@@ -1,0 +1,27 @@
+# Segredos
+.env
+*.env
+!.env.example
+
+# .NET
+bin/
+obj/
+*.user
+.vs/
+
+# Node / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Python / ML
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+ml/dados/brutos/
+*.parquet
+inmet_*/
+
+# Sistema
+.DS_Store
