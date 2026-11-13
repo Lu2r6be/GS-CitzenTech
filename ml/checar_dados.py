@@ -35,32 +35,56 @@ def inmet():
     print(f"Extraído em ./dados/brutos/inmet_{ANO}")
 
 
-def sim():
-    print("\n== SIM (óbitos) via PySUS (pip install pysus)")
-    try:
-        from pysus import SIM  # API pode variar conforme a versão do PySUS
+def sim(ano=2023):
+    """Óbitos do SIM (DATASUS) para SP, via PySUS 0.9.x.
 
-        s = SIM().load()
-        files = s.get_files("CID10", uf="SP", year=2023)
-        print("Arquivos:", files)
-        df = s.download(files)[0].to_dataframe()
+    Códigos úteis: CODMUNRES 355030 = São Paulo (capital);
+    IDADE vem codificada: 1º dígito = unidade (4 = anos, 5 = 100+ anos).
+    """
+    print(f"\n== SIM {ano} (óbitos, SP) via PySUS")
+    try:
+        from pysus.online_data.SIM import download
+        from pysus.online_data import parquets_to_dataframe
+
+        caminho = download("SP", ano)  # baixa do FTP do DATASUS; pode demorar
+        if isinstance(caminho, list):
+            caminho = caminho[0]
+        df = parquets_to_dataframe(caminho)
         print("Colunas:", list(df.columns))
         for c in ("CODMUNRES", "DTOBITO", "IDADE", "CAUSABAS", "CODBAIRES"):
             print(c, "presente" if c in df.columns else "AUSENTE")
         print(df[["CODMUNRES", "DTOBITO", "IDADE"]].head())
-        print("Óbitos em SP em 2023:", len(df))
-        df.to_parquet("dados/brutos/sim_sp_2023.parquet")
+        print("Óbitos no estado de SP:", len(df))
+
+        capital = df[df["CODMUNRES"].astype("string").str.startswith("355030")]
+        idade = capital["IDADE"].astype("string")
+        anos = pd_to_num(idade.str[1:])
+        e_60_mais = ((idade.str[0] == "4") & (anos >= 60)) | (idade.str[0] == "5")
+        idosos = capital[e_60_mais.fillna(False)]
+        datas = idosos["DTOBITO"].astype("string").str.zfill(8)
+        por_dia = datas.value_counts()
+        print(f"Capital: {len(capital)} óbitos; 60+: {len(idosos)}")
+        print("Óbitos 60+ por dia (capital): média %.1f, mín %d, máx %d, dias %d"
+              % (por_dia.mean(), por_dia.min(), por_dia.max(), len(por_dia)))
+        print("Exemplo de DTOBITO:", datas.iloc[0], "(esperado DDMMAAAA)")
     except Exception as e:  # noqa: BLE001
         print("Falhou:", repr(e))
         print("Alternativa: baixe o CSV do SIM no portal OpenDataSUS "
               "(opendatasus.saude.gov.br, dataset SIM) e rode df.columns.")
 
 
+def pd_to_num(serie):
+    import pandas as pd
+    return pd.to_numeric(serie, errors="coerce")
+
+
 if __name__ == "__main__":
     import os
     os.makedirs("dados/brutos", exist_ok=True)
-    try:
-        inmet()
-    except Exception as e:  # noqa: BLE001
-        print("INMET falhou:", repr(e), file=sys.stderr)
+    # "python3 checar_dados.py sim" pula o INMET (já baixado)
+    if "sim" not in sys.argv[1:]:
+        try:
+            inmet()
+        except Exception as e:  # noqa: BLE001
+            print("INMET falhou:", repr(e), file=sys.stderr)
     sim()

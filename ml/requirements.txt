@@ -1,0 +1,6 @@
+pandas>=1.5
+numpy
+scikit-learn
+matplotlib
+jupyter
+pysus==0.9.4  # versão que funciona no Python 3.9 (API pysus.online_data.SIM)

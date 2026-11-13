@@ -1,4 +1,4 @@
-# Contrato técnico — Termômetro do ACS (v2, 09/11/2026)
+# Contrato técnico — Termômetro do ACS (v3, 11/11/2026: semáforo com frio)
 
 Este é o documento-mãe. Quem programa: Claude (Claude Code, conversa própria) como principal; GPT só para código pesado pontual. Todo prompt começa com: "Leia docs/CONTRATO.md e siga-o". Se a IA discordar do contrato, ela PERGUNTA, não inventa. Mudou o contrato? Atualize este arquivo primeiro.
 
@@ -23,16 +23,18 @@ VM Linux: provisiona, hospeda a API, monitora (CPU/disco/memória), systemd
 - **O ESP32 manda DADO BRUTO** (temperatura, umidade, id do dispositivo). Quem classifica é a API. Assim os limiares ficam em um só lugar e o ML consegue alterá-los.
 - **O dispositivo não manda PII.** Ele só conhece um `deviceId` e um token. A ligação deviceId → casa existe só no banco.
 - **VM:** VirtualBox no PC (sem Azure for Students). O Wokwi só alcança URL pública → túnel `cloudflared` rodando como serviço systemd, provisionado pelo script.
-- **O semáforo é honesto:** `nível = f(índice de calor interno, alerta externo do dia)`. A **vulnerabilidade** (idade ≥ 80, mora sozinho, doença crônica) NÃO muda a cor: só a **ordem da fila**. A cor é "o que o sensor mede".
+- **O semáforo é honesto:** `nível = f(temperatura/índice de calor interno, alerta externo do dia)`. Ele tem **frio e calor** (v3, decidido em 11/11 depois do ML mostrar a curva em "U": em SP, o frio aumenta os óbitos de idosos em mais dias que o calor). A **vulnerabilidade** (idade ≥ 80, mora sozinho, doença crônica) NÃO muda a cor: só a **ordem da fila**. A cor é "o que o sensor mede".
   - Índice de calor interno: fórmula de Rothfusz (função pura em `Domain`, com testes). Ela só vale a partir de ~27 °C (80 °F); abaixo disso, usar a fórmula simples do NWS.
   - **Confirmação (histerese):** o nível só SOBE após 3 leituras seguidas na faixa nova e só DESCE após 6. Evita o semáforo piscando (como um termostato que não liga e desliga a cada décimo de grau).
   - **Sem sinal:** sem leitura há 30 min → status **cinza "sem sinal"**, que vai para o TOPO da fila. Sensor mudo nunca pode parecer "seguro".
   - **Exibição gradual:** o app mostra a temperatura numa barra de cor contínua (gradiente verde→amarelo→vermelho) com seta de tendência (subindo/estável/descendo, últimos 60 min). A DECISÃO (fila, alerta) usa os níveis discretos; o gradiente é para leitura humana.
-  - Faixas iniciais (a verificar antes de citar): verde < 32 °C; amarelo 32–39 °C; vermelho ≥ 39 °C (baseadas nas faixas do NWS, feitas para adultos saudáveis — para idosos talvez devam ser mais baixas; buscar fonte). Ficam na tabela `LimiarCalor`, nunca no código.
-  - "Dia de risco" vem do ML. Pergunta do ML: *dado o clima externo dos últimos dias (máxima, mínima, umidade, lags 0–7), quantos óbitos de 60+ são esperados no dia em SP?* (XGBoost ou Random Forest, regressão). Dia de risco = óbitos previstos acima de um corte (ex.: percentil 90 do histórico); esse corte, traduzido em temperatura máxima externa, vai para `DiaRisco`/`LimiarCalor`. Se hoje é dia de risco, o nível sobe um degrau.
+  - **Níveis:** azul (frio perigoso) · verde (ok) · amarelo (calor, atenção) · vermelho (calor perigoso) · cinza (sem sinal).
+  - **Frio (azul):** temperatura interna < 18 °C (referência: diretriz de moradia e saúde da OMS, 2018, mínimo de 18 °C dentro de casa; CONFERIR a fonte antes de citar). Usa a temperatura simples, não o índice de calor.
+  - Faixas iniciais de calor (a verificar antes de citar): verde < 32 °C; amarelo 32–39 °C; vermelho ≥ 39 °C (baseadas nas faixas do NWS, feitas para adultos saudáveis — para idosos talvez devam ser mais baixas; buscar fonte). Ficam na tabela `LimiarTemperatura`, nunca no código.
+  - "Dia de risco" vem do ML. Pergunta do ML: *dado o clima externo dos últimos dias (máxima, mínima, umidade, lags 0–7), quantos óbitos de 60+ são esperados no dia em SP?* (XGBoost ou Random Forest, regressão). O alvo é o **risco relativo** (óbitos do dia ÷ esperado para o ano). Dia de risco = RR previsto ≥ 1,05. Resultado do ML (11/11): **dia de calor = máxima externa ≥ 36 °C**; **dia de frio = mínima externa ≤ 13 °C** (vai para `DiaRisco`/`LimiarTemperatura`). Em dia de calor, o nível de calor sobe um degrau; em dia de frio, casas azuis vão para a prioridade do vermelho na fila.
   - O clima externo de hoje vem de uma tabela `ClimaExterno` (última observação do INMET, carregada por script ou à mão na demo). Buscar o INMET em tempo real é opcional e está nas questões abertas.
-  - Flag "noite sem resfriamento": mínima interna noturna acima de um valor configurável (a calibrar, citar fonte).
-  - O ML NÃO mede a casa. Ele diz "a que temperatura EXTERNA os óbitos 60+ sobem". A casa é medida pelo sensor.
+  - Flag "noite sem resfriamento": mínima interna noturna acima de um valor configurável. O ML mostrou que noites com mínima EXTERNA ≥ 23 °C tiveram +12% de óbitos 60+ (poucos dias; tratar como indício).
+  - O ML NÃO mede a casa. Ele diz "a que temperatura EXTERNA (fria ou quente) os óbitos 60+ sobem". A casa é medida pelo sensor.
 
 ## 3. Entidades (tabelas)
 | Entidade | Campos principais | PII? |
@@ -45,10 +47,10 @@ VM Linux: provisiona, hospeda a API, monitora (CPU/disco/memória), systemd
 | Microarea | id, nome, acsId | não |
 | Usuario | id, nome, email, senhaHash, papel (Acs/Familiar/Admin), microareaId? (ACS), residenteId? (Familiar) | SIM (email, senha) |
 | ClimaExterno | id, estacao, dataHoraUtc, tempMaxC, tempMinC, umidade | não |
-| DiaRisco | id, data, estacao, obitosPrevistos, corte, modeloVersao, nivelExterno | não |
+| DiaRisco | id, data, estacao, rrPrevisto, corte, tipo (Calor/Frio/Nenhum), modeloVersao | não |
 | Consentimento | id, residenteId, finalidade, concedidoEm, revogadoEm | não |
 | Visita | id (GUID gerado no app), domicilioId, acsId, planejadaEm, realizadaEm, observacao, resultado, origem (Online/Offline), sincronizadaEm | observação pode ter saúde |
-| LimiarCalor | id, versao, verdeAte, amareloAte, origem (Regra/ML), criadoEm | não |
+| LimiarTemperatura | id, versao, azulAbaixoDe, verdeAte, amareloAte, origem (Regra/ML), criadoEm | não |
 | AchadoSeguranca | id, tipo, severidade, origem, exposicao, categoriaPii, criadoEm | não |
 
 ## 4. Mensagem do ESP32 (JSON)
@@ -57,12 +59,12 @@ VM Linux: provisiona, hospeda a API, monitora (CPU/disco/memória), systemd
 { "deviceId": "esp32-001", "temperaturaC": 33.4, "umidade": 61.0 }
 ```
 A hora é registrada pela API no recebimento (o ESP32 não precisa de relógio/NTP — um ponto de falha a menos).
-Resposta: `202 Accepted` com `{ "nivel": "amarelo" }` (o ESP32 acende o LED correspondente).
+Resposta: `202 Accepted` com `{ "nivel": "amarelo" }` — valores: `azul`, `verde`, `amarelo`, `vermelho` (o ESP32 acende o LED correspondente; tem LED azul).
 `GET /api/v1/config/limiares` (o ESP32 lê na inicialização).
 
 ## 5. Endpoints (v1)
 - `POST /api/v1/auth/login` → JWT (papéis Acs, Familiar, Admin)
-- `GET /api/v1/visitas/fila` (Acs) → só a microárea do ACS; ordem: sem sinal > vermelho > amarelo > verde; empate por vulnerabilidade e tempo desde a última visita
+- `GET /api/v1/visitas/fila` (Acs) → só a microárea do ACS; ordem: sem sinal > vermelho (e azul em dia de frio) > azul > amarelo > verde; empate por vulnerabilidade e tempo desde a última visita
 - `POST /api/v1/visitas/sincronizar` (Acs) → recebe lote de visitas feitas offline; idempotente pelo GUID
 - `GET /api/v1/domicilios/{id}` → resumo e últimas leituras
 - `GET /api/v1/domicilios/{id}/leituras?de=&ate=`
