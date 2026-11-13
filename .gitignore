@@ -25,3 +25,6 @@ inmet_*/
 
 # Sistema
 .DS_Store
+
+# Entregas automáticas do Claude (zips)
+Claude outputs/
