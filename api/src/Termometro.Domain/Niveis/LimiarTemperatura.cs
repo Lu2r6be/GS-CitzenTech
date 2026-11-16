@@ -16,11 +16,15 @@ public enum OrigemLimiar
 /// </remarks>
 public sealed record LimiarTemperatura
 {
+    public int Id { get; private set; }
     public double AzulAbaixoDe { get; }
     public double VerdeAte { get; }
     public double AmareloAte { get; }
     public string Versao { get; }
     public OrigemLimiar Origem { get; }
+
+    /// <summary>Preenchido pelo banco ao gravar (o Domain não lê o relógio).</summary>
+    public DateTimeOffset CriadoEm { get; private set; }
 
     public LimiarTemperatura(double azulAbaixoDe, double verdeAte, double amareloAte,
         string versao, OrigemLimiar origem)
