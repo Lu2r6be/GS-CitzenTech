@@ -1,0 +1,1023 @@
+# ARQUIVO GERADO por security/ferramentas/gerar_regras_pii.py. NÃO edite à mão: rode o script de novo.
+# Fontes: membros com [Pii(CategoriaPii.X)] em api/src. Veja security/regras/README.md.
+rules:
+  - id: pii-nome-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Nome pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Nome
+      exposicao: Log
+      severidade: baixa
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Nome
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-cpf-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      CPF pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Cpf
+      exposicao: Log
+      severidade: alta
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cpf
+    - pattern: cpf
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-documento-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      RG (documento de identidade) pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Documento
+      exposicao: Log
+      severidade: alta
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Documento
+    - pattern: $X.NumeroDoRg
+    - pattern: $X.Rg
+    - pattern: documento
+    - pattern: numeroDoRg
+    - pattern: rg
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-saude-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Informação de saúde pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Saude
+      exposicao: Log
+      severidade: alta
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.CondicoesSaude
+    - pattern: $X.MoraSozinho
+    - pattern: $X.Observacao
+    - pattern: $X.TemDoencaCronica
+    - pattern: condicoesSaude
+    - pattern: moraSozinho
+    - pattern: temDoencaCronica
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-endereco-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Endereço pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Endereco
+      exposicao: Log
+      severidade: media
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cep
+    - pattern: $X.Endereco
+    - pattern: cep
+    - pattern: endereco
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-contato-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Telefone pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Contato
+      exposicao: Log
+      severidade: media
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.TelefoneContato
+    - pattern: telefoneContato
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-email-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      E-mail pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Email
+      exposicao: Log
+      severidade: media
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Email
+    - pattern: email
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-senha-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Senha pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Senha
+      exposicao: Log
+      severidade: critica
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Password
+    - pattern: $X.Senha
+    - pattern: $X.SenhaDosUsuarios
+    - pattern: $X.SenhaHash
+    - pattern: password
+    - pattern: senha
+    - pattern: senhaDosUsuarios
+    - pattern: senhaHash
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-segredo-para-log
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Chave ou token pode chegar a um log sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Segredo
+      exposicao: Log
+      severidade: critica
+      cwe: CWE-532
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.ApiKey
+    - pattern: $X.Chave
+    - pattern: $X.ChaveDoDispositivo
+    - pattern: $X.DeviceKey
+    - pattern: apiKey
+    - pattern: chaveDoDispositivo
+    - pattern: deviceKey
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $L.LogTrace(...)
+    - pattern: $L.LogDebug(...)
+    - pattern: $L.LogInformation(...)
+    - pattern: $L.LogWarning(...)
+    - pattern: $L.LogError(...)
+    - pattern: $L.LogCritical(...)
+    - pattern: $L.Log(...)
+    - pattern: Console.WriteLine(...)
+    - pattern: Console.Write(...)
+    - pattern: Console.Error.WriteLine(...)
+    - pattern: Debug.WriteLine(...)
+    - pattern: Trace.WriteLine(...)
+
+  - id: pii-cpf-para-resposta-http
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      CPF pode chegar a uma resposta HTTP sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Cpf
+      exposicao: RespostaHttp
+      severidade: alta
+      cwe: CWE-200
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cpf
+    - pattern: cpf
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: Ok(...)
+    - pattern: Created(...)
+    - pattern: CreatedAtAction(...)
+    - pattern: Accepted(...)
+    - pattern: BadRequest(...)
+    - pattern: Conflict(...)
+    - pattern: NotFound(...)
+    - pattern: Problem(...)
+    - pattern: StatusCode(...)
+    - pattern: Content(...)
+    - pattern: Json(...)
+    - pattern: Results.Ok(...)
+    - pattern: Results.Json(...)
+    - pattern: $R.WriteAsJsonAsync(...)
+    - pattern: $R.WriteAsync(...)
+    - pattern: new ProblemDetails { ... }
+    - pattern: new DadosInvalidos(...)
+    - pattern: new NaoAutenticado(...)
+    - pattern: new AcessoNegado(...)
+    - pattern: new NaoEncontrado(...)
+    - pattern: new Conflito(...)
+
+  - id: pii-documento-para-resposta-http
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      RG (documento de identidade) pode chegar a uma resposta HTTP sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Documento
+      exposicao: RespostaHttp
+      severidade: alta
+      cwe: CWE-200
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Documento
+    - pattern: $X.NumeroDoRg
+    - pattern: $X.Rg
+    - pattern: documento
+    - pattern: numeroDoRg
+    - pattern: rg
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: Ok(...)
+    - pattern: Created(...)
+    - pattern: CreatedAtAction(...)
+    - pattern: Accepted(...)
+    - pattern: BadRequest(...)
+    - pattern: Conflict(...)
+    - pattern: NotFound(...)
+    - pattern: Problem(...)
+    - pattern: StatusCode(...)
+    - pattern: Content(...)
+    - pattern: Json(...)
+    - pattern: Results.Ok(...)
+    - pattern: Results.Json(...)
+    - pattern: $R.WriteAsJsonAsync(...)
+    - pattern: $R.WriteAsync(...)
+    - pattern: new ProblemDetails { ... }
+    - pattern: new DadosInvalidos(...)
+    - pattern: new NaoAutenticado(...)
+    - pattern: new AcessoNegado(...)
+    - pattern: new NaoEncontrado(...)
+    - pattern: new Conflito(...)
+
+  - id: pii-senha-para-resposta-http
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Senha pode chegar a uma resposta HTTP sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Senha
+      exposicao: RespostaHttp
+      severidade: critica
+      cwe: CWE-200
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Password
+    - pattern: $X.Senha
+    - pattern: $X.SenhaDosUsuarios
+    - pattern: $X.SenhaHash
+    - pattern: password
+    - pattern: senha
+    - pattern: senhaDosUsuarios
+    - pattern: senhaHash
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: Ok(...)
+    - pattern: Created(...)
+    - pattern: CreatedAtAction(...)
+    - pattern: Accepted(...)
+    - pattern: BadRequest(...)
+    - pattern: Conflict(...)
+    - pattern: NotFound(...)
+    - pattern: Problem(...)
+    - pattern: StatusCode(...)
+    - pattern: Content(...)
+    - pattern: Json(...)
+    - pattern: Results.Ok(...)
+    - pattern: Results.Json(...)
+    - pattern: $R.WriteAsJsonAsync(...)
+    - pattern: $R.WriteAsync(...)
+    - pattern: new ProblemDetails { ... }
+    - pattern: new DadosInvalidos(...)
+    - pattern: new NaoAutenticado(...)
+    - pattern: new AcessoNegado(...)
+    - pattern: new NaoEncontrado(...)
+    - pattern: new Conflito(...)
+
+  - id: pii-nome-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Nome pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Nome
+      exposicao: PromptLlm
+      severidade: media
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Nome
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-cpf-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      CPF pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Cpf
+      exposicao: PromptLlm
+      severidade: critica
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cpf
+    - pattern: cpf
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-documento-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      RG (documento de identidade) pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Documento
+      exposicao: PromptLlm
+      severidade: critica
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Documento
+    - pattern: $X.NumeroDoRg
+    - pattern: $X.Rg
+    - pattern: documento
+    - pattern: numeroDoRg
+    - pattern: rg
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-saude-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Informação de saúde pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Saude
+      exposicao: PromptLlm
+      severidade: critica
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.CondicoesSaude
+    - pattern: $X.MoraSozinho
+    - pattern: $X.Observacao
+    - pattern: $X.TemDoencaCronica
+    - pattern: condicoesSaude
+    - pattern: moraSozinho
+    - pattern: temDoencaCronica
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-endereco-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Endereço pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Endereco
+      exposicao: PromptLlm
+      severidade: alta
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cep
+    - pattern: $X.Endereco
+    - pattern: cep
+    - pattern: endereco
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-contato-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Telefone pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Contato
+      exposicao: PromptLlm
+      severidade: alta
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.TelefoneContato
+    - pattern: telefoneContato
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-email-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      E-mail pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Email
+      exposicao: PromptLlm
+      severidade: alta
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Email
+    - pattern: email
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-senha-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Senha pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Senha
+      exposicao: PromptLlm
+      severidade: critica
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Password
+    - pattern: $X.Senha
+    - pattern: $X.SenhaDosUsuarios
+    - pattern: $X.SenhaHash
+    - pattern: password
+    - pattern: senha
+    - pattern: senhaDosUsuarios
+    - pattern: senhaHash
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-segredo-para-llm
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Chave ou token pode chegar a o prompt ou a requisição de um serviço externo (LLM) sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Segredo
+      exposicao: PromptLlm
+      severidade: critica
+      cwe: CWE-359
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.ApiKey
+    - pattern: $X.Chave
+    - pattern: $X.ChaveDoDispositivo
+    - pattern: $X.DeviceKey
+    - pattern: apiKey
+    - pattern: chaveDoDispositivo
+    - pattern: deviceKey
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: $C.TraduzirAsync(...)
+    - pattern: $C.CompletarAsync(...)
+    - pattern: $C.PerguntarAsync(...)
+    - pattern: $H.PostAsJsonAsync(...)
+    - pattern: $H.PostAsync(...)
+    - pattern: new StringContent(...)
+    - pattern: JsonContent.Create(...)
+
+  - id: pii-nome-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Nome pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Nome
+      exposicao: Arquivo
+      severidade: baixa
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Nome
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-cpf-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      CPF pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Cpf
+      exposicao: Arquivo
+      severidade: alta
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cpf
+    - pattern: cpf
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-documento-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      RG (documento de identidade) pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Documento
+      exposicao: Arquivo
+      severidade: alta
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Documento
+    - pattern: $X.NumeroDoRg
+    - pattern: $X.Rg
+    - pattern: documento
+    - pattern: numeroDoRg
+    - pattern: rg
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-saude-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Informação de saúde pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Saude
+      exposicao: Arquivo
+      severidade: alta
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.CondicoesSaude
+    - pattern: $X.MoraSozinho
+    - pattern: $X.Observacao
+    - pattern: $X.TemDoencaCronica
+    - pattern: condicoesSaude
+    - pattern: moraSozinho
+    - pattern: temDoencaCronica
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-endereco-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Endereço pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Endereco
+      exposicao: Arquivo
+      severidade: media
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Cep
+    - pattern: $X.Endereco
+    - pattern: cep
+    - pattern: endereco
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-contato-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Telefone pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Contato
+      exposicao: Arquivo
+      severidade: media
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.TelefoneContato
+    - pattern: telefoneContato
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-email-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      E-mail pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Email
+      exposicao: Arquivo
+      severidade: media
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Email
+    - pattern: email
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-senha-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Senha pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Senha
+      exposicao: Arquivo
+      severidade: critica
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.Password
+    - pattern: $X.Senha
+    - pattern: $X.SenhaDosUsuarios
+    - pattern: $X.SenhaHash
+    - pattern: password
+    - pattern: senha
+    - pattern: senhaDosUsuarios
+    - pattern: senhaHash
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
+
+  - id: pii-segredo-para-arquivo
+    mode: taint
+    languages: [csharp]
+    severity: ERROR
+    message: >-
+      Chave ou token pode chegar a um arquivo sem passar pelo PiiSanitizer.
+      Troque por um identificador, use .Mascarado ou chame PiiSanitizer.Sanitizar antes.
+    metadata:
+      categoria: Segredo
+      exposicao: Arquivo
+      severidade: critica
+      cwe: CWE-312
+      owasp: "API3:2023 Broken Object Property Level Authorization / A09:2021 Security Logging and Monitoring Failures"
+    pattern-sources:
+    - pattern: $X.ApiKey
+    - pattern: $X.Chave
+    - pattern: $X.ChaveDoDispositivo
+    - pattern: $X.DeviceKey
+    - pattern: apiKey
+    - pattern: chaveDoDispositivo
+    - pattern: deviceKey
+    pattern-sanitizers:
+    - pattern: $S.Sanitizar(...)
+    - pattern: $X.Mascarado
+    - pattern: Mascarar(...)
+    pattern-sinks:
+    - pattern: File.WriteAllText(...)
+    - pattern: File.WriteAllTextAsync(...)
+    - pattern: File.AppendAllText(...)
+    - pattern: File.AppendAllTextAsync(...)
+    - pattern: File.WriteAllLines(...)
+    - pattern: File.WriteAllBytes(...)
