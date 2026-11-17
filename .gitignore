@@ -28,3 +28,20 @@ inmet_*/
 
 # Entregas automáticas do Claude (zips)
 Claude outputs/
+
+# Material pessoal de estudo e planejamento (fora da entrega)
+estudo/
+CLAUDE.md
+AGENTS.md
+docs/CONTRATO.md
+docs/GLOSSARIO.md
+docs/rubricas.md
+**/ROTEIRO-VIDEO.md
+
+# Resultados locais da auditoria
+security/auditoria/resultados/
+
+# Banco local de desenvolvimento (SQLite)
+*.db
+*.db-shm
+*.db-wal
