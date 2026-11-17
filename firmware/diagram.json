@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "author": "Termometro do ACS",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -95,
+      "left": 120,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledAzul",
+      "top": 150,
+      "left": 130,
+      "attrs": {
+        "color": "blue",
+        "label": "Azul"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rAzul",
+      "top": 215,
+      "left": 115,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledVerde",
+      "top": 150,
+      "left": 180,
+      "attrs": {
+        "color": "green",
+        "label": "Verde"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rVerde",
+      "top": 215,
+      "left": 165,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledAmarelo",
+      "top": 150,
+      "left": 230,
+      "attrs": {
+        "color": "yellow",
+        "label": "Amarelo"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rAmarelo",
+      "top": 215,
+      "left": 215,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledVermelho",
+      "top": 150,
+      "left": 280,
+      "attrs": {
+        "color": "red",
+        "label": "Vermelho"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rVermelho",
+      "top": 215,
+      "left": 265,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "dht1:VCC",
+      "esp:3V3",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "dht1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "dht1:SDA",
+      "esp:15",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:25",
+      "rAzul:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "rAzul:2",
+      "ledAzul:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ledAzul:C",
+      "esp:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:26",
+      "rVerde:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "rVerde:2",
+      "ledVerde:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ledVerde:C",
+      "esp:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:27",
+      "rAmarelo:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "rAmarelo:2",
+      "ledAmarelo:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ledAmarelo:C",
+      "esp:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:14",
+      "rVermelho:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "rVermelho:2",
+      "ledVermelho:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ledVermelho:C",
+      "esp:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
