@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risco Cidadão - Termômetro do ACS</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --fundo: #f4f6f8; --cartao: #ffffff; --texto: #14212b; --suave: #4a5a68; --borda: #b8c4ce;
+    --azul: #0b4f8a; --baixo: #14633a; --moderado: #7a5200; --alto: #a23a00; --critico: #8e1b16;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--fundo); color: var(--texto); line-height: 1.45; }
+  header { background: var(--azul); color: #fff; padding: 20px 24px; }
+  header h1 { margin: 0; font-size: 1.5rem; }
+  header p { margin: 4px 0 0; opacity: .95; }
+  main { max-width: 1080px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 16px; }
+  .cartao { background: var(--cartao); border: 1px solid var(--borda); border-radius: 4px; padding: 18px 20px; }
+  .cartao h2 { margin: 0 0 10px; font-size: 1.1rem; }
+  .grade { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  label { display: block; font-weight: 600; margin: 10px 0 4px; }
+  input, textarea { width: 100%; padding: 11px 12px; font: inherit; border: 1px solid #5d6e7c; border-radius: 3px; background: #fff; color: var(--texto); }
+  textarea { min-height: 96px; resize: vertical; }
+  button { font: inherit; font-weight: 600; min-height: 48px; padding: 10px 18px; border-radius: 3px; border: 1px solid var(--azul); background: var(--azul); color: #fff; cursor: pointer; }
+  button.secundario { background: #fff; color: var(--azul); }
+  button:disabled { opacity: .6; cursor: progress; }
+  button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #ffb703; outline-offset: 2px; }
+  .linha { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .nota { font-size: .92rem; color: var(--suave); }
+  .erro { color: #8e1b16; font-weight: 600; }
+  .placar { display: flex; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+  .numero { font-size: 4rem; font-weight: 800; line-height: 1; }
+  .de100 { font-size: 1.3rem; color: var(--suave); margin-left: 6px; }
+  .Baixo .numero { color: var(--baixo); } .Moderado .numero { color: var(--moderado); } .Alto .numero { color: var(--alto); } .Critico .numero { color: var(--critico); }
+  .classificacao { display: grid; gap: 4px; }
+  .rotulo { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--suave); }
+  .status { display: inline-block; padding: 6px 14px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; border-radius: 2px; }
+  .status.verde { background: #1e7a46; color: #fff; }
+  .status.amarela { background: #e3a300; color: #14212b; }
+  .status.vermelha { background: #b42318; color: #fff; }
+  .nivel-texto { font-weight: 600; }
+  .contadores { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 18px; border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); }
+  .contador { padding: 12px 14px; }
+  .contador + .contador { border-left: 1px solid var(--borda); }
+  .contador b { display: block; font-size: 1.6rem; }
+  .alerta { border-left: 5px solid var(--borda); padding-left: 14px; }
+  .alerta.verde { border-left-color: #1e7a46; } .alerta.amarela { border-left-color: #e3a300; } .alerta.vermelha { border-left-color: #b42318; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #dde4ea; vertical-align: top; }
+  th { color: var(--suave); font-weight: 700; }
+  ul { margin: 8px 0 0 20px; padding: 0; }
+  pre { background: #eef2f5; border: 1px solid var(--borda); border-radius: 3px; padding: 10px 12px; white-space: pre-wrap; word-break: break-word; margin: 6px 0; }
+  #painel { display: grid; gap: 16px; }
+  .oculto { display: none !important; }
+  @media (max-width: 560px) { .numero { font-size: 3rem; } .contadores { grid-template-columns: 1fr; } .contador + .contador { border-left: 0; border-top: 1px solid var(--borda); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Risco Cidadão</h1>
+  <p>Quanto os dados dos moradores estão expostos por falhas deste sistema. Não é o risco térmico das casas.</p>
+</header>
+<main>
+  <section id="entrada" class="cartao" aria-labelledby="t-entrada">
+    <h2 id="t-entrada">Entrar como administrador</h2>
+    <form id="form-login">
+      <label for="email">E-mail</label>
+      <input id="email" type="email" autocomplete="username" required>
+      <label for="senha">Senha</label>
+      <input id="senha" type="password" autocomplete="current-password" required>
+      <div class="linha">
+        <button type="submit" id="btn-entrar">Entrar</button>
+        <button type="button" class="secundario" id="btn-demo">Preencher conta de demonstração</button>
+      </div>
+      <p id="msg-login" class="erro" role="alert"></p>
+    </form>
+  </section>
+
+  <div id="painel" class="oculto">
+    <section class="cartao" aria-labelledby="t-risco">
+      <h2 id="t-risco">Indicador Risco Cidadão</h2>
+      <div class="placar" id="placar">
+        <div><span class="numero" id="pontuacao">-</span><span class="de100">de 100</span></div>
+        <div class="classificacao">
+          <span class="rotulo">Classificação</span>
+          <div><span class="status" id="status">-</span> <span class="nivel-texto" id="nivel">-</span></div>
+        </div>
+      </div>
+      <p class="nota" id="atualizado" aria-live="polite"></p>
+      <div class="contadores">
+        <div class="contador"><b id="c-total">0</b>achados nos últimos 30 dias</div>
+        <div class="contador"><b id="c-abertos">0</b>falhas abertas no código</div>
+        <div class="contador"><b id="c-barrados">0</b>vazamentos barrados em execução</div>
+      </div>
+      <div class="linha"><button type="button" id="btn-atualizar">Atualizar agora</button></div>
+    </section>
+
+    <section class="cartao" aria-labelledby="t-alerta">
+      <h2 id="t-alerta">Alerta em linguagem simples</h2>
+      <div class="alerta" id="alerta-caixa">
+        <h3 style="margin:0 0 6px" id="alerta-titulo"></h3>
+        <p id="alerta-mensagem" style="margin:0 0 6px"></p>
+        <ul id="alerta-acoes"></ul>
+      </div>
+      <p class="nota" id="alerta-fonte"></p>
+    </section>
+
+    <div class="grade">
+      <section class="cartao" aria-labelledby="t-cat">
+        <h2 id="t-cat">Por tipo de dado</h2>
+        <table><thead><tr><th>Tipo</th><th>Achados</th><th>Pontos</th></tr></thead><tbody id="tab-categoria"></tbody></table>
+      </section>
+      <section class="cartao" aria-labelledby="t-saida">
+        <h2 id="t-saida">Por saída insegura</h2>
+        <table><thead><tr><th>Saída</th><th>Achados</th><th>Pontos</th></tr></thead><tbody id="tab-saida"></tbody></table>
+      </section>
+    </div>
+
+    <section class="cartao" aria-labelledby="t-recentes">
+      <h2 id="t-recentes">Achados mais recentes</h2>
+      <table><thead><tr><th>Quando</th><th>Tipo</th><th>Gravidade</th><th>Dado</th><th>Saída</th><th>Situação</th></tr></thead>
+      <tbody id="tab-recentes"></tbody></table>
+      <p class="nota" id="sem-achados">Nenhum achado registrado.</p>
+    </section>
+
+    <section class="cartao" aria-labelledby="t-teste">
+      <h2 id="t-teste">Testar o motor de PII</h2>
+      <p class="nota">Use somente dados fictícios. "Analisar" mostra o que o motor encontra. "Simular vazamento" faz o que um erro de programação faria: escreve o texto no log e o devolve na resposta. Os guardas barram os dois e o indicador sobe.</p>
+      <label for="texto">Texto de teste</label>
+      <textarea id="texto">cadastro do morador: cpf 529.982.247-25, senha: abc12345, histórico de diabetes</textarea>
+      <div class="linha">
+        <button type="button" id="btn-analisar">Analisar texto</button>
+        <button type="button" class="secundario" id="btn-simular">Simular vazamento</button>
+      </div>
+      <p id="msg-teste" class="erro" role="alert"></p>
+      <div id="resultado-teste" class="oculto" aria-live="polite">
+        <strong>Encontrado:</strong>
+        <ul id="lista-ocorrencias"></ul>
+        <strong>Texto depois do sanitizador:</strong>
+        <pre id="texto-limpo"></pre>
+        <strong id="rotulo-eco" class="oculto">O que a resposta da API devolveu:</strong>
+        <pre id="eco" class="oculto"></pre>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var token = null;        // só em memória: fechar a aba desconecta
+  var temporizador = null;
+  var $ = function (id) { return document.getElementById(id); };
+
+  var ROTULO_DADO = { Cpf: "CPF", Documento: "RG", Saude: "Saúde", Senha: "Senha", Segredo: "Chave ou token", Endereco: "Endereço", Contato: "Telefone", Email: "E-mail", Nome: "Nome", Outro: "Outro" };
+  var ROTULO_SAIDA = { Log: "Registros (log)", RespostaHttp: "Resposta da API", PromptLlm: "Prompt da IA", Arquivo: "Arquivo" };
+  var ROTULO_GRAV = { Baixa: "Baixa", Media: "Média", Alta: "Alta", Critica: "Crítica" };
+  // Classificação: baixo = verde, moderado = amarelo, alto e crítico = vermelho (a cor nunca vai sozinha: o nome dela vem escrito).
+  var COR_DO_NIVEL = { Baixo: "verde", Moderado: "amarela", Alto: "vermelha", Critico: "vermelha" };
+  var NOME_DA_COR = { verde: "Verde", amarela: "Amarelo", vermelha: "Vermelho" };
+  var ROTULO_NIVEL = { Baixo: "Risco baixo", Moderado: "Risco moderado", Alto: "Risco alto", Critico: "Risco crítico" };
+
+  function limpar(el) { while (el.firstChild) { el.removeChild(el.firstChild); } }
+  function celula(linha, texto) { var td = document.createElement("td"); td.textContent = texto; linha.appendChild(td); }
+
+  function chamar(metodo, caminho, corpo) {
+    var cab = { "Content-Type": "application/json" };
+    if (token) { cab["Authorization"] = "Bearer " + token; }
+    return fetch(caminho, { method: metodo, headers: cab, body: corpo ? JSON.stringify(corpo) : undefined })
+      .then(function (r) {
+        return r.text().then(function (t) {
+          var json = null; try { json = t ? JSON.parse(t) : null; } catch (e) { /* corpo não é JSON */ }
+          if (!r.ok) {
+            var erro = new Error((json && (json.detail || json.title)) || ("Erro " + r.status));
+            erro.status = r.status; throw erro;
+          }
+          return json;
+        });
+      });
+  }
+
+  function preencherTabela(id, grupos, rotulos) {
+    var corpo = $(id); limpar(corpo);
+    if (!grupos.length) { var l = document.createElement("tr"); celula(l, "Nada registrado"); celula(l, ""); celula(l, ""); corpo.appendChild(l); return; }
+    grupos.forEach(function (g) {
+      var l = document.createElement("tr");
+      celula(l, rotulos[g.grupo] || g.grupo); celula(l, String(g.quantidade)); celula(l, Number(g.pontos).toLocaleString("pt-BR"));
+      corpo.appendChild(l);
+    });
+  }
+
+  function mostrar(p) {
+    $("pontuacao").textContent = String(p.pontuacao);
+    $("nivel").textContent = ROTULO_NIVEL[p.nivel] || p.nivel;
+    $("placar").className = "placar " + p.nivel;
+    var cor = COR_DO_NIVEL[p.nivel] || "vermelha";
+    $("status").className = "status " + cor;
+    $("status").textContent = NOME_DA_COR[cor];
+    $("alerta-caixa").className = "alerta " + cor;
+    $("c-total").textContent = String(p.totalDeAchados);
+    $("c-abertos").textContent = String(p.abertosNoCodigo);
+    $("c-barrados").textContent = String(p.barradosEmExecucao);
+    $("atualizado").textContent = "Atualizado em " + new Date(p.geradoEm).toLocaleString("pt-BR") + ". Janela: últimos " + p.janelaEmDias + " dias.";
+
+    $("alerta-titulo").textContent = p.alerta.titulo;
+    $("alerta-mensagem").textContent = p.alerta.mensagem;
+    var acoes = $("alerta-acoes"); limpar(acoes);
+    p.alerta.acoes.forEach(function (a) { var li = document.createElement("li"); li.textContent = a; acoes.appendChild(li); });
+    $("alerta-fonte").textContent = p.alerta.fonte === "mistral"
+      ? "Texto escrito pela IA (Mistral) a partir do resumo numérico, sem dados de moradores."
+      : "Texto-modelo de reserva (a IA não foi usada nesta consulta).";
+
+    preencherTabela("tab-categoria", p.porCategoria, ROTULO_DADO);
+    preencherTabela("tab-saida", p.porSaida, ROTULO_SAIDA);
+
+    var rec = $("tab-recentes"); limpar(rec);
+    $("sem-achados").className = p.recentes.length ? "oculto" : "nota";
+    p.recentes.forEach(function (a) {
+      var l = document.createElement("tr");
+      celula(l, new Date(a.criadoEm).toLocaleString("pt-BR"));
+      celula(l, a.tipo);
+      celula(l, ROTULO_GRAV[a.severidade] || a.severidade);
+      celula(l, a.categoria ? (ROTULO_DADO[a.categoria] || a.categoria) : "Outro");
+      celula(l, ROTULO_SAIDA[a.exposicao] || a.exposicao);
+      celula(l, a.barradoEmExecucao ? "Barrado em execução" : "Falha aberta no código");
+      rec.appendChild(l);
+    });
+  }
+
+  function atualizar() {
+    return chamar("GET", "/api/v1/seguranca/risco-cidadao").then(mostrar).catch(function (e) {
+      if (e.status === 401 || e.status === 403) { sair("Sessão expirada ou sem permissão. Entre de novo."); }
+      else { $("atualizado").textContent = "Não consegui atualizar: " + e.message; }
+    });
+  }
+
+  function sair(mensagem) {
+    token = null; clearInterval(temporizador);
+    $("painel").className = "oculto"; $("entrada").className = "cartao";
+    $("msg-login").textContent = mensagem || "";
+  }
+
+  $("form-login").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    $("msg-login").textContent = ""; $("btn-entrar").disabled = true;
+    chamar("POST", "/api/v1/auth/login", { email: $("email").value.trim(), senha: $("senha").value })
+      .then(function (r) {
+        if (r.papel !== "Admin") { throw new Error("Este painel é só para administradores."); }
+        token = r.token; $("senha").value = "";
+        $("entrada").className = "oculto"; $("painel").className = "";
+        return atualizar().then(function () { temporizador = setInterval(atualizar, 15000); });
+      })
+      .catch(function (e) { $("msg-login").textContent = e.status === 401 ? "E-mail ou senha incorretos." : e.message; })
+      .then(function () { $("btn-entrar").disabled = false; });
+  });
+
+  $("btn-demo").addEventListener("click", function () { $("email").value = "admin@demo.local"; $("senha").value = "Demo@2026!"; });
+  $("btn-atualizar").addEventListener("click", atualizar);
+
+  function mostrarAnalise(r, eco) {
+    $("resultado-teste").className = "";
+    var lista = $("lista-ocorrencias"); limpar(lista);
+    if (!r.ocorrencias.length) { var vazio = document.createElement("li"); vazio.textContent = "Nenhum dado sensível encontrado."; lista.appendChild(vazio); }
+    r.ocorrencias.forEach(function (o) {
+      var li = document.createElement("li");
+      li.textContent = (ROTULO_DADO[o.categoria] || o.categoria) + " (regra " + o.regra + ", posição " + o.inicio + ", " + o.tamanho + " caracteres)";
+      lista.appendChild(li);
+    });
+    $("texto-limpo").textContent = r.textoSanitizado;
+    var temEco = typeof eco === "string";
+    $("rotulo-eco").className = temEco ? "" : "oculto"; $("eco").className = temEco ? "" : "oculto";
+    if (temEco) { $("eco").textContent = eco; }
+  }
+
+  function aoTestar(botao, trabalho) {
+    $("msg-teste").textContent = ""; botao.disabled = true;
+    trabalho().catch(function (e) { $("msg-teste").textContent = e.message; }).then(function () { botao.disabled = false; });
+  }
+
+  $("btn-analisar").addEventListener("click", function () {
+    aoTestar($("btn-analisar"), function () {
+      return chamar("POST", "/api/v1/seguranca/analisar-texto", { texto: $("texto").value, saida: "log" })
+        .then(function (r) { mostrarAnalise(r); return atualizar(); });
+    });
+  });
+
+  $("btn-simular").addEventListener("click", function () {
+    aoTestar($("btn-simular"), function () {
+      var texto = $("texto").value;
+      return chamar("POST", "/api/v1/seguranca/analisar-texto", { texto: texto, saida: "log" })
+        .then(function (analise) {
+          return chamar("POST", "/api/v1/seguranca/simular-vazamento", { texto: texto }).then(function (resp) {
+            mostrarAnalise(analise, resp.eco);
+            // os achados são gravados em segundo plano: espera um instante antes de atualizar o painel
+            return new Promise(function (ok) { setTimeout(ok, 800); }).then(atualizar);
+          });
+        });
+    });
+  });
+})();
+</script>
+</body>
+</html>

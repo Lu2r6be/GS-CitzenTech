@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Termometro.Domain\Termometro.Domain.csproj" />
+    <ProjectReference Include="..\Termometro.Application\Termometro.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,7 +3,6 @@ namespace Termometro.Domain.Niveis;
 /// <summary>
 /// Confirmação de leituras (histerese): evita o semáforo piscando.
 /// O nível só PIORA depois de 3 leituras seguidas na faixa nova e só MELHORA depois de 6.
-/// Analogia: um termostato que não liga e desliga a cada décimo de grau.
 /// O estado (Atual, Candidato, contagem) é público para poder ser guardado no banco
 /// e restaurado na próxima leitura.
 /// </summary>
