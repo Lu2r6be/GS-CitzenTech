@@ -1,0 +1,19 @@
+[Unit]
+Description=Termometro do ACS - tunel publico (cloudflared quick tunnel)
+After=network-online.target termometro-api.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+ExecStart=/usr/bin/cloudflared tunnel --no-autoupdate --url http://127.0.0.1:@PORTA_API@
+Restart=always
+RestartSec=5
+SyslogIdentifier=termometro-cloudflared
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

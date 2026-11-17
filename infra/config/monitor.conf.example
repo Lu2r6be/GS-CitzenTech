@@ -1,0 +1,10 @@
+# Limites do monitor. O monitor le este arquivo a cada ciclo: mudou aqui, vale no ciclo seguinte (sem reiniciar).
+# Fica em /etc/termometro/monitor.conf
+
+INTERVALO_SEGUNDOS=30        # de quanto em quanto tempo mede
+CPU_LIMITE=85                # alerta se o uso de CPU passar disso (%)
+RAM_LIMITE=85                # alerta se o uso de memoria passar disso (%)
+DISCO_LIMITE=85              # alerta se o uso do disco passar disso (%)
+DISCO_CAMINHO="/"
+URL_SAUDE="http://127.0.0.1:5080/health"
+SERVICOS="postgresql termometro-api termometro-cloudflared"

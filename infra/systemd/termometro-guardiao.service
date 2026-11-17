@@ -1,0 +1,9 @@
+[Unit]
+Description=Termometro do ACS - guardiao (religa servicos parados)
+# Uma execucao curta; quem repete e o timer (termometro-guardiao.timer).
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=@DIR_SCRIPTS@/guardiao.sh
+SyslogIdentifier=termometro-guardiao

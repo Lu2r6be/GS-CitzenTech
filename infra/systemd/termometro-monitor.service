@@ -1,0 +1,22 @@
+[Unit]
+Description=Termometro do ACS - monitor de CPU, RAM, disco e servicos
+After=network-online.target termometro-api.service
+
+[Service]
+Type=simple
+User=monitor
+Group=termometro-logs
+ExecStart=@DIR_SCRIPTS@/monitor.sh
+# O monitor roda em ciclos para sempre. Se morrer por qualquer motivo, volta em 2 s.
+Restart=always
+RestartSec=2
+SyslogIdentifier=termometro-monitor
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/log/termometro
+
+[Install]
+WantedBy=multi-user.target

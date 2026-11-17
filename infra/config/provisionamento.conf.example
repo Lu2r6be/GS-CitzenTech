@@ -1,0 +1,25 @@
+# Configuracao do provisionamento (NAO coloque segredo aqui; segredos sao gerados e ficam em /etc/termometro).
+# Copie para provisionamento.conf e ajuste, se precisar. Sem o arquivo, valem estes mesmos padroes.
+
+# --- Identidade e rede ---
+HOSTNAME_VM="termometro-acs"
+DOMINIO_LOCAL="gs.local"
+FUSO_HORARIO="America/Sao_Paulo"
+
+# Rede estatica. Os padroes servem para a rede NAT do VirtualBox (IP 10.0.2.15, gateway 10.0.2.2).
+# Se usar rede em modo "Bridge", troque IP/gateway pelos da sua rede, ou ponha REDE_CONFIGURAR=0.
+REDE_CONFIGURAR=1
+REDE_INTERFACE=""            # vazio = descobre sozinho a interface da rota padrao
+REDE_IP_CIDR="10.0.2.15/24"
+REDE_GATEWAY="10.0.2.2"
+DNS_SERVIDORES="1.1.1.1 8.8.8.8"
+
+# --- Pessoas e permissoes ---
+OPERADOR_USUARIO="operador"  # pode ver logs e ligar/desligar os servicos do projeto, nada alem disso
+
+# --- Aplicacao ---
+PORTA_API=5080
+REPO_URL=""                  # URL do GitHub do projeto (git clone). Ou deixe vazio e use SRC_DIR.
+REPO_BRANCH="main"
+SRC_DIR=""                   # pasta com o codigo ja copiado para a VM (alternativa ao REPO_URL)
+HABILITAR_DEMO=1             # 1 = cria as casas e contas FICTICIAS da demonstracao

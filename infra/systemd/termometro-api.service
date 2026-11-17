@@ -1,0 +1,36 @@
+[Unit]
+Description=Termometro do ACS - API (.NET)
+Documentation=file:///opt/termometro/README.md
+After=network-online.target postgresql.service
+Wants=network-online.target
+Requires=postgresql.service
+# Se cair 5 vezes em 2 minutos, o systemd para de insistir (evita laco infinito).
+# O guardiao tenta de novo depois, e deixa o motivo registrado no log.
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=termometro
+Group=termometro
+WorkingDirectory=/opt/termometro/app
+EnvironmentFile=/etc/termometro/termometro.env
+ExecStart=@DOTNET@ /opt/termometro/app/Termometro.Api.dll
+# Tolerancia a falhas: qualquer saida que nao seja uma parada pedida religa em 3 s.
+Restart=always
+RestartSec=3
+TimeoutStopSec=20
+SyslogIdentifier=termometro-api
+
+# Isolamento: a API so escreve onde precisa.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/termometro /var/log/termometro
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target
