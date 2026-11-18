@@ -24,24 +24,35 @@ evidencias/               prints
 testes-de-falha.md        roteiro e resultados dos testes de falha
 ```
 
-## Preparar a VM (VirtualBox)
+## Preparar a VM
 
-1. Ubuntu Server 24.04 LTS, 2 CPUs, 2 a 4 GB de RAM, 25 GB de disco, com OpenSSH.
-2. Rede NAT com redirecionamento de portas: `127.0.0.1:2222 → 22` (SSH) e `127.0.0.1:5080 → 5080` (API).
+Usei o **UTM** num Mac com Apple Silicon. O VirtualBox no Windows também serve: só mude o IP no `provisionamento.conf`.
+
+1. Ubuntu Server ARM64 (testado no 26.04 LTS), 2 CPUs, 2 GB de RAM, 22 GB de disco, com OpenSSH.
+2. Rede "Shared Network" do UTM: a VM fica em `192.168.64.2`, acessível pelo Mac (SSH na 22, API na 5080).
+3. Se o instalador deixou parte do disco sem uso: `sudo lvextend -r -l +100%FREE /dev/ubuntu-vg/ubuntu-lv`.
 
 ## Instalar
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git
-git clone <url-do-repositorio> termometro
+git clone https://github.com/Lu2r6be/GS-CitzenTech.git termometro
 cd termometro/infra
-cp config/provisionamento.conf.example config/provisionamento.conf   # opcional
+cp config/provisionamento.conf.example config/provisionamento.conf
+# no UTM: REDE_IP_CIDR="192.168.64.2/24" e REDE_GATEWAY="192.168.64.1"
 
 sudo ./scripts/provision-infra.sh
 sudo ./scripts/provision-app.sh
 ```
 
 `DRY_RUN=1` mostra o que seria feito sem alterar nada. Os scripts podem ser executados de novo: só mudam o que falta.
+
+Do Mac: `ssh lu2r6be@192.168.64.2` e Swagger em `http://192.168.64.2:5080/swagger`.
+
+## Resultado
+
+Os 8 testes de falha passaram; tabela, datas e o que eles revelaram em [`testes-de-falha.md`](testes-de-falha.md).
+Prints em `evidencias/` e logs reais da VM em `logs/logs-da-vm/`.
 
 ## Operação
 
@@ -76,7 +87,8 @@ sudo ./scripts/provision-app.sh
 
 ## Segurança
 
-- Senha do banco e chave do JWT são geradas na instalação e ficam em `/etc/termometro/termometro.env` (modo 640).
+- Senha do banco e chave do JWT são geradas na instalação e ficam em `/etc/termometro/termometro.env` (modo 640;
+  a pasta é 751: o monitor atravessa para ler `monitor.conf`, mas não lista nem lê o `.env`).
 - A API roda com usuário próprio, sem login, com `ProtectSystem=strict` e `NoNewPrivileges`.
-- O usuário `operador` só controla os serviços `termometro-*` via sudo.
+- O usuário `operador` só controla os serviços `termometro-*` via sudo (cada comando listado, sem curinga).
 - Firewall `ufw`: entrada liberada só nas portas 22 e 5080.
