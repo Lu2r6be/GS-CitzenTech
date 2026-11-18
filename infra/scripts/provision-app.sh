@@ -47,8 +47,8 @@ passo_dotnet() {
     garantir_pacotes dotnet-sdk-10.0
   else
     log INFO "pacote dotnet-sdk-10.0 nao esta nos repositorios; uso o instalador oficial da Microsoft"
-    executar "baixando o instalador oficial" curl -fsSL -o /tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
-    executar "instalando o SDK 10.0 em ${DOTNET_DIR}" bash /tmp/dotnet-install.sh --channel 10.0 --install-dir "$DOTNET_DIR"
+    executar "baixando o instalador oficial" curl -fsSL -o /var/tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
+    executar "instalando o SDK 10.0 em ${DOTNET_DIR}" env TMPDIR=/var/tmp bash /var/tmp/dotnet-install.sh --channel 10.0 --install-dir "$DOTNET_DIR"
     executar "criando o atalho /usr/local/bin/dotnet" ln -sf "${DOTNET_DIR}/dotnet" /usr/local/bin/dotnet
   fi
   [[ "$DRY_RUN" == "1" ]] || log OK ".NET instalado: $(dotnet --version)"
