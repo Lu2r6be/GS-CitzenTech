@@ -176,13 +176,25 @@ passo_usuarios() {
   executar "colocando ${OPERADOR_USUARIO} no grupo de logs" usermod -aG "$GRUPO_LOGS" "$OPERADOR_USUARIO"
 
   # sudo minimo: o operador so mexe nos servicos do projeto; nada de root geral.
+  # Lista os comandos um a um (sem curinga), porque o sudo-rs do Ubuntu novo nao aceita curinga nos argumentos.
+  local comandos="" acao unidade
+  for unidade in termometro-api termometro-monitor termometro-guardiao termometro-guardiao.timer termometro-cloudflared; do
+    for acao in start stop restart status; do
+      comandos+="${comandos:+, }/usr/bin/systemctl ${acao} ${unidade}"
+    done
+  done
   escrever_arquivo /etc/sudoers.d/termometro 440 root:root <<SUDO
 # Gerado por provision-infra.sh. Quem pode o que (privilegio minimo).
-Cmnd_Alias TERMOMETRO_SERVICOS = /usr/bin/systemctl start termometro-*, /usr/bin/systemctl stop termometro-*, /usr/bin/systemctl restart termometro-*, /usr/bin/systemctl status termometro-*
+Cmnd_Alias TERMOMETRO_SERVICOS = ${comandos}
 ${OPERADOR_USUARIO} ALL=(root) NOPASSWD: TERMOMETRO_SERVICOS
 SUDO
   if [[ "$DRY_RUN" != "1" ]]; then
-    visudo -cf /etc/sudoers.d/termometro >/dev/null && log OK "sudoers validado (visudo -c)"
+    if visudo -cf /etc/sudoers.d/termometro >/dev/null; then
+      log OK "sudoers validado (visudo -c)"
+    else
+      rm -f /etc/sudoers.d/termometro
+      log ERRO "regra de sudo invalida; arquivo removido para nao travar o sudo"; exit 1
+    fi
   fi
 
   # Pastas: cada uma com dono e permissao pensados.

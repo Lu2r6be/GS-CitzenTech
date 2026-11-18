@@ -12,7 +12,7 @@
 | **Cidadão beneficiado** | Pessoas idosas em casas quentes ou frias demais e os agentes comunitários de saúde (ACS) que as acompanham. |
 | **Problema** | O ACS não sabe quais casas de idosos estão perigosas agora: a previsão do tempo mede a rua, não a sala onde a pessoa está. |
 | **Como funciona** | Um sensor mede temperatura e umidade dentro da casa, a API classifica por cor e o app mostra ao ACS uma fila de visitas, da casa mais urgente para a menos. O familiar acompanha a casa do parente. |
-| **Repositório** | _(link do GitHub)_ |
+| **Repositório** | https://github.com/Lu2r6be/GS-CitzenTech |
 | **Indicador de impacto** | Hipótese: reduzir o tempo entre a casa ficar perigosa e a visita do ACS. Medida: tempo médio entre a primeira leitura vermelha e a visita. |
 | **ODS** | 3 (Saúde e bem-estar), 11 (Cidades sustentáveis), 13 (Ação climática). |
 
