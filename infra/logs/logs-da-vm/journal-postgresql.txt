@@ -1,0 +1,7 @@
+Nov 17 22:34:43 termometro-acs systemd[1]: Starting postgresql.service - PostgreSQL RDBMS...
+Nov 17 22:34:43 termometro-acs systemd[1]: Finished postgresql.service - PostgreSQL RDBMS.
+Nov 17 23:43:15 termometro-acs systemd[1]: postgresql.service: Deactivated successfully.
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopped postgresql.service - PostgreSQL RDBMS.
+-- Boot 4de2a1ef8dc14614be1cb81f1262bd1b --
+Nov 17 23:42:28 termometro-acs systemd[1]: Starting postgresql.service - PostgreSQL RDBMS...
+Nov 17 23:42:28 termometro-acs systemd[1]: Finished postgresql.service - PostgreSQL RDBMS.

@@ -1,0 +1,69 @@
+Nov 17 22:49:22 termometro-acs systemd[1]: Started termometro-api.service - Termometro do ACS - API (.NET).
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.277-03:00 ERRO Microsoft.EntityFrameworkCore.Database.Command: Failed executing DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: SELECT "MigrationId", "ProductVersion"
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: FROM "__EFMigrationsHistory"
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: ORDER BY "MigrationId";
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.603-03:00 INFO Termometro.Api.Demonstracao.SemeadorDeDemonstracao: Cenário de demonstração criado (5 casas, 1 ACS, 1 familiar, 1 admin).
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.640-03:00 WARN Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository: Using an in-memory repository. Keys will not be persisted to storage.
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.640-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.646-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {34fb4f37-d937-4927-b3d6-60e2a0b66a74} may be persisted to storage in unencrypted form.
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.662-03:00 INFO Microsoft.Hosting.Lifetime: Now listening on: http://0.0.0.0:5080
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.662-03:00 INFO Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.662-03:00 INFO Microsoft.Hosting.Lifetime: Hosting environment: Production
+Nov 17 22:49:23 termometro-acs termometro-api[13430]: 2026-11-17T22:49:23.662-03:00 INFO Microsoft.Hosting.Lifetime: Content root path: /opt/termometro/app
+Nov 17 23:23:06 termometro-acs systemd[1]: termometro-api.service: Main process exited, code=killed, status=9/KILL
+Nov 17 23:23:06 termometro-acs systemd[1]: termometro-api.service: Failed with result 'signal'.
+Nov 17 23:23:06 termometro-acs systemd[1]: termometro-api.service: Consumed 21.661s CPU time over 33min 43.810s wall clock time, 170.6M memory peak, 528K memory swap peak.
+Nov 17 23:23:09 termometro-acs systemd[1]: termometro-api.service: Scheduled restart job, restart counter is at 1.
+Nov 17 23:23:09 termometro-acs systemd[1]: Started termometro-api.service - Termometro do ACS - API (.NET).
+Nov 17 23:23:09 termometro-acs termometro-api[18017]: 2026-11-17T23:23:09.999-03:00 INFO Termometro.Api.Demonstracao.SemeadorDeDemonstracao: Banco já tem dados: demonstração não foi recriada.
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.030-03:00 WARN Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository: Using an in-memory repository. Keys will not be persisted to storage.
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.030-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.035-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {03c50591-a52c-4850-b184-02892f830566} may be persisted to storage in unencrypted form.
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.053-03:00 INFO Microsoft.Hosting.Lifetime: Now listening on: http://0.0.0.0:5080
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.053-03:00 INFO Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.053-03:00 INFO Microsoft.Hosting.Lifetime: Hosting environment: Production
+Nov 17 23:23:10 termometro-acs termometro-api[18017]: 2026-11-17T23:23:10.053-03:00 INFO Microsoft.Hosting.Lifetime: Content root path: /opt/termometro/app
+Nov 17 23:23:11 termometro-acs systemd[1]: Stopping termometro-api.service - Termometro do ACS - API (.NET)...
+Nov 17 23:23:11 termometro-acs termometro-api[18017]: 2026-11-17T23:23:11.307-03:00 INFO Microsoft.Hosting.Lifetime: Application is shutting down...
+Nov 17 23:23:11 termometro-acs systemd[1]: termometro-api.service: Deactivated successfully.
+Nov 17 23:23:11 termometro-acs systemd[1]: Stopped termometro-api.service - Termometro do ACS - API (.NET).
+Nov 17 23:23:11 termometro-acs systemd[1]: termometro-api.service: Consumed 866ms CPU time over 5.140s wall clock time, 111M memory peak.
+Nov 17 23:23:27 termometro-acs systemd[1]: Started termometro-api.service - Termometro do ACS - API (.NET).
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.278-03:00 INFO Termometro.Api.Demonstracao.SemeadorDeDemonstracao: Banco já tem dados: demonstração não foi recriada.
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.309-03:00 WARN Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository: Using an in-memory repository. Keys will not be persisted to storage.
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.309-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.314-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {a9f60424-2c99-44c0-8e0a-17e9c8aa7288} may be persisted to storage in unencrypted form.
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.331-03:00 INFO Microsoft.Hosting.Lifetime: Now listening on: http://0.0.0.0:5080
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.331-03:00 INFO Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.331-03:00 INFO Microsoft.Hosting.Lifetime: Hosting environment: Production
+Nov 17 23:23:28 termometro-acs termometro-api[18077]: 2026-11-17T23:23:28.331-03:00 INFO Microsoft.Hosting.Lifetime: Content root path: /opt/termometro/app
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopping termometro-api.service - Termometro do ACS - API (.NET)...
+Nov 17 23:43:15 termometro-acs termometro-api[18077]: 2026-11-17T23:43:15.564-03:00 INFO Microsoft.Hosting.Lifetime: Application is shutting down...
+Nov 17 23:43:15 termometro-acs systemd[1]: termometro-api.service: Deactivated successfully.
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopped termometro-api.service - Termometro do ACS - API (.NET).
+Nov 17 23:43:15 termometro-acs systemd[1]: termometro-api.service: Consumed 11.362s CPU time over 19min 48.055s wall clock time, 122.9M memory peak.
+-- Boot 4de2a1ef8dc14614be1cb81f1262bd1b --
+Nov 17 23:42:28 termometro-acs systemd[1]: Started termometro-api.service - Termometro do ACS - API (.NET).
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.296-03:00 INFO Termometro.Api.Demonstracao.SemeadorDeDemonstracao: Banco já tem dados: demonstração não foi recriada.
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.327-03:00 WARN Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository: Using an in-memory repository. Keys will not be persisted to storage.
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.327-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.332-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {42028173-5371-4b99-bb22-c7b6fe20794f} may be persisted to storage in unencrypted form.
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.349-03:00 INFO Microsoft.Hosting.Lifetime: Now listening on: http://0.0.0.0:5080
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.349-03:00 INFO Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.349-03:00 INFO Microsoft.Hosting.Lifetime: Hosting environment: Production
+Nov 17 23:42:29 termometro-acs termometro-api[1233]: 2026-11-17T23:42:29.349-03:00 INFO Microsoft.Hosting.Lifetime: Content root path: /opt/termometro/app
+Nov 18 00:07:25 termometro-acs systemd[1]: Stopping termometro-api.service - Termometro do ACS - API (.NET)...
+Nov 18 00:07:25 termometro-acs termometro-api[1233]: 2026-11-18T00:07:25.799-03:00 INFO Microsoft.Hosting.Lifetime: Application is shutting down...
+Nov 18 00:07:25 termometro-acs systemd[1]: termometro-api.service: Deactivated successfully.
+Nov 18 00:07:25 termometro-acs systemd[1]: Stopped termometro-api.service - Termometro do ACS - API (.NET).
+Nov 18 00:07:25 termometro-acs systemd[1]: termometro-api.service: Consumed 5.806s CPU time over 6min 16.705s wall clock time, 224.3M memory peak.
+Nov 18 00:09:32 termometro-acs systemd[1]: Started termometro-api.service - Termometro do ACS - API (.NET).
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.030-03:00 INFO Termometro.Api.Demonstracao.SemeadorDeDemonstracao: Banco já tem dados: demonstração não foi recriada.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.059-03:00 WARN Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository: Using an in-memory repository. Keys will not be persisted to storage.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.059-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.064-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {9b8a38ff-9de5-4f91-a75f-f03d2c9955bd} may be persisted to storage in unencrypted form.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Now listening on: http://0.0.0.0:5080
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Hosting environment: Production
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Content root path: /opt/termometro/app

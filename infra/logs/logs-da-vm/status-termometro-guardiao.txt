@@ -1,0 +1,13 @@
+○ termometro-guardiao.service - Termometro do ACS - guardiao (religa servicos parados)
+     Loaded: loaded (/etc/systemd/system/termometro-guardiao.service; static)
+     Active: inactive (dead) since Wed 2026-11-18 00:19:51 -03; 873ms ago
+ Invocation: 995d256315f24699a15aa777d60e9dd7
+TriggeredBy: ● termometro-guardiao.timer
+    Process: 3056 ExecStart=/opt/termometro/scripts/guardiao.sh (code=exited, status=0/SUCCESS)
+   Main PID: 3056 (code=exited, status=0/SUCCESS)
+   Mem peak: 4.5M
+        CPU: 44ms
+
+Nov 18 00:19:51 termometro-acs systemd[1]: Starting termometro-guardiao.service - Termometro do ACS - guardiao (religa servicos parados)...
+Nov 18 00:19:51 termometro-acs systemd[1]: termometro-guardiao.service: Deactivated successfully.
+Nov 18 00:19:51 termometro-acs systemd[1]: Finished termometro-guardiao.service - Termometro do ACS - guardiao (religa servicos parados).

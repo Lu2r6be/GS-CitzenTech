@@ -1,0 +1,13 @@
+2026-11-17T22:49:23-03:00 [guardiao] AVISO a API nao respondeu ao /health (1 de 3 seguidas)
+2026-11-17T23:09:00-03:00 [guardiao] ALERTA termometro-monitor.service: esta parada (estado: inactive)
+2026-11-17T23:09:00-03:00 [guardiao] RECUPERACAO termometro-monitor.service voltou a funcionar
+2026-11-17T23:23:27-03:00 [guardiao] ALERTA termometro-api.service: esta parada (estado: inactive)
+2026-11-17T23:23:27-03:00 [guardiao] RECUPERACAO termometro-api.service voltou a funcionar
+2026-11-17T23:23:27-03:00 [guardiao] AVISO a API nao respondeu ao /health (1 de 3 seguidas)
+2026-11-18T00:07:28-03:00 [guardiao] AVISO modo manutencao ativo (/etc/termometro/manutencao existe): nao vou religar nada
+2026-11-18T00:07:59-03:00 [guardiao] AVISO modo manutencao ativo (/etc/termometro/manutencao existe): nao vou religar nada
+2026-11-18T00:08:30-03:00 [guardiao] AVISO modo manutencao ativo (/etc/termometro/manutencao existe): nao vou religar nada
+2026-11-18T00:09:01-03:00 [guardiao] AVISO modo manutencao ativo (/etc/termometro/manutencao existe): nao vou religar nada
+2026-11-18T00:09:32-03:00 [guardiao] ALERTA termometro-api.service: esta parada (estado: inactive)
+2026-11-18T00:09:32-03:00 [guardiao] RECUPERACAO termometro-api.service voltou a funcionar
+2026-11-18T00:09:32-03:00 [guardiao] AVISO a API nao respondeu ao /health (1 de 3 seguidas)

@@ -1,0 +1,117 @@
+Nov 17 22:49:23 termometro-acs systemd[1]: Started termometro-cloudflared.service - Termometro do ACS - tunel publico (cloudflared quick tunnel).
+Nov 17 22:49:23 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:23Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+Nov 17 22:49:23 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:23Z INF Requesting new quick Tunnel on trycloudflare.com...
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF +--------------------------------------------------------------------------------------------+
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  https://joy-functionality-merger-plaintiff.trycloudflare.com                              |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF +--------------------------------------------------------------------------------------------+
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Version 2026.11.1 (Checksum b155cec3e48e489cfb8e5c602769fb8c771083018d8881d68b4d18a791567c5a)
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF GOOS: linux, GOVersion: go1.27.4, GoArch: arm64
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Settings: map[ha-connections:1 no-autoupdate:true url:http://127.0.0.1:5080]
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF cloudflared will not automatically update if installed by a package manager.
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Generated Connector ID: a903c3ea-1944-405b-aa8f-d920ea11621b
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Initial protocol quic
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF ICMP proxy will use 192.168.64.2 as source for IPv4
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF ICMP proxy will use fd4d:4ac4:113c:fdbc:7c18:c0ff:fe50:daec in zone enp0s1 as source for IPv6
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF ICMP proxy will use 192.168.64.2 as source for IPv4
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF ICMP proxy will use fd4d:4ac4:113c:fdbc:7c18:c0ff:fe50:daec in zone enp0s1 as source for IPv6
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Starting metrics server on 127.0.0.1:20241/metrics
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.192.107
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF +-------------------------------------------------------------------------------------+
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |                               CONNECTIVITY PRE-CHECKS                               |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF +-------------------------------------------------------------------------------------+
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  COMPONENT         TARGET                     STATUS  DETAILS                       |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  DNS Resolution    region1.v2.argotunnel.com  PASS    DNS Resolved successfully     |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  DNS Resolution    region2.v2.argotunnel.com  PASS    DNS Resolved successfully     |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  UDP Connectivity  region1.v2.argotunnel.com  PASS    QUIC connection successful    |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  UDP Connectivity  region2.v2.argotunnel.com  PASS    QUIC connection successful    |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  TCP Connectivity  region1.v2.argotunnel.com  PASS    HTTP/2 connection successful  |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  TCP Connectivity  region2.v2.argotunnel.com  PASS    HTTP/2 connection successful  |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  Cloudflare API    api.cloudflare.com:443     PASS    API is reachable              |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |                                                                                     |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF |  SUMMARY: Environment is healthy. cloudflared will use 'quic' as primary protocol.  |
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF +-------------------------------------------------------------------------------------+
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="DNS Resolution" details="DNS Resolved successfully" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=region1.v2.argotunnel.com
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="DNS Resolution" details="DNS Resolved successfully" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=region2.v2.argotunnel.com
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="UDP Connectivity" details="QUIC connection successful" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=region1.v2.argotunnel.com
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="UDP Connectivity" details="QUIC connection successful" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=region2.v2.argotunnel.com
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="TCP Connectivity" details="HTTP/2 connection successful" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=region1.v2.argotunnel.com
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="TCP Connectivity" details="HTTP/2 connection successful" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=region2.v2.argotunnel.com
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck component="Cloudflare API" details="API is reachable" run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a status=pass target=api.cloudflare.com:443
+Nov 17 22:49:28 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:28Z INF precheck complete hard_fail=false run_id=26cf3efa-a7e9-4171-866e-ef886546ce0a suggested_protocol=quic
+Nov 17 22:49:29 termometro-acs termometro-cloudflared[13675]: 2026-11-18T01:49:29Z INF Registered tunnel connection connIndex=0 connection=7ff9c923-5f6a-49f4-838c-3f468e819b2d event=0 ip=198.41.192.107 location=gru13 protocol=quic
+Nov 17 23:20:44 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:20:44Z ERR Serve tunnel error error="datagram manager error: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+Nov 17 23:20:44 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:20:44Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.107
+Nov 17 23:20:44 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:20:44Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.200.73
+Nov 17 23:20:45 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:20:45Z INF Registered tunnel connection connIndex=0 connection=28ff1be5-7455-4ae0-a217-a70cc344852d event=0 ip=198.41.200.73 location=gru18 protocol=quic
+Nov 17 23:21:12 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:21:12Z ERR Serve tunnel error error="datagram manager error: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.73
+Nov 17 23:21:12 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:21:12Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.200.73
+Nov 17 23:21:13 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:21:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.192.37
+Nov 17 23:21:14 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:21:14Z INF Registered tunnel connection connIndex=0 connection=e896789f-ec70-4c52-a2a9-65954ba7ee7f event=0 ip=198.41.192.37 location=gru13 protocol=quic
+Nov 17 23:21:59 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:21:59Z ERR Serve tunnel error error="datagram manager error: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.37
+Nov 17 23:21:59 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:21:59Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.37
+Nov 17 23:22:00 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:22:00Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.192.27
+Nov 17 23:22:00 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:22:00Z INF Registered tunnel connection connIndex=0 connection=b2f8a820-8e77-4644-b52a-5ac213971da6 event=0 ip=198.41.192.27 location=gru11 protocol=quic
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopping termometro-cloudflared.service - Termometro do ACS - tunel publico (cloudflared quick tunnel)...
+Nov 17 23:43:15 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:43:15Z INF Initiating graceful shutdown due to signal terminated ...
+Nov 17 23:43:15 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:43:15Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.27
+Nov 17 23:43:15 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:43:15Z ERR Connection terminated connIndex=0
+Nov 17 23:43:15 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:43:15Z ERR no more connections active and exiting
+Nov 17 23:43:15 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:43:15Z INF Tunnel server stopped
+Nov 17 23:43:15 termometro-acs termometro-cloudflared[13675]: 2026-11-18T02:43:15Z INF Metrics server stopped
+Nov 17 23:43:15 termometro-acs systemd[1]: termometro-cloudflared.service: Deactivated successfully.
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopped termometro-cloudflared.service - Termometro do ACS - tunel publico (cloudflared quick tunnel).
+Nov 17 23:43:15 termometro-acs systemd[1]: termometro-cloudflared.service: Consumed 9.296s CPU time over 53min 52.385s wall clock time, 18.5M memory peak, 1.8M memory swap peak.
+-- Boot 4de2a1ef8dc14614be1cb81f1262bd1b --
+Nov 17 23:42:28 termometro-acs systemd[1]: Started termometro-cloudflared.service - Termometro do ACS - tunel publico (cloudflared quick tunnel).
+Nov 17 23:42:28 termometro-acs termometro-cloudflared[1234]: 2026-11-18T02:42:28Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+Nov 17 23:42:28 termometro-acs termometro-cloudflared[1234]: 2026-11-18T02:42:28Z INF Requesting new quick Tunnel on trycloudflare.com...
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF +--------------------------------------------------------------------------------------------+
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  https://string-wagner-aquarium-classification.trycloudflare.com                           |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF +--------------------------------------------------------------------------------------------+
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Version 2026.11.1 (Checksum b155cec3e48e489cfb8e5c602769fb8c771083018d8881d68b4d18a791567c5a)
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF GOOS: linux, GOVersion: go1.27.4, GoArch: arm64
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Settings: map[ha-connections:1 no-autoupdate:true url:http://127.0.0.1:5080]
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF cloudflared will not automatically update if installed by a package manager.
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Generated Connector ID: c33dfcd4-8376-4edd-b2ea-f27b84a4aa4b
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Initial protocol quic
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF ICMP proxy will use 192.168.64.2 as source for IPv4
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF ICMP proxy will use fd4d:4ac4:113c:fdbc:7c18:c0ff:fe50:daec in zone enp0s1 as source for IPv6
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF ICMP proxy will use 192.168.64.2 as source for IPv4
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF ICMP proxy will use fd4d:4ac4:113c:fdbc:7c18:c0ff:fe50:daec in zone enp0s1 as source for IPv6
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Starting metrics server on 127.0.0.1:20241/metrics
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.200.63
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF +-------------------------------------------------------------------------------------+
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |                               CONNECTIVITY PRE-CHECKS                               |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF +-------------------------------------------------------------------------------------+
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  COMPONENT         TARGET                     STATUS  DETAILS                       |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  DNS Resolution    region1.v2.argotunnel.com  PASS    DNS Resolved successfully     |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  DNS Resolution    region2.v2.argotunnel.com  PASS    DNS Resolved successfully     |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  UDP Connectivity  region1.v2.argotunnel.com  PASS    QUIC connection successful    |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  UDP Connectivity  region2.v2.argotunnel.com  PASS    QUIC connection successful    |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  TCP Connectivity  region1.v2.argotunnel.com  PASS    HTTP/2 connection successful  |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  TCP Connectivity  region2.v2.argotunnel.com  PASS    HTTP/2 connection successful  |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  Cloudflare API    api.cloudflare.com:443     PASS    API is reachable              |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |                                                                                     |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF |  SUMMARY: Environment is healthy. cloudflared will use 'quic' as primary protocol.  |
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF +-------------------------------------------------------------------------------------+
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="DNS Resolution" details="DNS Resolved successfully" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=region1.v2.argotunnel.com
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="DNS Resolution" details="DNS Resolved successfully" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=region2.v2.argotunnel.com
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="UDP Connectivity" details="QUIC connection successful" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=region1.v2.argotunnel.com
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="UDP Connectivity" details="QUIC connection successful" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=region2.v2.argotunnel.com
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="TCP Connectivity" details="HTTP/2 connection successful" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=region1.v2.argotunnel.com
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="TCP Connectivity" details="HTTP/2 connection successful" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=region2.v2.argotunnel.com
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck component="Cloudflare API" details="API is reachable" run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 status=pass target=api.cloudflare.com:443
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck complete hard_fail=false run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 suggested_protocol=quic
+Nov 18 00:01:15 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:15Z INF Registered tunnel connection connIndex=0 connection=b24dab60-4a24-4a7f-886a-8bd066af88ad event=0 ip=198.41.200.63 location=gru21 protocol=quic
+Nov 18 00:18:48 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:48Z ERR Serve tunnel error error="datagram manager error: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+Nov 18 00:18:48 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:48Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.200.63
+Nov 18 00:18:48 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.192.77
+Nov 18 00:18:49 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:49Z INF Registered tunnel connection connIndex=0 connection=9fcd54a9-8141-46c8-a089-2f8be360f5a7 event=0 ip=198.41.192.77 location=gru20 protocol=quic
+Nov 18 00:19:35 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:35Z ERR Serve tunnel error error="accept stream listener error: failed to accept QUIC stream: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+Nov 18 00:19:35 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:35Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.77
+Nov 18 00:19:37 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.200.53
+Nov 18 00:19:38 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:38Z INF Registered tunnel connection connIndex=0 connection=166725c3-001d-4f47-97eb-3939bd4dcbc5 event=0 ip=198.41.200.53 location=gru19 protocol=quic

@@ -199,11 +199,11 @@ SUDO
 
   # Pastas: cada uma com dono e permissao pensados.
   #   /opt/termometro        codigo publicado    dono root, leitura para o grupo da app
-  #   /etc/termometro        configuracao        dono root, so o grupo da app le (tem segredos)
+  #   /etc/termometro        configuracao        dono root; outros so atravessam (o monitor le monitor.conf), o .env com segredos e 640
   #   /var/lib/termometro    dados da app        dono da app
   #   /var/log/termometro    logs                grupo de logs escreve, o resto le
   executar "criando /opt/termometro" install -d -m 0755 -o root -g "$GRUPO_APP" /opt/termometro
-  executar "criando /etc/termometro" install -d -m 0750 -o root -g "$GRUPO_APP" /etc/termometro
+  executar "criando /etc/termometro" install -d -m 0751 -o root -g "$GRUPO_APP" /etc/termometro
   executar "criando /var/lib/termometro" install -d -m 0750 -o "$USUARIO_APP" -g "$GRUPO_APP" /var/lib/termometro
   executar "criando /var/log/termometro" install -d -m 2775 -o root -g "$GRUPO_LOGS" /var/log/termometro
   if [[ "$DRY_RUN" != "1" ]]; then

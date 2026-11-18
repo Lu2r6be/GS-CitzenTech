@@ -1,0 +1,292 @@
+Nov 17 22:49:22 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 22:49:22 termometro-acs termometro-monitor[13507]: 2026-11-17T22:49:22-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 22:49:22 termometro-acs termometro-monitor[13507]: 2026-11-17T22:49:22-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 22:49:22 termometro-acs termometro-monitor[13560]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 22:49:23 termometro-acs termometro-monitor[13507]: 2026-11-17T22:49:23-03:00 [monitor] INFO cpu=84% ram=53% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:49:54 termometro-acs termometro-monitor[13507]: 2026-11-17T22:49:54-03:00 [monitor] INFO cpu=6% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:50:25 termometro-acs termometro-monitor[13507]: 2026-11-17T22:50:25-03:00 [monitor] INFO cpu=4% ram=55% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:50:56 termometro-acs termometro-monitor[13507]: 2026-11-17T22:50:56-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:51:27 termometro-acs termometro-monitor[13507]: 2026-11-17T22:51:27-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:51:59 termometro-acs termometro-monitor[13507]: 2026-11-17T22:51:59-03:00 [monitor] INFO cpu=2% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:51:59 termometro-acs termometro-monitor[15640]: INFO cpu=2% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:52:30 termometro-acs termometro-monitor[13507]: 2026-11-17T22:52:30-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:53:01 termometro-acs termometro-monitor[13507]: 2026-11-17T22:53:01-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:53:01 termometro-acs termometro-monitor[15728]: INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:53:32 termometro-acs termometro-monitor[13507]: 2026-11-17T22:53:32-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:54:03 termometro-acs termometro-monitor[13507]: 2026-11-17T22:54:03-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:54:03 termometro-acs termometro-monitor[15806]: INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:54:34 termometro-acs termometro-monitor[13507]: 2026-11-17T22:54:34-03:00 [monitor] INFO cpu=2% ram=53% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:54:34 termometro-acs termometro-monitor[15859]: INFO cpu=2% ram=53% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:55:05 termometro-acs termometro-monitor[13507]: 2026-11-17T22:55:05-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:55:36 termometro-acs termometro-monitor[13507]: 2026-11-17T22:55:36-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:56:07 termometro-acs termometro-monitor[13507]: 2026-11-17T22:56:07-03:00 [monitor] INFO cpu=1% ram=53% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:56:38 termometro-acs termometro-monitor[13507]: 2026-11-17T22:56:38-03:00 [monitor] INFO cpu=1% ram=53% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:56:38 termometro-acs termometro-monitor[16052]: INFO cpu=1% ram=53% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:57:09 termometro-acs termometro-monitor[13507]: 2026-11-17T22:57:09-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:57:40 termometro-acs termometro-monitor[13507]: 2026-11-17T22:57:40-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:58:11 termometro-acs termometro-monitor[13507]: 2026-11-17T22:58:11-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:58:43 termometro-acs termometro-monitor[13507]: 2026-11-17T22:58:43-03:00 [monitor] INFO cpu=1% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:59:14 termometro-acs termometro-monitor[13507]: 2026-11-17T22:59:14-03:00 [monitor] INFO cpu=4% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:59:14 termometro-acs termometro-monitor[16281]: INFO cpu=4% ram=54% disco=34% api=ok servicos_parados=nenhum
+Nov 17 22:59:45 termometro-acs termometro-monitor[13507]: 2026-11-17T22:59:45-03:00 [monitor] INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:00:16 termometro-acs termometro-monitor[13507]: 2026-11-17T23:00:16-03:00 [monitor] INFO cpu=0% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:00:16 termometro-acs termometro-monitor[16362]: INFO cpu=0% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:00:47 termometro-acs termometro-monitor[13507]: 2026-11-17T23:00:47-03:00 [monitor] INFO cpu=2% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:00:47 termometro-acs termometro-monitor[16487]: INFO cpu=2% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:01:18 termometro-acs termometro-monitor[13507]: 2026-11-17T23:01:18-03:00 [monitor] INFO cpu=0% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:01:18 termometro-acs termometro-monitor[16523]: INFO cpu=0% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:01:49 termometro-acs termometro-monitor[13507]: 2026-11-17T23:01:49-03:00 [monitor] INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:01:49 termometro-acs termometro-monitor[16557]: INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:02:20 termometro-acs termometro-monitor[13507]: 2026-11-17T23:02:20-03:00 [monitor] INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:02:20 termometro-acs termometro-monitor[16592]: INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:02:51 termometro-acs termometro-monitor[13507]: 2026-11-17T23:02:51-03:00 [monitor] INFO cpu=0% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:02:51 termometro-acs termometro-monitor[16625]: INFO cpu=0% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:03:22 termometro-acs termometro-monitor[13507]: 2026-11-17T23:03:22-03:00 [monitor] INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:03:22 termometro-acs termometro-monitor[16659]: INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:03:53 termometro-acs termometro-monitor[13507]: 2026-11-17T23:03:53-03:00 [monitor] INFO cpu=1% ram=41% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:04:24 termometro-acs termometro-monitor[13507]: 2026-11-17T23:04:24-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:04:55 termometro-acs termometro-monitor[13507]: 2026-11-17T23:04:55-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:04:55 termometro-acs termometro-monitor[16768]: INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:05:26 termometro-acs termometro-monitor[13507]: 2026-11-17T23:05:26-03:00 [monitor] INFO cpu=2% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:05:57 termometro-acs termometro-monitor[13507]: 2026-11-17T23:05:57-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:06:29 termometro-acs termometro-monitor[13507]: 2026-11-17T23:06:29-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:07:00 termometro-acs termometro-monitor[13507]: 2026-11-17T23:07:00-03:00 [monitor] INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:07:31 termometro-acs termometro-monitor[13507]: 2026-11-17T23:07:31-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:08:02 termometro-acs termometro-monitor[13507]: 2026-11-17T23:08:02-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:08:33 termometro-acs termometro-monitor[13507]: 2026-11-17T23:08:33-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:08:33 termometro-acs termometro-monitor[16996]: INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:08:42 termometro-acs systemd[1]: Stopping termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos...
+Nov 17 23:08:42 termometro-acs termometro-monitor[13507]: 2026-11-17T23:08:42-03:00 [monitor] INFO recebi pedido de parada; encerrando
+Nov 17 23:08:42 termometro-acs termometro-monitor[17011]: INFO recebi pedido de parada; encerrando
+Nov 17 23:08:42 termometro-acs termometro-monitor[13507]: 2026-11-17T23:08:42-03:00 [monitor] OK fim sem erros (1160s)
+Nov 17 23:08:42 termometro-acs termometro-monitor[17014]: OK fim sem erros (1160s)
+Nov 17 23:08:42 termometro-acs systemd[1]: termometro-monitor.service: Deactivated successfully.
+Nov 17 23:08:42 termometro-acs systemd[1]: Stopped termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:08:42 termometro-acs systemd[1]: termometro-monitor.service: Consumed 2.361s CPU time over 19min 20.053s wall clock time, 7.6M memory peak, 12K memory swap peak.
+Nov 17 23:09:00 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:09:00 termometro-acs termometro-monitor[17047]: 2026-11-17T23:09:00-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:09:00 termometro-acs termometro-monitor[17066]: INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:09:00 termometro-acs termometro-monitor[17047]: 2026-11-17T23:09:00-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:09:00 termometro-acs termometro-monitor[17068]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:09:01 termometro-acs termometro-monitor[17047]: 2026-11-17T23:09:01-03:00 [monitor] INFO cpu=2% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:09:32 termometro-acs termometro-monitor[17047]: 2026-11-17T23:09:32-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:10:03 termometro-acs termometro-monitor[17047]: 2026-11-17T23:10:03-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:10:34 termometro-acs termometro-monitor[17047]: 2026-11-17T23:10:34-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:11:06 termometro-acs termometro-monitor[17047]: 2026-11-17T23:11:06-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:11:37 termometro-acs termometro-monitor[17047]: 2026-11-17T23:11:37-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:12:08 termometro-acs termometro-monitor[17047]: 2026-11-17T23:12:08-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:12:39 termometro-acs termometro-monitor[17047]: 2026-11-17T23:12:39-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:13:10 termometro-acs termometro-monitor[17047]: 2026-11-17T23:13:10-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:13:41 termometro-acs termometro-monitor[17047]: 2026-11-17T23:13:41-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:13:41 termometro-acs termometro-monitor[17399]: INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:14:12 termometro-acs termometro-monitor[17047]: 2026-11-17T23:14:12-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:14:43 termometro-acs termometro-monitor[17047]: 2026-11-17T23:14:43-03:00 [monitor] INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:15:14 termometro-acs termometro-monitor[17047]: 2026-11-17T23:15:14-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:15:14 termometro-acs termometro-monitor[17499]: INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:15:45 termometro-acs termometro-monitor[17047]: 2026-11-17T23:15:45-03:00 [monitor] INFO cpu=0% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:16:16 termometro-acs termometro-monitor[17047]: 2026-11-17T23:16:16-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:16:47 termometro-acs termometro-monitor[17047]: 2026-11-17T23:16:47-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:17:18 termometro-acs termometro-monitor[17047]: 2026-11-17T23:17:18-03:00 [monitor] INFO cpu=1% ram=34% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:17:49 termometro-acs termometro-monitor[17047]: 2026-11-17T23:17:49-03:00 [monitor] INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:18:20 termometro-acs termometro-monitor[17047]: 2026-11-17T23:18:20-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:18:51 termometro-acs termometro-monitor[17047]: 2026-11-17T23:18:51-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:19:23 termometro-acs termometro-monitor[17047]: 2026-11-17T23:19:23-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:19:54 termometro-acs termometro-monitor[17047]: 2026-11-17T23:19:54-03:00 [monitor] INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:20:25 termometro-acs termometro-monitor[17047]: 2026-11-17T23:20:25-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:20:56 termometro-acs termometro-monitor[17047]: 2026-11-17T23:20:56-03:00 [monitor] INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:20:56 termometro-acs termometro-monitor[17865]: INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:21:27 termometro-acs termometro-monitor[17047]: 2026-11-17T23:21:27-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:21:58 termometro-acs termometro-monitor[17047]: 2026-11-17T23:21:58-03:00 [monitor] INFO cpu=3% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:22:29 termometro-acs termometro-monitor[17047]: 2026-11-17T23:22:29-03:00 [monitor] INFO cpu=0% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:23:00 termometro-acs termometro-monitor[17047]: 2026-11-17T23:23:00-03:00 [monitor] INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:23:00 termometro-acs termometro-monitor[17996]: INFO cpu=1% ram=35% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:23:31 termometro-acs termometro-monitor[17047]: 2026-11-17T23:23:31-03:00 [monitor] INFO cpu=4% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:24:02 termometro-acs termometro-monitor[17047]: 2026-11-17T23:24:02-03:00 [monitor] INFO cpu=1% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:24:33 termometro-acs termometro-monitor[17047]: 2026-11-17T23:24:33-03:00 [monitor] INFO cpu=0% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:25:04 termometro-acs termometro-monitor[17047]: 2026-11-17T23:25:04-03:00 [monitor] INFO cpu=1% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:25:04 termometro-acs termometro-monitor[18239]: INFO cpu=1% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:25:36 termometro-acs termometro-monitor[17047]: 2026-11-17T23:25:36-03:00 [monitor] INFO cpu=0% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:26:07 termometro-acs termometro-monitor[17047]: 2026-11-17T23:26:07-03:00 [monitor] INFO cpu=100% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:26:07 termometro-acs termometro-monitor[18350]: INFO cpu=100% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:26:07 termometro-acs termometro-monitor[17047]: 2026-11-17T23:26:07-03:00 [monitor] ALERTA CPU em 100% (limite 85%)
+Nov 17 23:26:07 termometro-acs termometro-monitor[18352]: ALERTA CPU em 100% (limite 85%)
+Nov 17 23:26:38 termometro-acs termometro-monitor[17047]: 2026-11-17T23:26:38-03:00 [monitor] INFO cpu=100% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:26:38 termometro-acs termometro-monitor[18387]: INFO cpu=100% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:26:38 termometro-acs termometro-monitor[17047]: 2026-11-17T23:26:38-03:00 [monitor] ALERTA CPU em 100% (limite 85%)
+Nov 17 23:26:38 termometro-acs termometro-monitor[18389]: ALERTA CPU em 100% (limite 85%)
+Nov 17 23:27:09 termometro-acs termometro-monitor[17047]: 2026-11-17T23:27:09-03:00 [monitor] INFO cpu=19% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:27:40 termometro-acs termometro-monitor[17047]: 2026-11-17T23:27:40-03:00 [monitor] INFO cpu=50% ram=59% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:27:40 termometro-acs termometro-monitor[18504]: INFO cpu=50% ram=59% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:28:11 termometro-acs termometro-monitor[17047]: 2026-11-17T23:28:11-03:00 [monitor] INFO cpu=51% ram=59% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:28:11 termometro-acs termometro-monitor[18540]: INFO cpu=51% ram=59% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:28:42 termometro-acs termometro-monitor[17047]: 2026-11-17T23:28:42-03:00 [monitor] INFO cpu=17% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:28:42 termometro-acs termometro-monitor[18586]: INFO cpu=17% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:29:13 termometro-acs termometro-monitor[17047]: 2026-11-17T23:29:13-03:00 [monitor] INFO cpu=1% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:29:13 termometro-acs termometro-monitor[18622]: INFO cpu=1% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:29:44 termometro-acs termometro-monitor[17047]: 2026-11-17T23:29:44-03:00 [monitor] INFO cpu=1% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:30:15 termometro-acs termometro-monitor[17047]: 2026-11-17T23:30:15-03:00 [monitor] INFO cpu=0% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:30:46 termometro-acs termometro-monitor[17047]: 2026-11-17T23:30:46-03:00 [monitor] INFO cpu=1% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:31:17 termometro-acs termometro-monitor[17047]: 2026-11-17T23:31:17-03:00 [monitor] INFO cpu=0% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:31:17 termometro-acs termometro-monitor[18765]: INFO cpu=0% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:31:48 termometro-acs termometro-monitor[17047]: 2026-11-17T23:31:48-03:00 [monitor] INFO cpu=50% ram=65% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:31:48 termometro-acs termometro-monitor[18835]: INFO cpu=50% ram=65% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:32:19 termometro-acs termometro-monitor[17047]: 2026-11-17T23:32:19-03:00 [monitor] INFO cpu=50% ram=62% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:32:19 termometro-acs termometro-monitor[18871]: INFO cpu=50% ram=62% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:32:51 termometro-acs termometro-monitor[17047]: 2026-11-17T23:32:50-03:00 [monitor] INFO cpu=50% ram=62% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:33:06 termometro-acs systemd[1]: Stopping termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos...
+Nov 17 23:33:06 termometro-acs termometro-monitor[17047]:  [monitor] INFO recebi pedido de parada; encerrando
+Nov 17 23:33:06 termometro-acs termometro-monitor[17047]: 2026-11-17T23:33:06-03:00 [monitor] OK fim sem erros (1446s)
+Nov 17 23:33:06 termometro-acs systemd[1]: termometro-monitor.service: Deactivated successfully.
+Nov 17 23:33:06 termometro-acs systemd[1]: Stopped termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:33:06 termometro-acs systemd[1]: termometro-monitor.service: Consumed 2.725s CPU time over 24min 5.445s wall clock time, 7.6M memory peak.
+Nov 17 23:33:06 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:33:06 termometro-acs termometro-monitor[18942]: 2026-11-17T23:33:06-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:33:06 termometro-acs termometro-monitor[18942]: 2026-11-17T23:33:06-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:33:06 termometro-acs termometro-monitor[18984]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:33:07 termometro-acs termometro-monitor[18942]: 2026-11-17T23:33:07-03:00 [monitor] INFO cpu=50% ram=64% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:33:07 termometro-acs termometro-monitor[19007]: INFO cpu=50% ram=64% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:33:38 termometro-acs termometro-monitor[18942]: 2026-11-17T23:33:38-03:00 [monitor] INFO cpu=50% ram=64% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:34:09 termometro-acs termometro-monitor[18942]: 2026-11-17T23:34:09-03:00 [monitor] INFO cpu=50% ram=64% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:34:09 termometro-acs termometro-monitor[19078]: INFO cpu=50% ram=64% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:34:40 termometro-acs termometro-monitor[18942]: 2026-11-17T23:34:40-03:00 [monitor] INFO cpu=1% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:35:11 termometro-acs termometro-monitor[18942]: 2026-11-17T23:35:11-03:00 [monitor] INFO cpu=3% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:35:31 termometro-acs systemd[1]: Stopping termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos...
+Nov 17 23:35:31 termometro-acs termometro-monitor[18942]: 2026-11-17T23:35:31-03:00 [monitor] INFO recebi pedido de parada; encerrando
+Nov 17 23:35:31 termometro-acs termometro-monitor[18942]: 2026-11-17T23:35:31-03:00 [monitor] OK fim sem erros (145s)
+Nov 17 23:35:31 termometro-acs termometro-monitor[19203]: OK fim sem erros (145s)
+Nov 17 23:35:31 termometro-acs systemd[1]: termometro-monitor.service: Deactivated successfully.
+Nov 17 23:35:31 termometro-acs systemd[1]: Stopped termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:35:31 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:35:31 termometro-acs termometro-monitor[19207]: 2026-11-17T23:35:31-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:35:31 termometro-acs termometro-monitor[19207]: 2026-11-17T23:35:31-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=50% disco=85%)
+Nov 17 23:35:31 termometro-acs termometro-monitor[19225]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=50% disco=85%)
+Nov 17 23:35:32 termometro-acs termometro-monitor[19207]: 2026-11-17T23:35:32-03:00 [monitor] INFO cpu=0% ram=32% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:36:03 termometro-acs termometro-monitor[19207]: 2026-11-17T23:36:03-03:00 [monitor] INFO cpu=49% ram=66% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:36:03 termometro-acs termometro-monitor[19207]: 2026-11-17T23:36:03-03:00 [monitor] ALERTA RAM em 66% (limite 50%)
+Nov 17 23:36:03 termometro-acs termometro-monitor[19313]: ALERTA RAM em 66% (limite 50%)
+Nov 17 23:36:34 termometro-acs termometro-monitor[19207]: 2026-11-17T23:36:34-03:00 [monitor] INFO cpu=50% ram=67% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:36:34 termometro-acs termometro-monitor[19346]: INFO cpu=50% ram=67% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:36:34 termometro-acs termometro-monitor[19207]: 2026-11-17T23:36:34-03:00 [monitor] ALERTA RAM em 67% (limite 50%)
+Nov 17 23:36:34 termometro-acs termometro-monitor[19348]: ALERTA RAM em 67% (limite 50%)
+Nov 17 23:37:05 termometro-acs termometro-monitor[19207]: 2026-11-17T23:37:05-03:00 [monitor] INFO cpu=50% ram=67% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:37:05 termometro-acs termometro-monitor[19382]: INFO cpu=50% ram=67% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:37:05 termometro-acs termometro-monitor[19207]: 2026-11-17T23:37:05-03:00 [monitor] ALERTA RAM em 67% (limite 50%)
+Nov 17 23:37:05 termometro-acs termometro-monitor[19384]: ALERTA RAM em 67% (limite 50%)
+Nov 17 23:37:36 termometro-acs termometro-monitor[19207]: 2026-11-17T23:37:36-03:00 [monitor] INFO cpu=0% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:38:07 termometro-acs termometro-monitor[19207]: 2026-11-17T23:38:07-03:00 [monitor] INFO cpu=0% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:38:07 termometro-acs termometro-monitor[19465]: INFO cpu=0% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:38:38 termometro-acs termometro-monitor[19207]: 2026-11-17T23:38:38-03:00 [monitor] INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:38:38 termometro-acs termometro-monitor[19502]: INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:39:09 termometro-acs termometro-monitor[19207]: 2026-11-17T23:39:09-03:00 [monitor] INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:39:09 termometro-acs termometro-monitor[19536]: INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:39:40 termometro-acs termometro-monitor[19207]: 2026-11-17T23:39:40-03:00 [monitor] INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:40:07 termometro-acs systemd[1]: Stopping termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos...
+Nov 17 23:40:07 termometro-acs termometro-monitor[19207]: 2026-11-17T23:40:07-03:00 [monitor] INFO recebi pedido de parada; encerrando
+Nov 17 23:40:07 termometro-acs termometro-monitor[19615]: INFO recebi pedido de parada; encerrando
+Nov 17 23:40:07 termometro-acs termometro-monitor[19207]: 2026-11-17T23:40:07-03:00 [monitor] OK fim sem erros (276s)
+Nov 17 23:40:07 termometro-acs termometro-monitor[19618]: OK fim sem erros (276s)
+Nov 17 23:40:07 termometro-acs systemd[1]: termometro-monitor.service: Deactivated successfully.
+Nov 17 23:40:07 termometro-acs systemd[1]: Stopped termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:40:07 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:40:07 termometro-acs termometro-monitor[19622]: 2026-11-17T23:40:07-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:40:07 termometro-acs termometro-monitor[19622]: 2026-11-17T23:40:07-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=40%)
+Nov 17 23:40:07 termometro-acs termometro-monitor[19659]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=40%)
+Nov 17 23:40:08 termometro-acs termometro-monitor[19622]: 2026-11-17T23:40:08-03:00 [monitor] INFO cpu=2% ram=33% disco=44% api=ok servicos_parados=nenhum
+Nov 17 23:40:08 termometro-acs termometro-monitor[19622]: 2026-11-17T23:40:08-03:00 [monitor] ALERTA DISCO em 44% em / (limite 40%)
+Nov 17 23:40:39 termometro-acs termometro-monitor[19622]: 2026-11-17T23:40:39-03:00 [monitor] INFO cpu=0% ram=33% disco=44% api=ok servicos_parados=nenhum
+Nov 17 23:40:39 termometro-acs termometro-monitor[19731]: INFO cpu=0% ram=33% disco=44% api=ok servicos_parados=nenhum
+Nov 17 23:40:39 termometro-acs termometro-monitor[19622]: 2026-11-17T23:40:39-03:00 [monitor] ALERTA DISCO em 44% em / (limite 40%)
+Nov 17 23:40:39 termometro-acs termometro-monitor[19733]: ALERTA DISCO em 44% em / (limite 40%)
+Nov 17 23:41:10 termometro-acs termometro-monitor[19622]: 2026-11-17T23:41:10-03:00 [monitor] INFO cpu=1% ram=33% disco=44% api=ok servicos_parados=nenhum
+Nov 17 23:41:10 termometro-acs termometro-monitor[19622]: 2026-11-17T23:41:10-03:00 [monitor] ALERTA DISCO em 44% em / (limite 40%)
+Nov 17 23:41:11 termometro-acs termometro-monitor[19769]: ALERTA DISCO em 44% em / (limite 40%)
+Nov 17 23:41:35 termometro-acs systemd[1]: Stopping termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos...
+Nov 17 23:41:35 termometro-acs termometro-monitor[19622]: 2026-11-17T23:41:35-03:00 [monitor] INFO recebi pedido de parada; encerrando
+Nov 17 23:41:35 termometro-acs termometro-monitor[19622]: 2026-11-17T23:41:35-03:00 [monitor] OK fim sem erros (88s)
+Nov 17 23:41:35 termometro-acs systemd[1]: termometro-monitor.service: Deactivated successfully.
+Nov 17 23:41:35 termometro-acs systemd[1]: Stopped termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:41:35 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:41:35 termometro-acs termometro-monitor[19827]: 2026-11-17T23:41:35-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:41:35 termometro-acs termometro-monitor[19827]: 2026-11-17T23:41:35-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:41:35 termometro-acs termometro-monitor[19846]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:41:36 termometro-acs termometro-monitor[19827]: 2026-11-17T23:41:36-03:00 [monitor] INFO cpu=3% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:42:07 termometro-acs termometro-monitor[19827]: 2026-11-17T23:42:07-03:00 [monitor] INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:42:38 termometro-acs termometro-monitor[19827]: 2026-11-17T23:42:38-03:00 [monitor] INFO cpu=2% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:43:09 termometro-acs termometro-monitor[19827]: 2026-11-17T23:43:09-03:00 [monitor] INFO cpu=1% ram=33% disco=34% api=ok servicos_parados=nenhum
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopping termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos...
+Nov 17 23:43:15 termometro-acs termometro-monitor[19827]: 2026-11-17T23:43:15-03:00 [monitor] INFO recebi pedido de parada; encerrando
+Nov 17 23:43:15 termometro-acs termometro-monitor[19827]: 2026-11-17T23:43:15-03:00 [monitor] OK fim sem erros (100s)
+Nov 17 23:43:15 termometro-acs termometro-monitor[20010]: OK fim sem erros (100s)
+Nov 17 23:43:15 termometro-acs systemd[1]: termometro-monitor.service: Deactivated successfully.
+Nov 17 23:43:15 termometro-acs systemd[1]: Stopped termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+-- Boot 4de2a1ef8dc14614be1cb81f1262bd1b --
+Nov 17 23:42:28 termometro-acs systemd[1]: Started termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos.
+Nov 17 23:42:28 termometro-acs termometro-monitor[1235]: 2026-11-17T23:42:28-03:00 [monitor] INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:42:28 termometro-acs termometro-monitor[1274]: INFO inicio (usuario=monitor, maquina=termometro-acs, DRY_RUN=0)
+Nov 17 23:42:28 termometro-acs termometro-monitor[1235]: 2026-11-17T23:42:28-03:00 [monitor] INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:42:28 termometro-acs termometro-monitor[1278]: INFO monitor em ciclos: a cada 30s (limites cpu=85% ram=85% disco=85%)
+Nov 17 23:42:29 termometro-acs termometro-monitor[1235]: 2026-11-17T23:42:29-03:00 [monitor] INFO cpu=36% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:01:41 termometro-acs termometro-monitor[1235]: 2026-11-18T00:01:41-03:00 [monitor] INFO cpu=7% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:02:12 termometro-acs termometro-monitor[1235]: 2026-11-18T00:02:12-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:02:43 termometro-acs termometro-monitor[1235]: 2026-11-18T00:02:43-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:03:14 termometro-acs termometro-monitor[1235]: 2026-11-18T00:03:14-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:03:45 termometro-acs termometro-monitor[1235]: 2026-11-18T00:03:45-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:03:46 termometro-acs termometro-monitor[1785]: INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:04:17 termometro-acs termometro-monitor[1235]: 2026-11-18T00:04:17-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:04:17 termometro-acs termometro-monitor[1885]: INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:04:48 termometro-acs termometro-monitor[1235]: 2026-11-18T00:04:48-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:05:19 termometro-acs termometro-monitor[1235]: 2026-11-18T00:05:19-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:05:50 termometro-acs termometro-monitor[1235]: 2026-11-18T00:05:50-03:00 [monitor] INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:05:50 termometro-acs termometro-monitor[1992]: INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:06:21 termometro-acs termometro-monitor[1235]: 2026-11-18T00:06:21-03:00 [monitor] INFO cpu=1% ram=30% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:06:21 termometro-acs termometro-monitor[2049]: INFO cpu=1% ram=30% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:06:52 termometro-acs termometro-monitor[1235]: 2026-11-18T00:06:52-03:00 [monitor] INFO cpu=0% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:06:52 termometro-acs termometro-monitor[2085]: INFO cpu=0% ram=31% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:07:23 termometro-acs termometro-monitor[1235]: 2026-11-18T00:07:23-03:00 [monitor] INFO cpu=2% ram=30% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:07:54 termometro-acs termometro-monitor[1235]: 2026-11-18T00:07:54-03:00 [monitor] INFO cpu=1% ram=24% disco=34% api=falhou servicos_parados=termometro-api
+Nov 18 00:07:54 termometro-acs termometro-monitor[1235]: 2026-11-18T00:07:54-03:00 [monitor] ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:07:54 termometro-acs termometro-monitor[2191]: ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:07:54 termometro-acs termometro-monitor[1235]: 2026-11-18T00:07:54-03:00 [monitor] ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:07:54 termometro-acs termometro-monitor[2193]: ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:08:25 termometro-acs termometro-monitor[1235]: 2026-11-18T00:08:25-03:00 [monitor] INFO cpu=0% ram=24% disco=34% api=falhou servicos_parados=termometro-api
+Nov 18 00:08:25 termometro-acs termometro-monitor[1235]: 2026-11-18T00:08:25-03:00 [monitor] ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:08:25 termometro-acs termometro-monitor[2221]: ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:08:25 termometro-acs termometro-monitor[1235]: 2026-11-18T00:08:25-03:00 [monitor] ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:08:25 termometro-acs termometro-monitor[2223]: ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:08:57 termometro-acs termometro-monitor[1235]: 2026-11-18T00:08:57-03:00 [monitor] INFO cpu=1% ram=24% disco=34% api=falhou servicos_parados=termometro-api
+Nov 18 00:08:57 termometro-acs termometro-monitor[1235]: 2026-11-18T00:08:57-03:00 [monitor] ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:08:57 termometro-acs termometro-monitor[2257]: ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:08:57 termometro-acs termometro-monitor[1235]: 2026-11-18T00:08:57-03:00 [monitor] ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:08:57 termometro-acs termometro-monitor[2259]: ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:09:28 termometro-acs termometro-monitor[1235]: 2026-11-18T00:09:28-03:00 [monitor] INFO cpu=3% ram=24% disco=34% api=falhou servicos_parados=termometro-api
+Nov 18 00:09:28 termometro-acs termometro-monitor[1235]: 2026-11-18T00:09:28-03:00 [monitor] ERRO FALHA: servicos parados: termometro-api
+Nov 18 00:09:28 termometro-acs termometro-monitor[1235]: 2026-11-18T00:09:28-03:00 [monitor] ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:09:28 termometro-acs termometro-monitor[2290]: ERRO FALHA: a API nao respondeu em http://127.0.0.1:5080/health
+Nov 18 00:09:59 termometro-acs termometro-monitor[1235]: 2026-11-18T00:09:59-03:00 [monitor] INFO cpu=2% ram=29% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:09:59 termometro-acs termometro-monitor[2371]: INFO cpu=2% ram=29% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:10:30 termometro-acs termometro-monitor[1235]: 2026-11-18T00:10:30-03:00 [monitor] INFO cpu=0% ram=29% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:11:01 termometro-acs termometro-monitor[1235]: 2026-11-18T00:11:01-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:11:01 termometro-acs termometro-monitor[2465]: INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:11:32 termometro-acs termometro-monitor[1235]: 2026-11-18T00:11:32-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:12:03 termometro-acs termometro-monitor[1235]: 2026-11-18T00:12:03-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:12:03 termometro-acs termometro-monitor[2538]: INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:12:34 termometro-acs termometro-monitor[1235]: 2026-11-18T00:12:34-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:13:05 termometro-acs termometro-monitor[1235]: 2026-11-18T00:13:05-03:00 [monitor] INFO cpu=2% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:13:05 termometro-acs termometro-monitor[2608]: INFO cpu=2% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:13:36 termometro-acs termometro-monitor[1235]: 2026-11-18T00:13:36-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:14:08 termometro-acs termometro-monitor[1235]: 2026-11-18T00:14:08-03:00 [monitor] INFO cpu=1% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:14:39 termometro-acs termometro-monitor[1235]: 2026-11-18T00:14:39-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:14:39 termometro-acs termometro-monitor[2714]: INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:15:10 termometro-acs termometro-monitor[1235]: 2026-11-18T00:15:10-03:00 [monitor] INFO cpu=0% ram=27% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:15:41 termometro-acs termometro-monitor[1235]: 2026-11-18T00:15:41-03:00 [monitor] INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:15:41 termometro-acs termometro-monitor[2781]: INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:16:12 termometro-acs termometro-monitor[1235]: 2026-11-18T00:16:12-03:00 [monitor] INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:16:43 termometro-acs termometro-monitor[1235]: 2026-11-18T00:16:43-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:17:14 termometro-acs termometro-monitor[1235]: 2026-11-18T00:17:14-03:00 [monitor] INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:17:14 termometro-acs termometro-monitor[2887]: INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:17:45 termometro-acs termometro-monitor[1235]: 2026-11-18T00:17:45-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:18:16 termometro-acs termometro-monitor[1235]: 2026-11-18T00:18:16-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:18:16 termometro-acs termometro-monitor[2952]: INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:18:47 termometro-acs termometro-monitor[1235]: 2026-11-18T00:18:47-03:00 [monitor] INFO cpu=2% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:19:18 termometro-acs termometro-monitor[1235]: 2026-11-18T00:19:18-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:19:50 termometro-acs termometro-monitor[1235]: 2026-11-18T00:19:50-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum

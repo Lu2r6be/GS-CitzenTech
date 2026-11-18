@@ -1,0 +1,53 @@
+# 2026-11-18T00:19:52-03:00 - termometro-acs
+## uptime
+ 00:19:52 up 18 min,  2 users,  load average: 0.04, 0.08, 0.08
+## ultimo boot
+         system boot  2026-11-17 23:42
+## memoria
+               total        used        free      shared  buff/cache   available
+Mem:           1.6Gi       475Mi       694Mi        62Mi       596Mi       1.1Gi
+Swap:          1.8Gi          0B       1.8Gi
+## disco
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv   22G  6.9G   14G  34% /
+## ip
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s1           UP             192.168.64.2/24 fd4d:4ac4:113c:fdbc:7c18:c0ff:fe50:daec/64 fe80::7c18:c0ff:fe50:daec/64 
+## unidades do projeto
+  UNIT                           LOAD   ACTIVE   SUB     DESCRIPTION
+  termometro-api.service         loaded active   running Termometro do ACS - API (.NET)
+  termometro-cloudflared.service loaded active   running Termometro do ACS - tunel publico (cloudflared quick tunnel)
+  termometro-guardiao.service    loaded inactive dead    Termometro do ACS - guardiao (religa servicos parados)
+  termometro-monitor.service     loaded active   running Termometro do ACS - monitor de CPU, RAM, disco e servicos
+  termometro-guardiao.timer      loaded active   waiting Termometro do ACS - guardiao a cada 30 s
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+5 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+## timers
+NEXT                        LEFT LAST                           PASSED UNIT                      ACTIVATES
+Wed 2026-11-18 00:20:21 -03  29s Wed 2026-11-18 00:19:51 -03 966ms ago termometro-guardiao.timer termometro-guardiao.service
+
+1 timers listed.
+Pass --all to see loaded but inactive timers, too.
+## habilitadas no boot
+enabled
+enabled
+enabled
+enabled
+enabled
+## usuarios do projeto
+uid=999(termometro) gid=984(termometro) groups=984(termometro),983(termometro-logs)
+uid=995(monitor) gid=984(termometro) groups=984(termometro),983(termometro-logs)
+uid=1001(operador) gid=1001(operador) groups=1001(operador),983(termometro-logs)
+## permissoes
+drwxr-x--x 2 root       termometro      4096 Nov 18 00:09 /etc/termometro
+drwxr-xr-x 5 root       termometro      4096 Nov 17 22:49 /opt/termometro
+drwxr-x--- 2 termometro termometro      4096 Nov 17 22:34 /var/lib/termometro
+drwxrwsr-x 2 root       termometro-logs 4096 Nov 18 00:19 /var/log/termometro
+total 8
+-rw-r--r-- 1 root root       436 Nov 17 23:41 monitor.conf
+-rw-r----- 1 root termometro 682 Nov 17 22:49 termometro.env

@@ -102,15 +102,25 @@ sudo rm /etc/termometro/manutencao
 # em até 45 s o guardião volta a religar
 ```
 
-## Tabela de resultados (preencher na VM)
+## Resultados (VM no UTM, Ubuntu 26.04 ARM, 17 e 18/11/2026)
 
 | Teste | Data/hora | Resultado esperado ocorreu? | Print |
 |-------|-----------|-----------------------------|-------|
-| T1 parar o monitor | | | `evidencias/10-t1-monitor-recuperado.png` |
-| T2 derrubar a API | | | `evidencias/11-t2-api-recuperada.png` |
-| T3 CPU | | | `evidencias/12-t3-alerta-cpu.png` |
-| T4 memória | | | `evidencias/13-t4-alerta-ram.png` |
-| T5 disco | | | `evidencias/14-t5-alerta-disco.png` |
-| T6 reboot | | | `evidencias/15-t6-reboot.png` |
-| T7 falha controlada | | | `evidencias/16-t7-falha-controlada.png` |
-| T8 manutenção | | | `evidencias/17-t8-manutencao.png` |
+| T1 parar o monitor | 17/11 23:08 | Sim. Guardião religou em ~18 s (ALERTA + RECUPERACAO) | `evidencias/10-t1-monitor-recuperado.png` |
+| T2 derrubar a API | 17/11 23:23 | Sim. `kill -9` voltou sozinho; `stop` religado pelo guardião | `evidencias/11-t2-api-recuperada.png` |
+| T3 CPU | 17/11 23:26 | Sim. `ALERTA CPU em 100%` | `evidencias/12-t3-alerta-cpu.png` |
+| T4 memória | 17/11 23:36 | Sim, com limite de teste 50% (a RAM só chegou a 67%) | `evidencias/13-t4-alerta-ram.png` |
+| T5 disco | 17/11 23:40 | Sim, com limite de teste 40% e arquivo de 2 GB (`ALERTA DISCO em 44%`) | `evidencias/14-t5-alerta-disco.png` |
+| T6 reboot | 18/11 00:01 | Sim. 5 serviços `active` e API `Healthy` sem intervenção | `evidencias/15-t6-reboot.png` |
+| T7 falha controlada | 18/11 00:03 | Sim. Código 2 e as três linhas de ERRO | `evidencias/16-t7-falha-controlada.png` |
+| T8 manutenção | 18/11 00:07 | Sim. Guardião só avisou; religou ao tirar a placa | `evidencias/17-t8-manutencao.png` |
+
+## O que os testes revelaram (e foi corrigido)
+
+- **Monitor não lia a própria configuração.** Ele roda como usuário `monitor`, sem acesso à pasta
+  `/etc/termometro` (0750). Usava os limites padrão sem avisar. Correção: a pasta virou 0751
+  (atravessar sim, listar não); o arquivo de segredos continua 640. Achado no T4.
+- **sudo novo (sudo-rs) não aceita curinga nos argumentos.** A regra do `operador` passou a listar cada
+  serviço; se a regra vier inválida, o script apaga o arquivo e para.
+- **`/tmp` em RAM (814 MB)** não cabia o .NET descompactado: o instalador usa `/var/tmp`.
+- **PostgreSQL instalado sem cluster.** O script cria o cluster se faltar e espera o banco aceitar conexão.

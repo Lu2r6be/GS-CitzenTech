@@ -1,0 +1,1311 @@
+2026-11-17T22:39:49-03:00 [provision-app] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T22:39:49-03:00 [provision-app] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-17T22:39:49-03:00 [provision-app] INFO == 1/7 .NET SDK 10 ==
+2026-11-17T22:39:49-03:00 [provision-app] INFO pacote dotnet-sdk-10.0 nao esta nos repositorios; uso o instalador oficial da Microsoft
+2026-11-17T22:39:49-03:00 [provision-app] INFO baixando o instalador oficial
+2026-11-17T22:39:49-03:00 [provision-app] CMD curl -fsSL -o /tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
+2026-11-17T22:39:50-03:00 [provision-app] INFO instalando o SDK 10.0 em /usr/share/dotnet
+2026-11-17T22:39:50-03:00 [provision-app] CMD bash /tmp/dotnet-install.sh --channel 10.0 --install-dir /usr/share/dotnet
+    | dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz
+    | dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz size is 235410674 bytes.
+    | dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Intrinsics.xml: Wrote only 1536 of 10240 bytes
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Routing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Xml.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Identity.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.JSInterop.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.StaticFiles.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.StaticAssets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Concurrent.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Identity.Core.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.WebEncoders.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Hosting.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Numerics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.Lightweight.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Diagnostics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Overlapped.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Authentication.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Configuration.Ini.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Net.HttpListener.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.RequestDecompression.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.WebSockets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.FileProviders.Embedded.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Logging.EventSource.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.Client.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Http.Features.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Expressions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Threading.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Cors.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.HostFiltering.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Configuration.KeyPerFile.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.FileSystemGlobbing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Authorization.Policy.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Server.Kestrel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Authentication.Core.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/data/PlatformManifest.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/data/PackageOverrides.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/data/FrameworkList.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.App.CodeFixes.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.Http.RequestDelegateGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Logging.Generators.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Options.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Validation.ValidationsGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.App.SourceGenerators.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Configuration.Binder.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.App.Analyzers.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.CodePages.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.Watcher.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipelines.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Ping.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebProxy.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ObjectModel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ServiceModel.Web.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.FileVersionInfo.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Requests.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Dynamic.Runtime.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Drawing.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Expressions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Xml.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Numerics.Vectors.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.ZipFile.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Parallel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Parallel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.NonGeneric.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.DispatchProxy.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.CompilerServices.VisualC.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Contracts.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Formatters.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebClient.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Claims.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.Reader.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.MemoryMappedFiles.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Metadata.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Registry.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Claims.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Dataflow.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Tar.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.Common.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Csp.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Configuration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Quic.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encodings.Web.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Sockets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Specialized.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.UnmanagedMemoryStream.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Tar.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Security.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TextWriterTraceListener.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.VisualBasic.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.XDocument.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.AsyncEnumerable.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Globalization.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Channels.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TraceSource.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.Brotli.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.EventBasedAsync.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Handles.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Contracts.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.ThreadPool.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TraceSource.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XDocument.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Annotations.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.TypeConverter.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebProxy.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ObjectModel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Queryable.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.TypeConverter.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.Watcher.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.NonGeneric.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.ZipFile.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Quic.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Web.HttpUtility.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.IsolatedStorage.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.SecureString.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.StackTrace.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Parallel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Cng.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.HttpListener.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Encoding.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.JavaScript.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.Json.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.RuntimeInformation.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.ServicePoint.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.VisualBasic.Core.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Asn1.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.CompilerServices.Unsafe.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebClient.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.ThreadPool.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.DataAnnotations.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.TypeExtensions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.FileVersionInfo.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.Writer.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipelines.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Core.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebHeaderCollection.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Web.HttpUtility.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.Brotli.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.ServerSentEvents.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Ping.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.RegularExpressions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebHeaderCollection.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Asn1.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Queryable.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Requests.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Principal.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Json.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.Serialization.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Transactions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.CSharp.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Transactions.Local.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.DriveInfo.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Registry.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.TypeExtensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Loader.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.AppContext.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.ResourceManager.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Overlapped.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.CompilerServices.VisualC.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.OpenSsl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XmlDocument.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ValueTuple.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Algorithms.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Memory.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Intrinsics.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TextWriterTraceListener.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Specialized.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.ILGeneration.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Channels.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Globalization.Calendars.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NameResolution.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Numerics.Vectors.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XDocument.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Console.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Concurrent.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/mscorlib.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NameResolution.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/netstandard.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.X509Certificates.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.XDocument.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Json.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Metadata.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Tracing.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NetworkInformation.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.ReaderWriter.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Buffers.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.DriveInfo.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.DiagnosticSource.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Formatters.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.Writer.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.EventBasedAsync.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.Client.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Drawing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Tracing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Globalization.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.FileSystem.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Thread.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NetworkInformation.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.DispatchProxy.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.DiagnosticSource.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XmlSerializer.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.VisualBasic.Core.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.StackTrace.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Loader.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Parallel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Thread.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ServiceProcess.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Transactions.Local.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Mail.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Immutable.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Timer.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.Lightweight.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.CSharp.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encodings.Web.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.AsyncEnumerable.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Console.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Sockets.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.Common.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.IsolatedStorage.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Numerics.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Xml.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Drawing.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.Extensions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.CodePages.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Numerics.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.ILGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Dataflow.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Annotations.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Web.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/WindowsBase.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.ServerSentEvents.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.ReaderWriter.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Memory.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Process.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Mail.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.Linq.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XmlSerializer.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Debug.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Principal.Windows.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Security.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.MemoryMappedFiles.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Intrinsics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Tools.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Concurrent.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.JavaScript.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Numerics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.Lightweight.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Process.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.RegularExpressions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.DataSetExtensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Overlapped.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.HttpListener.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Immutable.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.Client.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Expressions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Principal.Windows.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Windows.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/data/PlatformManifest.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/data/PackageOverrides.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/data/FrameworkList.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/System.Text.RegularExpressions.Generator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.ComInterfaceGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.LibraryImportGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.JavaScript.JSImportGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./dotnet: Cannot write: No space left on device
+    | tar: ./host/fxr/10.0.15/libhostfxr.so: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net7/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net7/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net8/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net8/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net6/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net6/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maui/10.0.0/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maui/10.0.0/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maui/10.0.0/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.android/36.1.2/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.android/36.1.2/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.android/36.1.2/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.tvos/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.tvos/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.tvos/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.macos/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.macos/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.macos/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.current/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.current/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net9/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net9/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.ios/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.ios/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.ios/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maccatalyst/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maccatalyst/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maccatalyst/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadManifest.Wasi.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WasmFeatures.props: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadTelemetry.targets: Cannot write: No space left on device
+    | tar: ./ThirdPartyNotices.txt: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.common.projecttemplates.10.0.10.0.404.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.wpf.projecttemplates.10.0.15-servicing.26529.108.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.winforms.projecttemplates.10.0.15-servicing.26529.108.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.web.itemtemplates.10.0.10.0.15.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.web.projecttemplates.10.0.10.0.15.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.mcpserver.projecttemplates.10.0.10.0.15.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.common.itemtemplates.10.0.404.nupkg: Cannot write: No space left on device
+    | tar: ./dnx: Cannot write: No space left on device
+    | tar: Exiting with failure status due to previous errors
+    | dotnet-install: Downloaded file size is 235410674 bytes.
+    | dotnet-install: The remote and local file sizes are equal.
+    | dotnet_install: Error: Extraction failed
+2026-11-17T22:39:58-03:00 [provision-app] ERRO comando falhou (codigo 1): bash /tmp/dotnet-install.sh --channel 10.0 --install-dir /usr/share/dotnet
+2026-11-17T22:39:58-03:00 [provision-app] ERRO falhou na linha 51 (codigo 1): return "$codigo"
+2026-11-17T22:39:58-03:00 [provision-app] ERRO fim COM ERRO, codigo 1 (9s)
+2026-11-17T22:41:38-03:00 [provision-app] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T22:41:38-03:00 [provision-app] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-17T22:41:38-03:00 [provision-app] INFO == 1/7 .NET SDK 10 ==
+2026-11-17T22:41:38-03:00 [provision-app] INFO pacote dotnet-sdk-10.0 nao esta nos repositorios; uso o instalador oficial da Microsoft
+2026-11-17T22:41:38-03:00 [provision-app] INFO baixando o instalador oficial
+2026-11-17T22:41:38-03:00 [provision-app] CMD curl -fsSL -o /tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
+2026-11-17T22:41:38-03:00 [provision-app] INFO instalando o SDK 10.0 em /usr/share/dotnet
+2026-11-17T22:41:38-03:00 [provision-app] CMD bash /tmp/dotnet-install.sh --channel 10.0 --install-dir /usr/share/dotnet
+    | dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz
+    | dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz size is 235410674 bytes.
+    | dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Intrinsics.xml: Wrote only 1536 of 10240 bytes
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Routing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Xml.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Identity.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.JSInterop.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.StaticFiles.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.StaticAssets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Concurrent.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Identity.Core.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.WebEncoders.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Hosting.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Numerics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.Lightweight.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Diagnostics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Overlapped.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Authentication.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Configuration.Ini.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Net.HttpListener.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.RequestDecompression.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.WebSockets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.FileProviders.Embedded.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Logging.EventSource.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.Client.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Http.Features.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Expressions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Threading.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Cors.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.HostFiltering.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.Configuration.KeyPerFile.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Extensions.FileSystemGlobbing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Authorization.Policy.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Server.Kestrel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/ref/net10.0/Microsoft.AspNetCore.Authentication.Core.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/data/PlatformManifest.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/data/PackageOverrides.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/data/FrameworkList.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.App.CodeFixes.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.Http.RequestDelegateGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Logging.Generators.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Options.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Validation.ValidationsGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.App.SourceGenerators.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Extensions.Configuration.Binder.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.AspNetCore.App.Analyzers.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Extensions.Options.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.AspNetCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.CodePages.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.Watcher.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipelines.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Ping.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebProxy.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ObjectModel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ServiceModel.Web.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.FileVersionInfo.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Requests.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Dynamic.Runtime.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Drawing.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Expressions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Xml.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Numerics.Vectors.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.ZipFile.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Parallel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Parallel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.NonGeneric.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.DispatchProxy.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.CompilerServices.VisualC.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Contracts.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Formatters.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebClient.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Claims.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.Reader.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.MemoryMappedFiles.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Metadata.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Registry.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Claims.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Dataflow.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Tar.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.Common.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Csp.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Configuration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Quic.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encodings.Web.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Sockets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Specialized.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.UnmanagedMemoryStream.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Tar.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Security.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TextWriterTraceListener.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.VisualBasic.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.XDocument.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.AsyncEnumerable.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Globalization.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Channels.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TraceSource.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.Brotli.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.EventBasedAsync.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Handles.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Contracts.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.ThreadPool.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TraceSource.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XDocument.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Annotations.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.TypeConverter.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebProxy.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ObjectModel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Queryable.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.TypeConverter.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.Watcher.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.NonGeneric.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.ZipFile.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Quic.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Web.HttpUtility.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.IsolatedStorage.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.SecureString.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.StackTrace.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Parallel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Cng.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.HttpListener.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Encoding.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.JavaScript.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.Json.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.RuntimeInformation.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.ServicePoint.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.VisualBasic.Core.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Asn1.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.CompilerServices.Unsafe.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebClient.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.ThreadPool.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.DataAnnotations.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.TypeExtensions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.FileVersionInfo.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.Writer.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipelines.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Core.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebHeaderCollection.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Web.HttpUtility.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.Brotli.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.ServerSentEvents.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Ping.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.RegularExpressions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebHeaderCollection.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Formats.Asn1.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Queryable.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Requests.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Principal.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Json.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.Serialization.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Transactions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.CSharp.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Transactions.Local.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.DriveInfo.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Registry.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.TypeExtensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Loader.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.AppContext.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.ResourceManager.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Overlapped.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.CompilerServices.VisualC.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.OpenSsl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XmlDocument.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ValueTuple.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.Algorithms.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Memory.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Intrinsics.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.TextWriterTraceListener.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Specialized.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.ILGeneration.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Channels.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Globalization.Calendars.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NameResolution.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Numerics.Vectors.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Json.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XDocument.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Console.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Concurrent.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/mscorlib.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NameResolution.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/netstandard.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.X509Certificates.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.XDocument.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Json.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Metadata.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Tracing.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Http.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NetworkInformation.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.ReaderWriter.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Buffers.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.FileSystem.DriveInfo.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.DiagnosticSource.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Formatters.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.AccessControl.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Resources.Writer.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.EventBasedAsync.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.Client.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Drawing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Tracing.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Globalization.Extensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Compression.FileSystem.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Thread.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.NetworkInformation.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.DispatchProxy.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.DiagnosticSource.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XmlSerializer.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.VisualBasic.Core.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.StackTrace.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Loader.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Parallel.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Thread.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Primitives.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ServiceProcess.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Transactions.Local.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Mail.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Immutable.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Timer.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.Lightweight.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.CSharp.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encodings.Web.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.AsyncEnumerable.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Console.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Sockets.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.Common.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.IsolatedStorage.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Numerics.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Serialization.Xml.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Drawing.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.Extensions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.Encoding.CodePages.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Numerics.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.ILGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Tasks.Dataflow.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Cryptography.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.Annotations.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Web.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.ComponentModel.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/WindowsBase.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.ServerSentEvents.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.ReaderWriter.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Memory.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.Pipes.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Process.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Mail.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.Linq.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/Microsoft.Win32.Primitives.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XmlSerializer.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Debug.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Principal.Windows.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.Security.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.IO.MemoryMappedFiles.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Intrinsics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Tools.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Concurrent.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.JavaScript.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.Numerics.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.InteropServices.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Reflection.Emit.Lightweight.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Diagnostics.Process.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Text.RegularExpressions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.DataSetExtensions.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.Overlapped.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.HttpListener.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Collections.Immutable.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Net.WebSockets.Client.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Linq.Expressions.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Security.Principal.Windows.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Threading.AccessControl.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Windows.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Runtime.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Data.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/ref/net10.0/System.Xml.XPath.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/data/PlatformManifest.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/data/PackageOverrides.txt: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/data/FrameworkList.xml: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pl/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/de/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/System.Text.RegularExpressions.Generator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.ComInterfaceGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/pt-BR/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ru/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hans/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/it/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ko/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.LibraryImportGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/ja/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/zh-Hant/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/fr/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/tr/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/cs/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/Microsoft.Interop.JavaScript.JSImportGenerator.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/System.Text.RegularExpressions.Generator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Interop.ComInterfaceGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/System.Text.Json.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Interop.SourceGeneration.resources.dll: Cannot write: No space left on device
+    | tar: ./packs/Microsoft.NETCore.App.Ref/10.0.15/analyzers/dotnet/cs/es/Microsoft.Interop.LibraryImportGenerator.resources.dll: Cannot write: No space left on device
+    | tar: ./dotnet: Cannot write: No space left on device
+    | tar: ./host/fxr/10.0.15/libhostfxr.so: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net7/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net7/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net8/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net8/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net6/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net6/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net7/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maui/10.0.0/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maui/10.0.0/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maui/10.0.0/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.android/36.1.2/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.android/36.1.2/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.android/36.1.2/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net6/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.tvos/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.tvos/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.tvos/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net8/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.macos/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.macos/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.macos/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.current/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.current/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.net9/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net9/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.emscripten.net9/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.ios/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.ios/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.ios/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maccatalyst/26.0.11017/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maccatalyst/26.0.11017/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.sdk.maccatalyst/26.0.11017/WorkloadDependencies.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadManifest.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadManifest.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadManifest.Wasi.targets: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WasmFeatures.props: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.tr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.ja.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.fr.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.de.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.pt-BR.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.cs.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.it.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.es.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.en.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.zh-Hans.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.ru.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.zh-Hant.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.ko.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/localize/WorkloadManifest.pl.json: Cannot write: No space left on device
+    | tar: ./sdk-manifests/10.0.100/microsoft.net.workload.mono.toolchain.current/10.0.115/WorkloadTelemetry.targets: Cannot write: No space left on device
+    | tar: ./ThirdPartyNotices.txt: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.common.projecttemplates.10.0.10.0.404.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.wpf.projecttemplates.10.0.15-servicing.26529.108.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.winforms.projecttemplates.10.0.15-servicing.26529.108.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.web.itemtemplates.10.0.10.0.15.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.web.projecttemplates.10.0.10.0.15.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.mcpserver.projecttemplates.10.0.10.0.15.nupkg: Cannot write: No space left on device
+    | tar: ./templates/10.0.15/microsoft.dotnet.common.itemtemplates.10.0.404.nupkg: Cannot write: No space left on device
+    | tar: ./dnx: Cannot write: No space left on device
+    | tar: Exiting with failure status due to previous errors
+    | dotnet-install: Downloaded file size is 235410674 bytes.
+    | dotnet-install: The remote and local file sizes are equal.
+    | dotnet_install: Error: Extraction failed
+2026-11-17T22:41:45-03:00 [provision-app] ERRO comando falhou (codigo 1): bash /tmp/dotnet-install.sh --channel 10.0 --install-dir /usr/share/dotnet
+2026-11-17T22:41:45-03:00 [provision-app] ERRO falhou na linha 51 (codigo 1): return "$codigo"
+2026-11-17T22:41:45-03:00 [provision-app] ERRO fim COM ERRO, codigo 1 (7s)
+2026-11-17T22:43:23-03:00 [provision-app] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T22:43:23-03:00 [provision-app] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-17T22:43:23-03:00 [provision-app] INFO == 1/7 .NET SDK 10 ==
+2026-11-17T22:43:23-03:00 [provision-app] INFO pacote dotnet-sdk-10.0 nao esta nos repositorios; uso o instalador oficial da Microsoft
+2026-11-17T22:43:23-03:00 [provision-app] INFO baixando o instalador oficial
+2026-11-17T22:43:23-03:00 [provision-app] CMD curl -fsSL -o /var/tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
+2026-11-17T22:43:24-03:00 [provision-app] INFO instalando o SDK 10.0 em /usr/share/dotnet
+2026-11-17T22:43:24-03:00 [provision-app] CMD env TMPDIR=/var/tmp bash /var/tmp/dotnet-install.sh --channel 10.0 --install-dir /usr/share/dotnet
+    | dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz
+    | dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz size is 235410674 bytes.
+    | dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-linux-arm64.tar.gz
+    | dotnet-install: Downloaded file size is 235410674 bytes.
+    | dotnet-install: The remote and local file sizes are equal.
+    | dotnet-install: Installed version is 10.0.404
+    | dotnet-install: Adding to current process PATH: `/usr/share/dotnet`. Note: This change will be visible only when sourcing script.
+    | dotnet-install: Note that the script does not resolve dependencies during installation.
+    | dotnet-install: To check the list of dependencies, go to https://learn.microsoft.com/dotnet/core/install, select your operating system and check the "Dependencies" section.
+    | dotnet-install: Installation finished successfully.
+2026-11-17T22:43:30-03:00 [provision-app] INFO criando o atalho /usr/local/bin/dotnet
+2026-11-17T22:43:30-03:00 [provision-app] CMD ln -sf /usr/share/dotnet/dotnet /usr/local/bin/dotnet
+2026-11-17T22:43:30-03:00 [provision-app] OK .NET instalado: 10.0.404
+2026-11-17T22:43:30-03:00 [provision-app] INFO == 2/7 Codigo-fonte ==
+2026-11-17T22:43:30-03:00 [provision-app] INFO clonando https://github.com/Lu2r6be/GS-CitzenTech.git
+2026-11-17T22:43:30-03:00 [provision-app] CMD git clone --depth 1 --branch main https://github.com/Lu2r6be/GS-CitzenTech.git /opt/termometro/fonte
+    | Cloning into '/opt/termometro/fonte'...
+2026-11-17T22:43:31-03:00 [provision-app] INFO == 3/7 PostgreSQL ==
+2026-11-17T22:43:31-03:00 [provision-app] INFO garantindo o PostgreSQL ligado e no boot
+2026-11-17T22:43:31-03:00 [provision-app] CMD systemctl enable --now postgresql
+    | Synchronizing state of postgresql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+    | Executing: /usr/lib/systemd/systemd-sysv-install enable postgresql
+2026-11-17T22:43:32-03:00 [provision-app] INFO criando o papel termometro_app
+2026-11-17T22:43:32-03:00 [provision-app] ERRO falhou na linha 106 (codigo 2): sudo -u postgres psql -q -v ON_ERROR_STOP=1
+2026-11-17T22:43:32-03:00 [provision-app] ERRO fim COM ERRO, codigo 2 (9s)
+2026-11-17T22:49:08-03:00 [provision-app] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T22:49:08-03:00 [provision-app] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-17T22:49:08-03:00 [provision-app] INFO == 1/7 .NET SDK 10 ==
+2026-11-17T22:49:08-03:00 [provision-app] INFO .NET 10 ja instalado: 10.0.404
+2026-11-17T22:49:08-03:00 [provision-app] INFO == 2/7 Codigo-fonte ==
+2026-11-17T22:49:08-03:00 [provision-app] INFO atualizando o clone em /opt/termometro/fonte
+2026-11-17T22:49:08-03:00 [provision-app] CMD git -C /opt/termometro/fonte pull --ff-only
+    | From https://github.com/Lu2r6be/GS-CitzenTech
+    |    4bd1b04..001c8b0  main       -> origin/main
+    | Updating 4bd1b04..001c8b0
+    | Fast-forward
+    |  infra/scripts/provision-app.sh | 12 ++++++++++++
+    |  1 file changed, 12 insertions(+)
+2026-11-17T22:49:09-03:00 [provision-app] INFO == 3/7 PostgreSQL ==
+2026-11-17T22:49:09-03:00 [provision-app] INFO garantindo o PostgreSQL ligado e no boot
+2026-11-17T22:49:09-03:00 [provision-app] CMD systemctl enable --now postgresql
+    | Synchronizing state of postgresql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+    | Executing: /usr/lib/systemd/systemd-sysv-install enable postgresql
+2026-11-17T22:49:09-03:00 [provision-app] INFO criando o cluster 18/main do PostgreSQL
+2026-11-17T22:49:09-03:00 [provision-app] CMD pg_createcluster 18 main
+    | Creating new PostgreSQL cluster 18/main ...
+    | /usr/lib/postgresql/18/bin/initdb -D /var/lib/postgresql/18/main --auth-local peer --auth-host scram-sha-256 --no-instructions
+    | The files belonging to this database system will be owned by user "postgres".
+    | This user must also own the server process.
+    | 
+    | The database cluster will be initialized with locale "C.UTF-8".
+    | The default database encoding has accordingly been set to "UTF8".
+    | The default text search configuration will be set to "english".
+    | 
+    | Data page checksums are enabled.
+    | 
+    | fixing permissions on existing directory /var/lib/postgresql/18/main ... ok
+    | creating subdirectories ... ok
+    | selecting dynamic shared memory implementation ... posix
+    | selecting default "max_connections" ... 100
+    | selecting default "shared_buffers" ... 128MB
+    | selecting default time zone ... America/Sao_Paulo
+    | creating configuration files ... ok
+    | running bootstrap script ... ok
+    | performing post-bootstrap initialization ... ok
+    | syncing data to disk ... ok
+    | Ver Cluster Port Status Owner    Data directory              Log file
+    | 18  main    5432 down   postgres /var/lib/postgresql/18/main /var/log/postgresql/postgresql-18-main.log
+2026-11-17T22:49:12-03:00 [provision-app] OK PostgreSQL aceitando conexoes
+2026-11-17T22:49:12-03:00 [provision-app] INFO criando o papel termometro_app
+2026-11-17T22:49:12-03:00 [provision-app] INFO criando o banco termometro
+2026-11-17T22:49:12-03:00 [provision-app] CMD sudo -u postgres createdb -O termometro_app termometro
+2026-11-17T22:49:12-03:00 [provision-app] OK PostgreSQL pronto (as tabelas sao criadas pela API na primeira partida, via migrations)
+2026-11-17T22:49:12-03:00 [provision-app] INFO == 4/7 Publicando a API (dotnet publish -c Release) ==
+2026-11-17T22:49:12-03:00 [provision-app] INFO limpando pasta temporaria
+2026-11-17T22:49:12-03:00 [provision-app] CMD rm -rf /opt/termometro/app.novo
+2026-11-17T22:49:12-03:00 [provision-app] INFO compilando e publicando
+2026-11-17T22:49:12-03:00 [provision-app] CMD env HOME=/root DOTNET_CLI_TELEMETRY_OPTOUT=1 DOTNET_NOLOGO=1 dotnet publish /opt/termometro/fonte/api/src/Termometro.Api -c Release -o /opt/termometro/app.novo --nologo
+    |   Determining projects to restore...
+    |   Restored /opt/termometro/fonte/api/src/Termometro.Domain/Termometro.Domain.csproj (in 31 ms).
+    |   Restored /opt/termometro/fonte/api/src/Termometro.Application/Termometro.Application.csproj (in 1.46 sec).
+    |   Restored /opt/termometro/fonte/api/src/Termometro.Infrastructure/Termometro.Infrastructure.csproj (in 2.58 sec).
+    | /opt/termometro/fonte/api/src/Termometro.Api/Termometro.Api.csproj : warning NU1903: Package 'Microsoft.OpenApi' 2.4.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc
+    | /opt/termometro/fonte/api/src/Termometro.Api/Termometro.Api.csproj : warning NU1903: Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q
+    |   Restored /opt/termometro/fonte/api/src/Termometro.Api/Termometro.Api.csproj (in 2.07 sec).
+    | /opt/termometro/fonte/api/src/Termometro.Api/Termometro.Api.csproj : warning NU1903: Package 'Microsoft.OpenApi' 2.4.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc
+    | /opt/termometro/fonte/api/src/Termometro.Api/Termometro.Api.csproj : warning NU1903: Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q
+    |   Termometro.Domain -> /opt/termometro/fonte/api/src/Termometro.Domain/bin/Release/net10.0/Termometro.Domain.dll
+    |   Termometro.Application -> /opt/termometro/fonte/api/src/Termometro.Application/bin/Release/net10.0/Termometro.Application.dll
+    |   Termometro.Infrastructure -> /opt/termometro/fonte/api/src/Termometro.Infrastructure/bin/Release/net10.0/Termometro.Infrastructure.dll
+    |   Termometro.Api -> /opt/termometro/fonte/api/src/Termometro.Api/bin/Release/net10.0/Termometro.Api.dll
+    |   Termometro.Api -> /opt/termometro/app.novo/
+2026-11-17T22:49:20-03:00 [provision-app] OK API publicada em /opt/termometro/app
+2026-11-17T22:49:20-03:00 [provision-app] INFO == 5/7 Variaveis de ambiente em /etc/termometro/termometro.env ==
+2026-11-17T22:49:20-03:00 [provision-app] INFO arquivo criado: /etc/termometro/termometro.env
+2026-11-17T22:49:20-03:00 [provision-app] INFO arquivo criado: /etc/termometro/monitor.conf
+2026-11-17T22:49:20-03:00 [provision-app] INFO == 6/7 Servicos systemd ==
+2026-11-17T22:49:20-03:00 [provision-app] INFO baixando o cloudflared
+2026-11-17T22:49:20-03:00 [provision-app] CMD curl -fsSL -o /tmp/cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb
+2026-11-17T22:49:20-03:00 [provision-app] INFO instalando o cloudflared
+2026-11-17T22:49:20-03:00 [provision-app] CMD dpkg -i /tmp/cloudflared.deb
+    | Selecting previously unselected package cloudflared.
+    | (Reading database ... 152499 files and directories currently installed.)
+    | Preparing to unpack /tmp/cloudflared.deb ...
+    | Unpacking cloudflared (2026.11.1) ...
+    | Setting up cloudflared (2026.11.1) ...
+    | Processing triggers for man-db (2.13.1-1build1) ...
+2026-11-17T22:49:22-03:00 [provision-app] INFO arquivo criado: /etc/systemd/system/termometro-api.service
+2026-11-17T22:49:22-03:00 [provision-app] INFO arquivo criado: /etc/systemd/system/termometro-monitor.service
+2026-11-17T22:49:22-03:00 [provision-app] INFO arquivo criado: /etc/systemd/system/termometro-guardiao.service
+2026-11-17T22:49:22-03:00 [provision-app] INFO arquivo criado: /etc/systemd/system/termometro-guardiao.timer
+2026-11-17T22:49:22-03:00 [provision-app] INFO arquivo criado: /etc/systemd/system/termometro-cloudflared.service
+2026-11-17T22:49:22-03:00 [provision-app] INFO criando /opt/termometro/scripts
+2026-11-17T22:49:22-03:00 [provision-app] CMD install -d -m 0755 -o root -g root /opt/termometro/scripts/lib
+2026-11-17T22:49:22-03:00 [provision-app] INFO copiando monitor.sh e guardiao.sh
+2026-11-17T22:49:22-03:00 [provision-app] CMD install -m 0755 -o root -g root /home/lu2r6be/termometro/infra/scripts/monitor.sh /home/lu2r6be/termometro/infra/scripts/guardiao.sh /home/lu2r6be/termometro/infra/scripts/mostrar-url-tunel.sh /opt/termometro/scripts/
+2026-11-17T22:49:22-03:00 [provision-app] INFO copiando lib/comum.sh
+2026-11-17T22:49:22-03:00 [provision-app] CMD install -m 0644 -o root -g root /home/lu2r6be/termometro/infra/scripts/lib/comum.sh /opt/termometro/scripts/lib/
+2026-11-17T22:49:22-03:00 [provision-app] INFO recarregando o systemd
+2026-11-17T22:49:22-03:00 [provision-app] CMD systemctl daemon-reload
+2026-11-17T22:49:22-03:00 [provision-app] INFO ligando e habilitando a API no boot
+2026-11-17T22:49:22-03:00 [provision-app] CMD systemctl enable --now termometro-api.service
+    | Created symlink '/etc/systemd/system/multi-user.target.wants/termometro-api.service' → '/etc/systemd/system/termometro-api.service'.
+2026-11-17T22:49:22-03:00 [provision-app] INFO ligando e habilitando o monitor no boot
+2026-11-17T22:49:22-03:00 [provision-app] CMD systemctl enable --now termometro-monitor.service
+    | Created symlink '/etc/systemd/system/multi-user.target.wants/termometro-monitor.service' → '/etc/systemd/system/termometro-monitor.service'.
+2026-11-17T22:49:22-03:00 [provision-app] INFO ligando e habilitando o guardiao (timer) no boot
+2026-11-17T22:49:22-03:00 [provision-app] CMD systemctl enable --now termometro-guardiao.timer
+    | Created symlink '/etc/systemd/system/timers.target.wants/termometro-guardiao.timer' → '/etc/systemd/system/termometro-guardiao.timer'.
+2026-11-17T22:49:22-03:00 [provision-app] INFO ligando e habilitando o tunel no boot
+2026-11-17T22:49:22-03:00 [provision-app] CMD systemctl enable --now termometro-cloudflared.service
+    | Created symlink '/etc/systemd/system/multi-user.target.wants/termometro-cloudflared.service' → '/etc/systemd/system/termometro-cloudflared.service'.
+2026-11-17T22:49:23-03:00 [provision-app] INFO == 7/7 Verificacao ==
+2026-11-17T22:49:25-03:00 [provision-app] OK API respondeu em /health (tentativa 2)
+2026-11-17T22:49:25-03:00 [provision-app] OK servico ativo: postgresql
+2026-11-17T22:49:25-03:00 [provision-app] OK servico ativo: termometro-api
+2026-11-17T22:49:25-03:00 [provision-app] OK servico ativo: termometro-monitor
+2026-11-17T22:49:25-03:00 [provision-app] OK servico ativo: termometro-guardiao.timer
+2026-11-17T22:49:25-03:00 [provision-app] OK servico ativo: termometro-cloudflared
+2026-11-17T22:49:25-03:00 [provision-app] INFO habilitado no boot: postgresql = enabled
+2026-11-17T22:49:25-03:00 [provision-app] INFO habilitado no boot: termometro-api = enabled
+2026-11-17T22:49:25-03:00 [provision-app] INFO habilitado no boot: termometro-monitor = enabled
+2026-11-17T22:49:25-03:00 [provision-app] INFO habilitado no boot: termometro-guardiao.timer = enabled
+2026-11-17T22:49:25-03:00 [provision-app] INFO habilitado no boot: termometro-cloudflared = enabled
+2026-11-17T22:49:25-03:00 [provision-app] INFO URL publica do tunel (pode demorar alguns segundos): rode ./mostrar-url-tunel.sh
+2026-11-17T22:49:25-03:00 [provision-app] OK aplicacao pronta.
+2026-11-17T22:49:25-03:00 [provision-app] OK fim sem erros (17s)

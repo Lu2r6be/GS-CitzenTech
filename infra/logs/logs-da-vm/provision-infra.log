@@ -1,0 +1,474 @@
+2026-11-18T01:34:36+00:00 [provision-infra] INFO inicio (usuario=root, maquina=termometroacs, DRY_RUN=0)
+2026-11-18T01:34:36+00:00 [provision-infra] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-18T01:34:36+00:00 [provision-infra] INFO == 1/7 Identidade: hostname, fuso, /etc/hosts ==
+2026-11-18T01:34:36+00:00 [provision-infra] INFO definindo o hostname como termometro-acs
+2026-11-18T01:34:36+00:00 [provision-infra] CMD hostnamectl set-hostname termometro-acs
+2026-11-18T01:34:36+00:00 [provision-infra] INFO definindo o fuso horario America/Sao_Paulo
+2026-11-18T01:34:36+00:00 [provision-infra] CMD timedatectl set-timezone America/Sao_Paulo
+2026-11-17T22:34:36-03:00 [provision-infra] INFO /etc/hosts atualizado: 127.0.1.1 termometro-acs.gs.local termometro-acs
+2026-11-17T22:34:36-03:00 [provision-infra] INFO == 2/7 Rede: IP, gateway, DNS ==
+2026-11-17T22:34:36-03:00 [provision-infra] INFO interface de rede: enp0s1; IP 192.168.64.2/24; gateway 192.168.64.1; DNS 1.1.1.1 8.8.8.8
+2026-11-17T22:34:36-03:00 [provision-infra] INFO arquivo criado: /etc/netplan/60-termometro.yaml
+2026-11-17T22:34:36-03:00 [provision-infra] INFO desativei /etc/netplan/00-installer-config.yaml (renomeado), pois definia a mesma interface
+2026-11-17T22:34:36-03:00 [provision-infra] INFO validando a configuracao de rede
+2026-11-17T22:34:36-03:00 [provision-infra] CMD netplan generate
+2026-11-17T22:34:37-03:00 [provision-infra] INFO aplicando a configuracao de rede
+2026-11-17T22:34:37-03:00 [provision-infra] CMD netplan apply
+2026-11-17T22:34:37-03:00 [provision-infra] INFO == 3/7 DNS: resolucao de nomes ==
+2026-11-17T22:34:37-03:00 [provision-infra] INFO systemd-resolved ativo; servidores DNS em uso:
+    | Global:
+    | Link 2 (enp0s1): 1.1.1.1 8.8.8.8
+2026-11-17T22:34:37-03:00 [provision-infra] OK DNS resolveu github.com -> 4.228.31.150
+2026-11-17T22:34:37-03:00 [provision-infra] OK DNS resolveu api.nuget.org -> 2600:1419:4e00:1f::17d3:6d8f
+2026-11-17T22:34:37-03:00 [provision-infra] OK o nome local termometro-acs resolve para 127.0.1.1
+2026-11-17T22:34:37-03:00 [provision-infra] INFO == 4/7 Pacotes base ==
+2026-11-17T22:34:37-03:00 [provision-infra] INFO atualizando a lista de pacotes
+2026-11-17T22:34:37-03:00 [provision-infra] CMD env DEBIAN_FRONTEND=noninteractive apt-get update
+    | Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+    | Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+    | Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+    | Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+    | Reading package lists...
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: curl
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: ca-certificates
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: git
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: jq
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: ufw
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: htop
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: openssl
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: logrotate
+2026-11-17T22:34:39-03:00 [provision-infra] INFO pacote ja instalado: sudo
+2026-11-17T22:34:39-03:00 [provision-infra] INFO instalando pacotes: unzip stress-ng postgresql
+2026-11-17T22:34:39-03:00 [provision-infra] CMD env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends unzip stress-ng postgresql
+    | Reading package lists...
+    | Building dependency tree...
+    | Reading state information...
+    | Solving dependencies...
+    | The following packages were automatically installed and are no longer required:
+    |   linux-headers-7.0.0-30 linux-headers-7.0.0-30-generic
+    |   linux-image-unsigned-7.0.0-30-generic
+    |   linux-main-modules-zfs-7.0.0-30-generic linux-modules-7.0.0-30-generic
+    |   linux-tools-7.0.0-30 linux-tools-7.0.0-30-generic
+    | Use 'sudo apt autoremove' to remove them.
+    | The following additional packages will be installed:
+    |   libegl-mesa0 libegl1 libgbm1 libgles2 libglvnd0 libjpeg-turbo8 libjpeg8
+    |   libjson-perl libjudydebian1 libpq5 libsctp1 liburing2 libwayland-client0
+    |   libx11-xcb1 libxcb-dri3-0 libxcb-present0 libxcb-randr0 libxcb-shm0
+    |   libxcb-sync1 libxcb-xfixes0 libxshmfence1 mesa-libgallium postgresql-18
+    |   postgresql-client-18 postgresql-client-common postgresql-common ssl-cert
+    | Suggested packages:
+    |   libpq-oauth lksctp-tools postgresql-doc postgresql-doc-18 zip
+    | Recommended packages:
+    |   libjson-xs-perl postgresql-18-jit
+    | The following NEW packages will be installed:
+    |   libegl-mesa0 libegl1 libgbm1 libgles2 libglvnd0 libjpeg-turbo8 libjpeg8
+    |   libjson-perl libjudydebian1 libpq5 libsctp1 liburing2 libwayland-client0
+    |   libx11-xcb1 libxcb-dri3-0 libxcb-present0 libxcb-randr0 libxcb-shm0
+    |   libxcb-sync1 libxcb-xfixes0 libxshmfence1 mesa-libgallium postgresql
+    |   postgresql-18 postgresql-client-18 postgresql-client-common
+    |   postgresql-common ssl-cert stress-ng unzip
+    | 0 upgraded, 30 newly installed, 0 to remove and 50 not upgraded.
+    | Need to get 23.3 MB of archives.
+    | After this operation, 93.1 MB of additional disk space will be used.
+    | Get:1 http://archive.ubuntu.com/ubuntu resolute/main arm64 libjson-perl all 4.10000-1 [81.9 kB]
+    | Get:2 http://archive.ubuntu.com/ubuntu resolute/main arm64 postgresql-client-common all 290ubuntu1 [49.4 kB]
+    | Get:3 http://archive.ubuntu.com/ubuntu resolute/main arm64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+    | Get:4 http://archive.ubuntu.com/ubuntu resolute/main arm64 postgresql-common all 290ubuntu1 [101 kB]
+    | Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 libx11-xcb1 arm64 2:1.8.13-1ubuntu0.1 [8148 B]
+    | Get:6 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxcb-dri3-0 arm64 1.17.0-2ubuntu1 [7624 B]
+    | Get:7 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxcb-present0 arm64 1.17.0-2ubuntu1 [6198 B]
+    | Get:8 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxcb-randr0 arm64 1.17.0-2ubuntu1 [18.1 kB]
+    | Get:9 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxcb-sync1 arm64 1.17.0-2ubuntu1 [9620 B]
+    | Get:10 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxcb-xfixes0 arm64 1.17.0-2ubuntu1 [10.4 kB]
+    | Get:11 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxshmfence1 arm64 1.3.3-1build1 [5482 B]
+    | Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 mesa-libgallium arm64 26.0.8-1ubuntu0.3 [12.3 MB]
+    | Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 libgbm1 arm64 26.0.8-1ubuntu0.3 [41.8 kB]
+    | Get:14 http://archive.ubuntu.com/ubuntu resolute/main arm64 libwayland-client0 arm64 1.24.0-2 [27.6 kB]
+    | Get:15 http://archive.ubuntu.com/ubuntu resolute/main arm64 libxcb-shm0 arm64 1.17.0-2ubuntu1 [5938 B]
+    | Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 libegl-mesa0 arm64 26.0.8-1ubuntu0.3 [123 kB]
+    | Get:17 http://archive.ubuntu.com/ubuntu resolute/main arm64 libjpeg-turbo8 arm64 2.1.5-4ubuntu4 [157 kB]
+    | Get:18 http://archive.ubuntu.com/ubuntu resolute/main arm64 libjpeg8 arm64 8c-2ubuntu12 [2142 B]
+    | Get:19 http://archive.ubuntu.com/ubuntu resolute/universe arm64 libjudydebian1 arm64 1.0.5-7 [104 kB]
+    | Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 libpq5 arm64 18.6-0ubuntu0.26.04.1 [160 kB]
+    | Get:21 http://archive.ubuntu.com/ubuntu resolute/main arm64 libsctp1 arm64 1.0.21+dfsg-1build2 [9620 B]
+    | Get:22 http://archive.ubuntu.com/ubuntu resolute/main arm64 liburing2 arm64 2.14-1 [25.9 kB]
+    | Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 postgresql-client-18 arm64 18.6-0ubuntu0.26.04.1 [1391 kB]
+    | Get:24 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 postgresql-18 arm64 18.6-0ubuntu0.26.04.1 [5785 kB]
+    | Get:25 http://archive.ubuntu.com/ubuntu resolute/main arm64 postgresql all 18+290ubuntu1 [18.6 kB]
+    | Get:26 http://archive.ubuntu.com/ubuntu resolute/main arm64 libglvnd0 arm64 1.7.0-3 [57.9 kB]
+    | Get:27 http://archive.ubuntu.com/ubuntu resolute/main arm64 libegl1 arm64 1.7.0-3 [29.7 kB]
+    | Get:28 http://archive.ubuntu.com/ubuntu resolute/main arm64 libgles2 arm64 1.7.0-3 [17.8 kB]
+    | Get:29 http://archive.ubuntu.com/ubuntu resolute/universe arm64 stress-ng arm64 0.20.01-1 [2557 kB]
+    | Get:30 http://archive.ubuntu.com/ubuntu resolute/main arm64 unzip arm64 6.0-29ubuntu1 [176 kB]
+    | Preconfiguring packages ...
+    | /var/cache/debconf/tmp.ci/postgresql.config.T35Zag: 12: pg_lsclusters: not found
+    | Fetched 23.3 MB in 2s (10.2 MB/s)
+    | Selecting previously unselected package libjson-perl.
+    | (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 151526 files and directories currently installed.)
+    | Preparing to unpack .../00-libjson-perl_4.10000-1_all.deb ...
+    | Unpacking libjson-perl (4.10000-1) ...
+    | Selecting previously unselected package postgresql-client-common.
+    | Preparing to unpack .../01-postgresql-client-common_290ubuntu1_all.deb ...
+    | Unpacking postgresql-client-common (290ubuntu1) ...
+    | Selecting previously unselected package ssl-cert.
+    | Preparing to unpack .../02-ssl-cert_1.1.3ubuntu2_all.deb ...
+    | Unpacking ssl-cert (1.1.3ubuntu2) ...
+    | Selecting previously unselected package postgresql-common.
+    | Preparing to unpack .../03-postgresql-common_290ubuntu1_all.deb ...
+    | Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+    | Unpacking postgresql-common (290ubuntu1) ...
+    | Selecting previously unselected package libx11-xcb1:arm64.
+    | Preparing to unpack .../04-libx11-xcb1_2%3a1.8.13-1ubuntu0.1_arm64.deb ...
+    | Unpacking libx11-xcb1:arm64 (2:1.8.13-1ubuntu0.1) ...
+    | Selecting previously unselected package libxcb-dri3-0:arm64.
+    | Preparing to unpack .../05-libxcb-dri3-0_1.17.0-2ubuntu1_arm64.deb ...
+    | Unpacking libxcb-dri3-0:arm64 (1.17.0-2ubuntu1) ...
+    | Selecting previously unselected package libxcb-present0:arm64.
+    | Preparing to unpack .../06-libxcb-present0_1.17.0-2ubuntu1_arm64.deb ...
+    | Unpacking libxcb-present0:arm64 (1.17.0-2ubuntu1) ...
+    | Selecting previously unselected package libxcb-randr0:arm64.
+    | Preparing to unpack .../07-libxcb-randr0_1.17.0-2ubuntu1_arm64.deb ...
+    | Unpacking libxcb-randr0:arm64 (1.17.0-2ubuntu1) ...
+    | Selecting previously unselected package libxcb-sync1:arm64.
+    | Preparing to unpack .../08-libxcb-sync1_1.17.0-2ubuntu1_arm64.deb ...
+    | Unpacking libxcb-sync1:arm64 (1.17.0-2ubuntu1) ...
+    | Selecting previously unselected package libxcb-xfixes0:arm64.
+    | Preparing to unpack .../09-libxcb-xfixes0_1.17.0-2ubuntu1_arm64.deb ...
+    | Unpacking libxcb-xfixes0:arm64 (1.17.0-2ubuntu1) ...
+    | Selecting previously unselected package libxshmfence1:arm64.
+    | Preparing to unpack .../10-libxshmfence1_1.3.3-1build1_arm64.deb ...
+    | Unpacking libxshmfence1:arm64 (1.3.3-1build1) ...
+    | Selecting previously unselected package mesa-libgallium:arm64.
+    | Preparing to unpack .../11-mesa-libgallium_26.0.8-1ubuntu0.3_arm64.deb ...
+    | Unpacking mesa-libgallium:arm64 (26.0.8-1ubuntu0.3) ...
+    | Selecting previously unselected package libgbm1:arm64.
+    | Preparing to unpack .../12-libgbm1_26.0.8-1ubuntu0.3_arm64.deb ...
+    | Unpacking libgbm1:arm64 (26.0.8-1ubuntu0.3) ...
+    | Selecting previously unselected package libwayland-client0:arm64.
+    | Preparing to unpack .../13-libwayland-client0_1.24.0-2_arm64.deb ...
+    | Unpacking libwayland-client0:arm64 (1.24.0-2) ...
+    | Selecting previously unselected package libxcb-shm0:arm64.
+    | Preparing to unpack .../14-libxcb-shm0_1.17.0-2ubuntu1_arm64.deb ...
+    | Unpacking libxcb-shm0:arm64 (1.17.0-2ubuntu1) ...
+    | Selecting previously unselected package libegl-mesa0:arm64.
+    | Preparing to unpack .../15-libegl-mesa0_26.0.8-1ubuntu0.3_arm64.deb ...
+    | Unpacking libegl-mesa0:arm64 (26.0.8-1ubuntu0.3) ...
+    | Selecting previously unselected package libjpeg-turbo8:arm64.
+    | Preparing to unpack .../16-libjpeg-turbo8_2.1.5-4ubuntu4_arm64.deb ...
+    | Unpacking libjpeg-turbo8:arm64 (2.1.5-4ubuntu4) ...
+    | Selecting previously unselected package libjpeg8:arm64.
+    | Preparing to unpack .../17-libjpeg8_8c-2ubuntu12_arm64.deb ...
+    | Unpacking libjpeg8:arm64 (8c-2ubuntu12) ...
+    | Selecting previously unselected package libjudydebian1.
+    | Preparing to unpack .../18-libjudydebian1_1.0.5-7_arm64.deb ...
+    | Unpacking libjudydebian1 (1.0.5-7) ...
+    | Selecting previously unselected package libpq5:arm64.
+    | Preparing to unpack .../19-libpq5_18.6-0ubuntu0.26.04.1_arm64.deb ...
+    | Unpacking libpq5:arm64 (18.6-0ubuntu0.26.04.1) ...
+    | Selecting previously unselected package libsctp1:arm64.
+    | Preparing to unpack .../20-libsctp1_1.0.21+dfsg-1build2_arm64.deb ...
+    | Unpacking libsctp1:arm64 (1.0.21+dfsg-1build2) ...
+    | Selecting previously unselected package liburing2:arm64.
+    | Preparing to unpack .../21-liburing2_2.14-1_arm64.deb ...
+    | Unpacking liburing2:arm64 (2.14-1) ...
+    | Selecting previously unselected package postgresql-client-18.
+    | Preparing to unpack .../22-postgresql-client-18_18.6-0ubuntu0.26.04.1_arm64.deb ...
+    | Unpacking postgresql-client-18 (18.6-0ubuntu0.26.04.1) ...
+    | Selecting previously unselected package postgresql-18.
+    | Preparing to unpack .../23-postgresql-18_18.6-0ubuntu0.26.04.1_arm64.deb ...
+    | Unpacking postgresql-18 (18.6-0ubuntu0.26.04.1) ...
+    | Selecting previously unselected package postgresql.
+    | Preparing to unpack .../24-postgresql_18+290ubuntu1_all.deb ...
+    | Unpacking postgresql (18+290ubuntu1) ...
+    | Selecting previously unselected package libglvnd0:arm64.
+    | Preparing to unpack .../25-libglvnd0_1.7.0-3_arm64.deb ...
+    | Unpacking libglvnd0:arm64 (1.7.0-3) ...
+    | Selecting previously unselected package libegl1:arm64.
+    | Preparing to unpack .../26-libegl1_1.7.0-3_arm64.deb ...
+    | Unpacking libegl1:arm64 (1.7.0-3) ...
+    | Selecting previously unselected package libgles2:arm64.
+    | Preparing to unpack .../27-libgles2_1.7.0-3_arm64.deb ...
+    | Unpacking libgles2:arm64 (1.7.0-3) ...
+    | Selecting previously unselected package stress-ng.
+    | Preparing to unpack .../28-stress-ng_0.20.01-1_arm64.deb ...
+    | Unpacking stress-ng (0.20.01-1) ...
+    | Selecting previously unselected package unzip.
+    | Preparing to unpack .../29-unzip_6.0-29ubuntu1_arm64.deb ...
+    | Unpacking unzip (6.0-29ubuntu1) ...
+    | Setting up postgresql-client-common (290ubuntu1) ...
+    | Setting up libxcb-dri3-0:arm64 (1.17.0-2ubuntu1) ...
+    | Setting up libx11-xcb1:arm64 (2:1.8.13-1ubuntu0.1) ...
+    | Setting up libxcb-xfixes0:arm64 (1.17.0-2ubuntu1) ...
+    | Setting up libglvnd0:arm64 (1.7.0-3) ...
+    | Setting up unzip (6.0-29ubuntu1) ...
+    | Setting up libpq5:arm64 (18.6-0ubuntu0.26.04.1) ...
+    | Setting up libxcb-shm0:arm64 (1.17.0-2ubuntu1) ...
+    | Setting up libjudydebian1 (1.0.5-7) ...
+    | Setting up libxcb-present0:arm64 (1.17.0-2ubuntu1) ...
+    | Setting up libgles2:arm64 (1.7.0-3) ...
+    | Setting up ssl-cert (1.1.3ubuntu2) ...
+    | Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+    | Setting up libxcb-sync1:arm64 (1.17.0-2ubuntu1) ...
+    | Setting up libjpeg-turbo8:arm64 (2.1.5-4ubuntu4) ...
+    | Setting up libsctp1:arm64 (1.0.21+dfsg-1build2) ...
+    | Setting up libxshmfence1:arm64 (1.3.3-1build1) ...
+    | Setting up libxcb-randr0:arm64 (1.17.0-2ubuntu1) ...
+    | Setting up libjson-perl (4.10000-1) ...
+    | Setting up liburing2:arm64 (2.14-1) ...
+    | Setting up libwayland-client0:arm64 (1.24.0-2) ...
+    | Setting up libjpeg8:arm64 (8c-2ubuntu12) ...
+    | Setting up mesa-libgallium:arm64 (26.0.8-1ubuntu0.3) ...
+    | Setting up postgresql-client-18 (18.6-0ubuntu0.26.04.1) ...
+    | update-alternatives: using /usr/share/postgresql/18/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+    | Setting up libgbm1:arm64 (26.0.8-1ubuntu0.3) ...
+    | Setting up libegl-mesa0:arm64 (26.0.8-1ubuntu0.3) ...
+    | Setting up postgresql-common (290ubuntu1) ...
+    | Creating config file /etc/postgresql-common/createcluster.conf with new version
+    | Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+    | Removing obsolete dictionary files:
+    | Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql.service' → '/usr/lib/systemd/system/postgresql.service'.
+    | Setting up libegl1:arm64 (1.7.0-3) ...
+    | Setting up postgresql-18 (18.6-0ubuntu0.26.04.1) ...
+    | Error: The locale requested by the environment is invalid:
+    |   LANG: pt_PT.UTF-8
+    | Error: could not create default cluster. Please create it manually with
+    | 
+    |   pg_createcluster 18 main --start
+    | 
+    | or a similar command (see 'man pg_createcluster').
+    | Setting up stress-ng (0.20.01-1) ...
+    | Setting up postgresql (18+290ubuntu1) ...
+    | Processing triggers for man-db (2.13.1-1build1) ...
+    | Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+    | 
+    | Running kernel seems to be up-to-date (ABI upgrades are not detected).
+    | 
+    | No services need to be restarted.
+    | 
+    | No containers need to be restarted.
+    | 
+    | No user sessions are running outdated binaries.
+    | 
+    | No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-17T22:34:47-03:00 [provision-infra] INFO == 5/7 Usuarios, grupos e permissoes ==
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando o grupo termometro
+2026-11-17T22:34:47-03:00 [provision-infra] CMD groupadd --system termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando o grupo termometro-logs
+2026-11-17T22:34:47-03:00 [provision-infra] CMD groupadd --system termometro-logs
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando o usuario de sistema termometro
+2026-11-17T22:34:47-03:00 [provision-infra] CMD useradd --system --gid termometro --home-dir /opt/termometro --no-create-home --shell /usr/sbin/nologin --comment Termometro do ACS - roda a API termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando o usuario de sistema monitor
+2026-11-17T22:34:47-03:00 [provision-infra] CMD useradd --system --gid termometro --home-dir /var/lib/termometro --no-create-home --shell /usr/sbin/nologin --comment Termometro do ACS - monitor monitor
+2026-11-17T22:34:47-03:00 [provision-infra] INFO colocando termometro e monitor no grupo de logs
+2026-11-17T22:34:47-03:00 [provision-infra] CMD usermod -aG termometro-logs termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO colocando monitor no grupo de logs
+2026-11-17T22:34:47-03:00 [provision-infra] CMD usermod -aG termometro-logs monitor
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando o usuario operador operador
+2026-11-17T22:34:47-03:00 [provision-infra] CMD useradd --create-home --shell /bin/bash --comment Operador do Termometro operador
+2026-11-17T22:34:47-03:00 [provision-infra] INFO colocando operador no grupo de logs
+2026-11-17T22:34:47-03:00 [provision-infra] CMD usermod -aG termometro-logs operador
+2026-11-17T22:34:47-03:00 [provision-infra] INFO arquivo criado: /etc/sudoers.d/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando /opt/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] CMD install -d -m 0755 -o root -g termometro /opt/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando /etc/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] CMD install -d -m 0750 -o root -g termometro /etc/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando /var/lib/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] CMD install -d -m 0750 -o termometro -g termometro /var/lib/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO criando /var/log/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] CMD install -d -m 2775 -o root -g termometro-logs /var/log/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] INFO == 6/7 Firewall (ufw) ==
+2026-11-17T22:34:47-03:00 [provision-infra] INFO politica padrao: negar entrada
+2026-11-17T22:34:47-03:00 [provision-infra] CMD ufw default deny incoming
+    | Default incoming policy changed to 'deny'
+    | (be sure to update your rules accordingly)
+2026-11-17T22:34:47-03:00 [provision-infra] INFO politica padrao: permitir saida
+2026-11-17T22:34:47-03:00 [provision-infra] CMD ufw default allow outgoing
+    | Default outgoing policy changed to 'allow'
+    | (be sure to update your rules accordingly)
+2026-11-17T22:34:47-03:00 [provision-infra] INFO liberando SSH (22/tcp)
+2026-11-17T22:34:47-03:00 [provision-infra] CMD ufw allow 22/tcp
+    | Rules updated
+    | Rules updated (v6)
+2026-11-17T22:34:47-03:00 [provision-infra] INFO liberando a API (5080/tcp)
+2026-11-17T22:34:47-03:00 [provision-infra] CMD ufw allow 5080/tcp
+    | Rules updated
+    | Rules updated (v6)
+2026-11-17T22:34:47-03:00 [provision-infra] INFO ligando o firewall
+2026-11-17T22:34:47-03:00 [provision-infra] CMD ufw --force enable
+    | Firewall is active and enabled on system startup
+2026-11-17T22:34:47-03:00 [provision-infra] INFO == 7/7 Rotacao de logs ==
+2026-11-17T22:34:47-03:00 [provision-infra] INFO arquivo criado: /etc/logrotate.d/termometro
+2026-11-17T22:34:47-03:00 [provision-infra] OK infraestrutura pronta. Proximo passo: sudo ./provision-app.sh
+2026-11-17T22:34:47-03:00 [provision-infra] OK fim sem erros (11s)
+2026-11-17T22:38:36-03:00 [provision-infra] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T22:38:36-03:00 [provision-infra] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-17T22:38:36-03:00 [provision-infra] INFO == 1/7 Identidade: hostname, fuso, /etc/hosts ==
+2026-11-17T22:38:36-03:00 [provision-infra] INFO hostname ja e termometro-acs
+2026-11-17T22:38:37-03:00 [provision-infra] INFO fuso horario ja e America/Sao_Paulo
+2026-11-17T22:38:37-03:00 [provision-infra] INFO /etc/hosts ja tem: 127.0.1.1 termometro-acs.gs.local termometro-acs
+2026-11-17T22:38:37-03:00 [provision-infra] INFO == 2/7 Rede: IP, gateway, DNS ==
+2026-11-17T22:38:37-03:00 [provision-infra] INFO interface de rede: enp0s1; IP 192.168.64.2/24; gateway 192.168.64.1; DNS 1.1.1.1 8.8.8.8
+2026-11-17T22:38:37-03:00 [provision-infra] INFO arquivo ja estava correto: /etc/netplan/60-termometro.yaml
+2026-11-17T22:38:37-03:00 [provision-infra] INFO validando a configuracao de rede
+2026-11-17T22:38:37-03:00 [provision-infra] CMD netplan generate
+2026-11-17T22:38:37-03:00 [provision-infra] INFO aplicando a configuracao de rede
+2026-11-17T22:38:37-03:00 [provision-infra] CMD netplan apply
+2026-11-17T22:38:37-03:00 [provision-infra] INFO == 3/7 DNS: resolucao de nomes ==
+2026-11-17T22:38:37-03:00 [provision-infra] INFO systemd-resolved ativo; servidores DNS em uso:
+    | Global:
+    | Link 2 (enp0s1): 1.1.1.1 8.8.8.8
+2026-11-17T22:38:37-03:00 [provision-infra] OK DNS resolveu github.com -> 4.228.31.150
+2026-11-17T22:38:37-03:00 [provision-infra] OK DNS resolveu api.nuget.org -> 2600:1419:4e00:1f::17d3:6d8f
+2026-11-17T22:38:37-03:00 [provision-infra] OK o nome local termometro-acs resolve para 127.0.1.1
+2026-11-17T22:38:37-03:00 [provision-infra] INFO == 4/7 Pacotes base ==
+2026-11-17T22:38:37-03:00 [provision-infra] INFO atualizando a lista de pacotes
+2026-11-17T22:38:37-03:00 [provision-infra] CMD env DEBIAN_FRONTEND=noninteractive apt-get update
+    | Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+    | Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+    | Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+    | Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+    | Reading package lists...
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: curl
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: ca-certificates
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: git
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: jq
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: ufw
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: unzip
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: htop
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: stress-ng
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: openssl
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: logrotate
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: postgresql
+2026-11-17T22:38:39-03:00 [provision-infra] INFO pacote ja instalado: sudo
+2026-11-17T22:38:39-03:00 [provision-infra] INFO == 5/7 Usuarios, grupos e permissoes ==
+2026-11-17T22:38:39-03:00 [provision-infra] INFO grupo ja existe: termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO grupo ja existe: termometro-logs
+2026-11-17T22:38:39-03:00 [provision-infra] INFO usuario ja existe: termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO usuario ja existe: monitor
+2026-11-17T22:38:39-03:00 [provision-infra] INFO colocando termometro e monitor no grupo de logs
+2026-11-17T22:38:39-03:00 [provision-infra] CMD usermod -aG termometro-logs termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO colocando monitor no grupo de logs
+2026-11-17T22:38:39-03:00 [provision-infra] CMD usermod -aG termometro-logs monitor
+2026-11-17T22:38:39-03:00 [provision-infra] INFO usuario ja existe: operador
+2026-11-17T22:38:39-03:00 [provision-infra] INFO colocando operador no grupo de logs
+2026-11-17T22:38:39-03:00 [provision-infra] CMD usermod -aG termometro-logs operador
+2026-11-17T22:38:39-03:00 [provision-infra] INFO arquivo atualizado (copia .bak criada): /etc/sudoers.d/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] OK sudoers validado (visudo -c)
+2026-11-17T22:38:39-03:00 [provision-infra] INFO criando /opt/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] CMD install -d -m 0755 -o root -g termometro /opt/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO criando /etc/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] CMD install -d -m 0750 -o root -g termometro /etc/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO criando /var/lib/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] CMD install -d -m 0750 -o termometro -g termometro /var/lib/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO criando /var/log/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] CMD install -d -m 2775 -o root -g termometro-logs /var/log/termometro
+2026-11-17T22:38:39-03:00 [provision-infra] INFO == 6/7 Firewall (ufw) ==
+2026-11-17T22:38:39-03:00 [provision-infra] INFO politica padrao: negar entrada
+2026-11-17T22:38:39-03:00 [provision-infra] CMD ufw default deny incoming
+    | Default incoming policy changed to 'deny'
+    | (be sure to update your rules accordingly)
+2026-11-17T22:38:39-03:00 [provision-infra] INFO politica padrao: permitir saida
+2026-11-17T22:38:39-03:00 [provision-infra] CMD ufw default allow outgoing
+    | Default outgoing policy changed to 'allow'
+    | (be sure to update your rules accordingly)
+2026-11-17T22:38:40-03:00 [provision-infra] INFO liberando SSH (22/tcp)
+2026-11-17T22:38:40-03:00 [provision-infra] CMD ufw allow 22/tcp
+    | Skipping adding existing rule
+    | Skipping adding existing rule (v6)
+2026-11-17T22:38:40-03:00 [provision-infra] INFO liberando a API (5080/tcp)
+2026-11-17T22:38:40-03:00 [provision-infra] CMD ufw allow 5080/tcp
+    | Skipping adding existing rule
+    | Skipping adding existing rule (v6)
+2026-11-17T22:38:40-03:00 [provision-infra] INFO ligando o firewall
+2026-11-17T22:38:40-03:00 [provision-infra] CMD ufw --force enable
+    | Firewall is active and enabled on system startup
+2026-11-17T22:38:40-03:00 [provision-infra] INFO == 7/7 Rotacao de logs ==
+2026-11-17T22:38:40-03:00 [provision-infra] INFO arquivo ja estava correto: /etc/logrotate.d/termometro
+2026-11-17T22:38:40-03:00 [provision-infra] OK infraestrutura pronta. Proximo passo: sudo ./provision-app.sh
+2026-11-17T22:38:40-03:00 [provision-infra] OK fim sem erros (4s)
+2026-11-17T22:50:37-03:00 [provision-infra] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T22:50:37-03:00 [provision-infra] INFO lendo configuracao: /home/lu2r6be/termometro/infra/config/provisionamento.conf
+2026-11-17T22:50:37-03:00 [provision-infra] INFO == 1/7 Identidade: hostname, fuso, /etc/hosts ==
+2026-11-17T22:50:37-03:00 [provision-infra] INFO hostname ja e termometro-acs
+2026-11-17T22:50:37-03:00 [provision-infra] INFO fuso horario ja e America/Sao_Paulo
+2026-11-17T22:50:37-03:00 [provision-infra] INFO /etc/hosts ja tem: 127.0.1.1 termometro-acs.gs.local termometro-acs
+2026-11-17T22:50:37-03:00 [provision-infra] INFO == 2/7 Rede: IP, gateway, DNS ==
+2026-11-17T22:50:37-03:00 [provision-infra] INFO interface de rede: enp0s1; IP 192.168.64.2/24; gateway 192.168.64.1; DNS 1.1.1.1 8.8.8.8
+2026-11-17T22:50:37-03:00 [provision-infra] INFO arquivo ja estava correto: /etc/netplan/60-termometro.yaml
+2026-11-17T22:50:37-03:00 [provision-infra] INFO validando a configuracao de rede
+2026-11-17T22:50:37-03:00 [provision-infra] CMD netplan generate
+2026-11-17T22:50:37-03:00 [provision-infra] INFO aplicando a configuracao de rede
+2026-11-17T22:50:37-03:00 [provision-infra] CMD netplan apply
+2026-11-17T22:50:37-03:00 [provision-infra] INFO == 3/7 DNS: resolucao de nomes ==
+2026-11-17T22:50:37-03:00 [provision-infra] INFO systemd-resolved ativo; servidores DNS em uso:
+    | Global:
+    | Link 2 (enp0s1): 1.1.1.1 8.8.8.8
+2026-11-17T22:50:37-03:00 [provision-infra] OK DNS resolveu github.com -> 4.228.31.150
+2026-11-17T22:50:37-03:00 [provision-infra] OK DNS resolveu api.nuget.org -> 2600:1419:4e00:1f::17d3:6d94
+2026-11-17T22:50:37-03:00 [provision-infra] OK o nome local termometro-acs resolve para 127.0.1.1
+2026-11-17T22:50:37-03:00 [provision-infra] INFO == 4/7 Pacotes base ==
+2026-11-17T22:50:37-03:00 [provision-infra] INFO atualizando a lista de pacotes
+2026-11-17T22:50:37-03:00 [provision-infra] CMD env DEBIAN_FRONTEND=noninteractive apt-get update
+    | Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+    | Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+    | Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+    | Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+    | Reading package lists...
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: curl
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: ca-certificates
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: git
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: jq
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: ufw
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: unzip
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: htop
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: stress-ng
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: openssl
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: logrotate
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: postgresql
+2026-11-17T22:50:39-03:00 [provision-infra] INFO pacote ja instalado: sudo
+2026-11-17T22:50:40-03:00 [provision-infra] INFO == 5/7 Usuarios, grupos e permissoes ==
+2026-11-17T22:50:40-03:00 [provision-infra] INFO grupo ja existe: termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO grupo ja existe: termometro-logs
+2026-11-17T22:50:40-03:00 [provision-infra] INFO usuario ja existe: termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO usuario ja existe: monitor
+2026-11-17T22:50:40-03:00 [provision-infra] INFO colocando termometro e monitor no grupo de logs
+2026-11-17T22:50:40-03:00 [provision-infra] CMD usermod -aG termometro-logs termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO colocando monitor no grupo de logs
+2026-11-17T22:50:40-03:00 [provision-infra] CMD usermod -aG termometro-logs monitor
+2026-11-17T22:50:40-03:00 [provision-infra] INFO usuario ja existe: operador
+2026-11-17T22:50:40-03:00 [provision-infra] INFO colocando operador no grupo de logs
+2026-11-17T22:50:40-03:00 [provision-infra] CMD usermod -aG termometro-logs operador
+2026-11-17T22:50:40-03:00 [provision-infra] INFO arquivo ja estava correto: /etc/sudoers.d/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] OK sudoers validado (visudo -c)
+2026-11-17T22:50:40-03:00 [provision-infra] INFO criando /opt/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] CMD install -d -m 0755 -o root -g termometro /opt/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO criando /etc/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] CMD install -d -m 0750 -o root -g termometro /etc/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO criando /var/lib/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] CMD install -d -m 0750 -o termometro -g termometro /var/lib/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO criando /var/log/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] CMD install -d -m 2775 -o root -g termometro-logs /var/log/termometro
+2026-11-17T22:50:40-03:00 [provision-infra] INFO == 6/7 Firewall (ufw) ==
+2026-11-17T22:50:40-03:00 [provision-infra] INFO politica padrao: negar entrada
+2026-11-17T22:50:40-03:00 [provision-infra] CMD ufw default deny incoming
+    | Default incoming policy changed to 'deny'
+    | (be sure to update your rules accordingly)
+2026-11-17T22:50:40-03:00 [provision-infra] INFO politica padrao: permitir saida
+2026-11-17T22:50:40-03:00 [provision-infra] CMD ufw default allow outgoing
+    | Default outgoing policy changed to 'allow'
+    | (be sure to update your rules accordingly)
+2026-11-17T22:50:41-03:00 [provision-infra] INFO liberando SSH (22/tcp)
+2026-11-17T22:50:41-03:00 [provision-infra] CMD ufw allow 22/tcp
+    | Skipping adding existing rule
+    | Skipping adding existing rule (v6)
+2026-11-17T22:50:41-03:00 [provision-infra] INFO liberando a API (5080/tcp)
+2026-11-17T22:50:41-03:00 [provision-infra] CMD ufw allow 5080/tcp
+    | Skipping adding existing rule
+    | Skipping adding existing rule (v6)
+2026-11-17T22:50:41-03:00 [provision-infra] INFO ligando o firewall
+2026-11-17T22:50:41-03:00 [provision-infra] CMD ufw --force enable
+    | Firewall is active and enabled on system startup
+2026-11-17T22:50:41-03:00 [provision-infra] INFO == 7/7 Rotacao de logs ==
+2026-11-17T22:50:41-03:00 [provision-infra] INFO arquivo ja estava correto: /etc/logrotate.d/termometro
+2026-11-17T22:50:41-03:00 [provision-infra] OK infraestrutura pronta. Proximo passo: sudo ./provision-app.sh
+2026-11-17T22:50:41-03:00 [provision-infra] OK fim sem erros (4s)

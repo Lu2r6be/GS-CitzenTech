@@ -1,0 +1,69 @@
+2026-11-17T23:26:01-03:00 [teste-estresse] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T23:26:01-03:00 [teste-estresse] INFO TESTE: carga de CPU em todos os nucleos por 90s
+2026-11-17T23:26:01-03:00 [teste-estresse] INFO stress-ng (cpu)
+2026-11-17T23:26:01-03:00 [teste-estresse] CMD stress-ng --cpu 0 --timeout 90s --metrics-brief
+2026-11-17T23:27:08-03:00 [teste-estresse] OK fim sem erros (67s)
+2026-11-17T23:27:11-03:00 [teste-estresse] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T23:27:11-03:00 [teste-estresse] INFO TESTE: ocupando ~90% da memoria por 90s
+2026-11-17T23:27:11-03:00 [teste-estresse] INFO stress-ng (memoria)
+2026-11-17T23:27:11-03:00 [teste-estresse] CMD stress-ng --vm 1 --vm-bytes 90% --vm-keep --timeout 90s --metrics-brief
+    | stress-ng: info:  [18468] setting to a 1 min 30 secs run per stressor
+    | stress-ng: info:  [18468] dispatching hogs: 1 vm
+    | stress-ng: info:  [18469] vm: using 448.84MB per stressor instance (total 448.84MB of 498.71MB available memory)
+    | stress-ng: metrc: [18468] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+    | stress-ng: metrc: [18468]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+    | stress-ng: metrc: [18468] vm             16235450     90.06     89.58      0.46    180276.31      180316.03
+    | stress-ng: info:  [18468] skipped: 0
+    | stress-ng: info:  [18468] passed: 1: vm (1)
+    | stress-ng: info:  [18468] failed: 0
+    | stress-ng: info:  [18468] metrics untrustworthy: 0
+    | stress-ng: info:  [18468] successful run completed in 1 min 30.06 secs
+2026-11-17T23:28:41-03:00 [teste-estresse] INFO TESTE concluido: confira os ALERTAs em /var/log/termometro/monitor.log
+2026-11-17T23:28:41-03:00 [teste-estresse] OK fim sem erros (90s)
+2026-11-17T23:31:34-03:00 [teste-estresse] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T23:31:34-03:00 [teste-estresse] INFO TESTE: ocupando ~90% da memoria por 90s
+2026-11-17T23:31:34-03:00 [teste-estresse] INFO stress-ng (memoria)
+2026-11-17T23:31:34-03:00 [teste-estresse] CMD stress-ng --vm 1 --vm-bytes 90% --vm-keep --timeout 90s --metrics-brief
+2026-11-17T23:33:02-03:00 [teste-estresse] OK fim sem erros (88s)
+2026-11-17T23:33:06-03:00 [teste-estresse] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T23:33:06-03:00 [teste-estresse] INFO TESTE: ocupando ~90% da memoria por 90s
+2026-11-17T23:33:06-03:00 [teste-estresse] INFO stress-ng (memoria)
+2026-11-17T23:33:06-03:00 [teste-estresse] CMD stress-ng --vm 1 --vm-bytes 90% --vm-keep --timeout 90s --metrics-brief
+    | stress-ng: info:  [18992] setting to a 1 min 30 secs run per stressor
+    | stress-ng: info:  [18992] dispatching hogs: 1 vm
+    | stress-ng: info:  [18993] vm: using 516.99MB per stressor instance (total 516.99MB of 574.44MB available memory)
+    | stress-ng: metrc: [18992] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+    | stress-ng: metrc: [18992]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+    | stress-ng: metrc: [18992] vm             15092741     90.22     82.99      0.28    167287.00      181259.04
+    | stress-ng: info:  [18992] skipped: 0
+    | stress-ng: info:  [18992] passed: 1: vm (1)
+    | stress-ng: info:  [18992] failed: 0
+    | stress-ng: info:  [18992] metrics untrustworthy: 0
+    | stress-ng: info:  [18992] successful run completed in 1 min 30.22 secs
+2026-11-17T23:34:36-03:00 [teste-estresse] INFO TESTE concluido: confira os ALERTAs em /var/log/termometro/monitor.log
+2026-11-17T23:34:36-03:00 [teste-estresse] OK fim sem erros (90s)
+2026-11-17T23:36:02-03:00 [teste-estresse] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T23:36:02-03:00 [teste-estresse] INFO TESTE: ocupando ~90% da memoria por 90s
+2026-11-17T23:36:02-03:00 [teste-estresse] INFO stress-ng (memoria)
+2026-11-17T23:36:02-03:00 [teste-estresse] CMD stress-ng --vm 1 --vm-bytes 90% --vm-keep --timeout 90s --metrics-brief
+    | stress-ng: info:  [19296] setting to a 1 min 30 secs run per stressor
+    | stress-ng: info:  [19296] dispatching hogs: 1 vm
+    | stress-ng: info:  [19297] vm: using 546.03MB per stressor instance (total 546.03MB of 606.70MB available memory)
+    | stress-ng: metrc: [19296] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+    | stress-ng: metrc: [19296]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+    | stress-ng: metrc: [19296] vm             15395224     90.40     82.78      0.63    170302.23      184561.61
+    | stress-ng: info:  [19296] skipped: 0
+    | stress-ng: info:  [19296] passed: 1: vm (1)
+    | stress-ng: info:  [19296] failed: 0
+    | stress-ng: info:  [19296] metrics untrustworthy: 0
+    | stress-ng: info:  [19296] successful run completed in 1 min 30.40 secs
+2026-11-17T23:37:32-03:00 [teste-estresse] INFO TESTE concluido: confira os ALERTAs em /var/log/termometro/monitor.log
+2026-11-17T23:37:32-03:00 [teste-estresse] OK fim sem erros (90s)
+2026-11-17T23:40:07-03:00 [teste-estresse] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-17T23:40:07-03:00 [teste-estresse] INFO TESTE: criando 2048 MB em /var/tmp/termometro-teste-disco.bin (apagado ao final)
+2026-11-17T23:40:07-03:00 [teste-estresse] INFO criando arquivo grande
+2026-11-17T23:40:07-03:00 [teste-estresse] CMD fallocate -l 2048M /var/tmp/termometro-teste-disco.bin
+2026-11-17T23:40:07-03:00 [teste-estresse] INFO uso do disco agora: 44%
+2026-11-17T23:40:07-03:00 [teste-estresse] INFO aguardando 70 s para o monitor medir (Ctrl+C apaga o arquivo e encerra)
+2026-11-17T23:41:17-03:00 [teste-estresse] INFO TESTE concluido: confira os ALERTAs em /var/log/termometro/monitor.log
+2026-11-17T23:41:17-03:00 [teste-estresse] INFO arquivo de teste apagado

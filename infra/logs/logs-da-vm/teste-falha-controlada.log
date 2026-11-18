@@ -1,0 +1,8 @@
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] INFO inicio (usuario=root, maquina=termometro-acs, DRY_RUN=0)
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] INFO TESTE: vou executar um comando que NAO pode dar certo
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] INFO listando uma pasta que nao existe
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] CMD ls /pasta/que/nao/existe
+    | ls: cannot access '/pasta/que/nao/existe': No such file or directory
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] ERRO comando falhou (codigo 2): ls /pasta/que/nao/existe
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] ERRO falhou na linha 15 (codigo 2): return "$codigo"
+2026-11-18T00:03:56-03:00 [teste-falha-controlada] ERRO fim COM ERRO, codigo 2 (0s)

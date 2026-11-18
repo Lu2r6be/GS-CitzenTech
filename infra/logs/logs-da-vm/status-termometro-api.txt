@@ -1,0 +1,21 @@
+● termometro-api.service - Termometro do ACS - API (.NET)
+     Loaded: loaded (/etc/systemd/system/termometro-api.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-11-18 00:09:32 -03; 10min ago
+ Invocation: 16ff154967754286980b651edb7bd0c3
+       Docs: file:///opt/termometro/README.md
+   Main PID: 2322 (dotnet)
+      Tasks: 19 (limit: 948)
+     Memory: 117.9M (peak: 118.4M)
+        CPU: 7.601s
+     CGroup: /system.slice/termometro-api.service
+             └─2322 /usr/share/dotnet/dotnet /opt/termometro/app/Termometro.Api.dll
+
+Nov 18 00:09:32 termometro-acs systemd[1]: Started termometro-api.service - Termometro do ACS - API (.NET).
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.030-03:00 INFO Termometro.Api.Demonstracao.SemeadorDeDemonstracao: Banco já tem dados: demonstração não foi recriada.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.059-03:00 WARN Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository: Using an in-memory repository. Keys will not be persisted to storage.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.059-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.064-03:00 WARN Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {9b8a38ff-9de5-4f91-a75f-f03d2c9955bd} may be persisted to storage in unencrypted form.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Now listening on: http://0.0.0.0:5080
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Hosting environment: Production
+Nov 18 00:09:33 termometro-acs termometro-api[2322]: 2026-11-18T00:09:33.079-03:00 INFO Microsoft.Hosting.Lifetime: Content root path: /opt/termometro/app

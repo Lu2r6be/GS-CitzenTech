@@ -1,0 +1,22 @@
+● termometro-monitor.service - Termometro do ACS - monitor de CPU, RAM, disco e servicos
+     Loaded: loaded (/etc/systemd/system/termometro-monitor.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 23:42:28 -03; 37min ago
+ Invocation: ab5af1e4c3b84065a9454f59df931069
+   Main PID: 1235 (bash)
+      Tasks: 2 (limit: 948)
+     Memory: 4.4M (peak: 8.5M)
+        CPU: 2.864s
+     CGroup: /system.slice/termometro-monitor.service
+             ├─1235 bash /opt/termometro/scripts/monitor.sh
+             └─3055 sleep 30
+
+Nov 18 00:16:12 termometro-acs termometro-monitor[1235]: 2026-11-18T00:16:12-03:00 [monitor] INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:16:43 termometro-acs termometro-monitor[1235]: 2026-11-18T00:16:43-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:17:14 termometro-acs termometro-monitor[1235]: 2026-11-18T00:17:14-03:00 [monitor] INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:17:14 termometro-acs termometro-monitor[2887]: INFO cpu=0% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:17:45 termometro-acs termometro-monitor[1235]: 2026-11-18T00:17:45-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:18:16 termometro-acs termometro-monitor[1235]: 2026-11-18T00:18:16-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:18:16 termometro-acs termometro-monitor[2952]: INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:18:47 termometro-acs termometro-monitor[1235]: 2026-11-18T00:18:47-03:00 [monitor] INFO cpu=2% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:19:18 termometro-acs termometro-monitor[1235]: 2026-11-18T00:19:18-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum
+Nov 18 00:19:50 termometro-acs termometro-monitor[1235]: 2026-11-18T00:19:50-03:00 [monitor] INFO cpu=1% ram=28% disco=34% api=ok servicos_parados=nenhum

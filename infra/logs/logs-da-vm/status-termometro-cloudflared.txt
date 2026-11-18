@@ -1,0 +1,21 @@
+● termometro-cloudflared.service - Termometro do ACS - tunel publico (cloudflared quick tunnel)
+     Loaded: loaded (/etc/systemd/system/termometro-cloudflared.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 23:42:28 -03; 37min ago
+ Invocation: f8f49e3d63bf40d59a8e30828977f03a
+   Main PID: 1234 (cloudflared)
+      Tasks: 8 (limit: 948)
+     Memory: 51.1M (peak: 53.5M)
+        CPU: 3.871s
+     CGroup: /system.slice/termometro-cloudflared.service
+             └─1234 /usr/bin/cloudflared tunnel --no-autoupdate --url http://127.0.0.1:5080
+
+Nov 18 00:01:14 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:14Z INF precheck complete hard_fail=false run_id=022e9ebb-d03f-4932-bc30-794f9ef713d5 suggested_protocol=quic
+Nov 18 00:01:15 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:01:15Z INF Registered tunnel connection connIndex=0 connection=b24dab60-4a24-4a7f-886a-8bd066af88ad event=0 ip=198.41.200.63 location=gru21 protocol=quic
+Nov 18 00:18:48 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:48Z ERR Serve tunnel error error="datagram manager error: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.63
+Nov 18 00:18:48 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:48Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.200.63
+Nov 18 00:18:48 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.192.77
+Nov 18 00:18:49 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:18:49Z INF Registered tunnel connection connIndex=0 connection=9fcd54a9-8141-46c8-a089-2f8be360f5a7 event=0 ip=198.41.192.77 location=gru20 protocol=quic
+Nov 18 00:19:35 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:35Z ERR Serve tunnel error error="accept stream listener error: failed to accept QUIC stream: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
+Nov 18 00:19:35 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:35Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.77
+Nov 18 00:19:37 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:37Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.200.53
+Nov 18 00:19:38 termometro-acs termometro-cloudflared[1234]: 2026-11-18T03:19:38Z INF Registered tunnel connection connIndex=0 connection=166725c3-001d-4f47-97eb-3939bd4dcbc5 event=0 ip=198.41.200.53 location=gru19 protocol=quic
