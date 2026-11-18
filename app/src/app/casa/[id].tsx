@@ -105,7 +105,7 @@ export default function DetalheDaCasaTela() {
       <Text style={estilos.explicacao}>
         {casa.semSinal
           ? 'O sensor desta casa está sem sinal. Vale ligar para a pessoa ou passar lá.'
-          : `Casa ${aparenciaDe(casa.nivel).explicacao}.`}
+          : `${primeiraMaiuscula(aparenciaDe(casa.nivel).explicacao)}.`}
       </Text>
 
       <View style={estilos.cartao}>
@@ -175,3 +175,7 @@ const estilos = StyleSheet.create({
   leituraHora: { fontSize: fonte.pequena, fontWeight: '700', color: cores.texto, width: 52 },
   leituraTexto: { flex: 1, fontSize: fonte.pequena, color: cores.textoSuave },
 });
+
+function primeiraMaiuscula(texto: string): string {
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}

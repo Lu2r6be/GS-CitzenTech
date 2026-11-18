@@ -83,4 +83,5 @@ Testes do domínio, da infraestrutura (banco em memória) e da API de ponta a po
 
 ## Evidências
 
-(prints do `dotnet test` e do Swagger)
+- `dotnet test`: 267 testes, 0 falhas → [`prints/01-dotnet-test.png`](prints/01-dotnet-test.png)
+- Swagger rodando na VM (`http://192.168.64.2:5080/swagger`) → [`prints/02-swagger.png`](prints/02-swagger.png)

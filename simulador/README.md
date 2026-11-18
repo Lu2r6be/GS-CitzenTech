@@ -6,8 +6,6 @@ A casa da avó tem o ESP32 de verdade (Wokwi). As **outras 4 casas** da microár
 
 > **Os dados são FICTÍCIOS e existem só para a demo do app. Nunca entram no ML** (a rubrica de IA exige dados reais). Declare isso no vídeo.
 
-Analogia: são figurantes. Fazem o papel dos sensores das outras casas enquanto a "atriz principal" (a avó) usa o ESP32 real.
-
 ## O que cada casa mostra (cenário `estavel`)
 
 | Dispositivo | Casa | Temperatura | Cor |

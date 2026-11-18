@@ -29,7 +29,11 @@ Os moradores, casas e leituras do app são fictícios.
 | ACS | Cadastrar residente | Dados da pessoa e da casa, com consentimento obrigatório. |
 | Familiar | Minha casa | Cor, temperatura e uma frase simples sobre o que fazer. |
 
-Prints em `prints/`.
+Prints (celular Android, Expo Go, API na VM via túnel):
+
+| Login | Fila | Casa | Visita | Cadastro | Familiar |
+|---|---|---|---|---|---|
+| ![](prints/01-login.jpg) | ![](prints/02-fila.jpg) | ![](prints/03-casa.jpg) | ![](prints/04-visita.jpg) | ![](prints/05-cadastro.jpg) | ![](prints/06-familiar.jpg) |
 
 ## Como rodar
 
