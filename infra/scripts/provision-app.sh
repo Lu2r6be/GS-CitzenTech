@@ -92,6 +92,18 @@ ler_do_env() {  # ler_do_env CHAVE -> valor (vazio se nao existir)
 passo_banco() {
   log INFO "== 3/7 PostgreSQL =="
   executar "garantindo o PostgreSQL ligado e no boot" systemctl enable --now postgresql
+  if [[ "$DRY_RUN" != "1" ]]; then
+    # O servico "postgresql" e so um guarda-chuva; o banco de verdade e o "cluster". Se nao existir, crio; depois espero ele aceitar conexao.
+    if ! pg_lsclusters -h 2>/dev/null | grep -q .; then
+      local versao; versao="$(ls /usr/lib/postgresql | sort -V | tail -n1)"
+      executar "criando o cluster ${versao}/main do PostgreSQL" pg_createcluster "$versao" main
+    fi
+    pg_lsclusters -h | while read -r v nome _; do systemctl start "postgresql@${v}-${nome}" || true; done
+    local i
+    for i in $(seq 1 30); do pg_isready -q && break; sleep 1; done
+    pg_isready -q || { log ERRO "PostgreSQL nao respondeu em 30s (veja: pg_lsclusters e journalctl -u 'postgresql@*')"; exit 1; }
+    log OK "PostgreSQL aceitando conexoes"
+  fi
   SENHA_BANCO="$(ler_do_env BANCO_SENHA)"
   [[ -n "$SENHA_BANCO" ]] || SENHA_BANCO="$(openssl rand -hex 24)"
   if [[ "$DRY_RUN" == "1" ]]; then
