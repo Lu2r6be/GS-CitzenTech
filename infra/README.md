@@ -51,6 +51,9 @@ Do Mac: `ssh lu2r6be@192.168.64.2` e Swagger em `http://192.168.64.2:5080/swagge
 
 ## Resultado
 
+Vídeo de demonstração (7 min): https://youtu.be/0RNhEBeTv9g
+
+
 Os 8 testes de falha passaram; tabela, datas e o que eles revelaram em [`testes-de-falha.md`](testes-de-falha.md).
 Prints em `evidencias/` e logs reais da VM em `logs/logs-da-vm/`.
 
