@@ -2,6 +2,7 @@
 
 **Integrante:** Luiz Henrique Dos Reis Grabe · RM 556001
 **Projeto no Wokwi:** https://wokwi.com/projects/480861054313325569
+**Vídeo:** https://youtu.be/zbdKyTkFcg4
 
 O ESP32 lê temperatura e umidade (DHT22), envia para a API e acende o LED da cor que a API responder.
 A cor é decidida pela API, para que os limiares fiquem num só lugar.

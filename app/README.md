@@ -1,7 +1,7 @@
 # App Termômetro do ACS (Expo + TypeScript) · Mobile Development & IoT
 
 **Integrante:** Luiz Henrique Dos Reis Grabe · RM 556001
-**Vídeo:** _(link)_
+**Vídeo:** https://youtu.be/FGO3xMVJlyA
 
 ## Ficha da CitizenTech
 
