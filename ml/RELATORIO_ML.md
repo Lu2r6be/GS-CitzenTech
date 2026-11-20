@@ -2,7 +2,7 @@
 
 **Projeto:** Termômetro do ACS (Global Solution CitizenTech, FIAP 2026)
 **Integrante:** Luiz Henrique Dos Reis Grabe — RM 556001
-**Notebook:** [`modelo_calor_obitos.ipynb`](modelo_calor_obitos.ipynb) · **Vídeo:** [link do YouTube]
+**Notebook:** [`modelo_calor_obitos.ipynb`](modelo_calor_obitos.ipynb) · **Vídeo:** https://youtu.be/iGxmVT65Vp4
 
 ## 1. Problema
 

@@ -1,5 +1,7 @@
 # ML — Calor, frio e óbitos de idosos em São Paulo
 
+**Vídeo:** https://youtu.be/iGxmVT65Vp4
+
 ## A pergunta
 **A partir de que temperatura lá fora morrem mais idosos (60+) em São Paulo?**
 A resposta vira a régua do app: nesses dias, o agente de saúde é avisado de que o dia é perigoso.

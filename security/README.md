@@ -1,6 +1,7 @@
 # Segurança de dados pessoais · Cybersecurity
 
 **Integrante:** Luiz Henrique Dos Reis Grabe · RM 556001
+**Vídeo do painel Risco Cidadão:** https://youtu.be/F8eVvPw2fA8
 
 O sistema guarda CPF, RG, endereço, condição de saúde e senha de moradores idosos. Este módulo impede que esses dados
 saiam por log, resposta da API, pedido à IA ou arquivo, e mostra o resultado no painel Risco Cidadão.
